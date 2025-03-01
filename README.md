@@ -1,5 +1,5 @@
 # Template
 
-Replacement: 
-```GodotTemplate``` => Game Name
+Replacement: <br>
+```GodotTemplate``` => Game Name<br>
 ```GameAuthor``` => Game Author
