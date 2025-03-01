@@ -1,0 +1,153 @@
+[gd_scene load_steps=12 format=3 uid="uid://c10ydjmb1rbse"]
+
+[ext_resource type="FontFile" uid="uid://bcqdtd77ogca5" path="res://Resources/Fonts/Unifont/unifont.otf" id="1_6uagy"]
+[ext_resource type="Script" uid="uid://bxkge0hxl573n" path="res://System/Message.cs" id="2_32ci2"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_t8puc"]
+
+[sub_resource type="Theme" id="Theme_jin0c"]
+default_font = ExtResource("1_6uagy")
+default_font_size = 32
+Button/styles/focus = SubResource("StyleBoxEmpty_t8puc")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_oap83"]
+bg_color = Color(1, 1, 1, 0.25098)
+border_width_left = 12
+border_width_top = 12
+border_width_right = 12
+border_width_bottom = 12
+border_color = Color(1, 1, 1, 0.752941)
+border_blend = true
+
+[sub_resource type="Theme" id="Theme_14hd4"]
+Panel/styles/panel = SubResource("StyleBoxFlat_oap83")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_acxd4"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q8qdl"]
+bg_color = Color(1, 1, 1, 0.25098)
+border_width_left = 12
+border_width_top = 12
+border_width_right = 12
+border_width_bottom = 12
+border_color = Color(0.75, 0.75, 0.75, 0.752941)
+border_blend = true
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mwqlt"]
+bg_color = Color(0, 0, 0, 0.25098)
+border_width_left = 12
+border_width_top = 12
+border_width_right = 12
+border_width_bottom = 12
+border_color = Color(0.501961, 0.501961, 0.501961, 0.752941)
+border_blend = true
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_neuyp"]
+bg_color = Color(0, 0, 0, 0.25098)
+border_width_left = 12
+border_width_top = 12
+border_width_right = 12
+border_width_bottom = 12
+border_color = Color(1, 1, 1, 0.752941)
+border_blend = true
+
+[sub_resource type="Theme" id="Theme_fims0"]
+Button/styles/hover = SubResource("StyleBoxFlat_q8qdl")
+Button/styles/normal = SubResource("StyleBoxFlat_mwqlt")
+Button/styles/pressed = SubResource("StyleBoxFlat_neuyp")
+
+[node name="Message" type="Control"]
+layout_mode = 3
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+grow_horizontal = 0
+mouse_filter = 2
+theme = SubResource("Theme_jin0c")
+script = ExtResource("2_32ci2")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -426.0
+offset_bottom = 144.0
+grow_horizontal = 0
+mouse_filter = 2
+theme = SubResource("Theme_14hd4")
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -426.0
+offset_bottom = 144.0
+grow_horizontal = 0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_acxd4")
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="Text" type="RichTextLabel" parent="PanelContainer/MarginContainer"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/line_separation = 5
+theme_override_font_sizes/normal_font_size = 16
+bbcode_enabled = true
+text = "12345678901234567890123456789012
+一二三四五六七八九十一二三四五六七八九十
+abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghi
+1
+2
+3"
+scroll_active = false
+shortcut_keys_enabled = false
+
+[node name="Button" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -426.0
+offset_top = 104.0
+offset_bottom = 144.0
+grow_horizontal = 0
+mouse_filter = 2
+theme = SubResource("Theme_fims0")
+
+[node name="Copy" type="Button" parent="Button"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 16
+text = "locCopyInfo"
+
+[node name="Space1" type="Control" parent="Button"]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 2
+
+[node name="Custom" type="Button" parent="Button"]
+visible = false
+layout_mode = 2
+theme_override_font_sizes/font_size = 16
+
+[node name="Space2" type="Control" parent="Button"]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 2
+
+[node name="Close" type="Button" parent="Button"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 16
+text = "locClose"
+
+[connection signal="pressed" from="Button/Copy" to="." method="_on_copy_pressed"]
+[connection signal="pressed" from="Button/Custom" to="." method="_on_custom_pressed"]
+[connection signal="pressed" from="Button/Close" to="." method="_on_close_pressed"]

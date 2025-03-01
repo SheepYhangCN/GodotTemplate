@@ -1,0 +1,56 @@
+[gd_scene load_steps=5 format=3 uid="uid://31s1qpyqadpt"]
+
+[ext_resource type="Theme" uid="uid://bkhtwi15makv2" path="res://Theme/32_Button.tres" id="1_x2yn0"]
+[ext_resource type="Script" path="res://Menu/Settings/ControlOptions/ActionButton.cs" id="2_41rt8"]
+[ext_resource type="Texture2D" uid="uid://bv6qwas3og42d" path="res://Resources/Sprites/pen.png" id="2_sisq3"]
+[ext_resource type="Texture2D" uid="uid://qtms4q8sp3ly" path="res://Resources/Sprites/trash_can.png" id="3_3ct3u"]
+
+[node name="ActionButton" type="Control"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 3
+anchors_preset = 10
+anchor_right = 1.0
+grow_horizontal = 2
+theme = ExtResource("1_x2yn0")
+script = ExtResource("2_41rt8")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 40.0
+grow_horizontal = 2
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 4
+theme_override_constants/margin_bottom = 4
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="Name" type="Label" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+mouse_filter = 1
+text = "　key"
+
+[node name="Space" type="Control" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 2
+
+[node name="Edit" type="TextureButton" parent="MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+tooltip_text = "locEditKey"
+texture_normal = ExtResource("2_sisq3")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Remove" type="TextureButton" parent="MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+tooltip_text = "locRemoveKey"
+texture_normal = ExtResource("3_3ct3u")
+ignore_texture_size = true
+stretch_mode = 0

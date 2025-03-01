@@ -1,0 +1,84 @@
+keys,en,zh_CN,zh_TW,ja
+locGameTitle,GodotTemplate,GodotTemplate,GodotTemplate,GodotTemplate
+locLanguageName,English,中文（简体）,中文（繁體）,日本語
+locTranslators,,,,
+
+locLangEng,English,英语,英語,英語
+locLangChs,Chinese,中文,中文,中国語
+locLangChsS,Chinese (Simplified),中文（简体）,中文（簡體）,中国語（簡体字）
+locLangChsT,Chinese (Traditional),中文（繁体）,中文（繁體）,中国語（繁体字）
+locLangJapan,Japanese,日语,日語,日本語
+locLangChsMandarin,Chinese (Mandarin),汉语（普通话）,漢語（官話）,中国語（官話）
+locLangChsCantonese,Chinese (Cantonese),汉语（粤语）,漢語（粵語）,中国語（粤語）
+
+locWarningDriverD3d12,You're currently using Direct3D 12 rendering API\nIt's experimental and might having some issues\nPlease report every bugs you encounter,你目前正在使用Direct3D 12渲染API\n这是实验性的且可能会出现某些问题\n请报告你遇到的任何Bug,你目前正在使用Direct3D 12渲染API\n這是實驗性的且可能會出現某些問題\n請報告你遇到的任何Bug,現在Direct 3D 12レンダリングAPIを使用しています\nこれは実験的なもので、いくつか問題があるかもしれません\nあなたが遭遇したすべてのバグを報告してください
+locWarningDriverOpenGL3,You're currently using OpenGL 3 rendering API\nIt's only for compatibility with\noutdated hardwares and it won't be supported\nDisplay effect might won't work as expected,你目前正在使用OpenGL 3渲染API\n这仅用于兼容老旧硬件且不被支持\n可能会与预期的显示效果不符,你目前正在使用OpenGL 3渲染API\n這僅用於老舊硬體相容且不被支援\n可能會與預期的顯示效果不符,現在OpenGL 3レンダリングAPIを使用しています\nこれは古いハードウェアと互換性があり、\nサポートされていない\n表示効果が期待通りに動作しない可能性があります
+
+locEnabledMod,Mod Loader Enabled,Mod 加载器已启用,Mod 裝載器已啟用,MODローダー有効
+locInfoMod,{ModsLoaded} {ModS} loaded\n,载入了 {ModsLoaded} 个 Mod\n,載入了 {ModsLoaded} 個 Mod\n,{ModsLoaded}つのMODをロード\n
+locLocInfo,{LocalesLoaded} localization {fileS} loaded\n,载入了 {LocalesLoaded} 份本地化文件\n,載入了 {LocalesLoaded} 份在地化檔案\n,{LocalesLoaded}つの翻訳ファイルをロード\n
+
+locNotice,Notice,注意,注意,注意
+locNoticeUpper,NOTICE,注 意,注 意,注 意
+locWarning,Warning,警告,警告,警告
+locWarningUpper,WARNING,警 告,警 告,警 告
+locSelectLang,Please choose a language,请选择语言,請選擇語言,言語を選択してください
+locAnyKeySkip,Press any key to Skip,按下任意键跳过,按下任意鍵跳過,スキップするには任意のキーを押してください
+locAnyKeyStart,Press any key to Start,按下任意键开始,按下任意鍵開始,開始するには任意のキーを押してください
+
+locOff,Disable,禁用,禁用,オフ
+locOn,Enable,启用,啟用,オン
+locYes,Yes,是,是,はい
+locNo,No,否,否,いいえ
+locConfirm,Confirm,确认,確認,確認
+locCancel,Cancel,取消,取消,キャンセル
+locDone,Done,完成,完成,完了
+locClose,Close,关闭,關閉,閉じる
+locAccept,Accept,接受,接受,受け入れる
+locDeny,Deny,拒绝,拒绝,拒否
+locLoading,Loading,加载中,加載中,ロード中
+
+locSettings,Settings,游戏设置,遊戲設定,ゲームの設定
+locQuit,Quit,退出游戏,退出遊戲,ゲームを終了
+
+locLanguage,Language,语言,語言,言語
+locLanguageDisplay,Display Language,显示语言,視訊語言,表示言語
+locLanguageAudio,Audio Language,语音语言,音訊語言,音声言語
+locDisplayMode,Display Mode,显示模式,顯示模式,ディスプレイモード
+locWindowed,Windowed,窗口化,視窗化,ウィンドウ化
+locFullscreen,Fullscreen,全屏,全熒幕,全画面
+locWindowedFull,Windowed Fullscreen,窗口化全屏,視窗化全熒幕,ウィンドウ化全画面
+locResolution,Window Size,窗口大小,視窗尺寸,ウィンドウサイズ
+locFpsLimit,FPS Limit,FPS 限制,FPS 限制,FPS 制限
+locRefreshRate,Refresh Rate,刷新率,刷新率,リフレッシュレート
+locUnlimited,Unlimited,无限制,無限制,制限なし
+locVSync,V-Sync,垂直同步,垂直同步,垂直同期
+locVolume,Master Volume,主音量,主音量,しゅおんりょう
+locUseHDR,Use HDR (Experimental),使用 HDR (实验性),使用 HDR (實驗性),HDRを使用 (実験)
+locControl,Control Options,控制选项,操縱選項,コントロールのオプション
+locBack,Back,返回,返回,戻る
+locSaveBack,Save & Back,保存并返回,儲存並返回,保存して戻る
+locOpenScreenshotsFolder,Open Screenshots Folder,打开截图文件夹,開啟截屏資料夾,スクリーンショットフォルダを開く
+locContinue,Continue,继续,繼續,続ける
+locOpenModsFolder,Open Mods Folder,打开 Mod 文件夹,開啟 Mod 資料夾,Modsフォルダを開く
+locOpenLocsFolder,Open Locale Folder,打开本地化文件夹,開啟在地化資料夾,翻訳フォルダを開く
+locLoad,Load,载入,載入,ロード
+locOnlyMainMenu,This settings is only available in Main Menu,此设置仅在主菜单可用,此設定僅在主選單可用,この設定はメインメニューでのみ使用できます
+
+locControlMode,Control Mode,操作模式,操縱模式,制御モード
+locKeyboardMouse,Keyboard + Mouse,键盘 + 鼠标,鍵盤 + 滑鼠,キーボード　+　マウス
+locController,Controller(WIP),手柄(WIP),手柄(WIP),コントローラー(WIP)
+locVirturalController,Virtural Controller(WIP),虚拟控制器(WIP),虛擬控制器(WIP),仮想コントローラ(WIP)
+locKeybinds,Keybinds,按键绑定,按鍵綁定,鍵のバインド
+locWaitingForInput,Waiting For Input...,等待输入按键...,等待輸入按鍵...,待ち入力鍵...
+locResetDefault,Reset to Default,重置为默认,重設為預設,デフォルトにリセット
+locResetAllDefault,Reset all to default,全部重置为默认,全部重設為預設,すべてデフォルトにリセット
+locResetAllDefaultConfirm,Are you sure you want to reset all keybinds to default?,你确定你想要重置所有按键为默认值吗？,你確定你想要重設所有按鍵為預設值嗎？,本当にすべてのバインドのキーをデフォルトにリセットしたいですか？
+locAddKey,Add Key,添加按键,添加按鍵,鍵の追加
+locEditKey,Edit Key,编辑按键,編輯按鍵,鍵の編集
+locRemoveKey,Remove Key,移除按键,移除按鍵,鍵の削除
+
+locKeyCheckList,Check List,检查清单,檢查清單,チェックリスト
+locKeyStamps,Stamps Panel,印章面板,印章面板,印鑑パネル
+locKeyScreenshot,Screenshot,屏幕截图,截屏,スクリーンショット
+locKeyFullscreen,Windowed/Fullscreen,窗口化/全屏,視窗化/全熒幕,ウィンドウ化/全画面

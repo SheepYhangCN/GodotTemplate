@@ -1,0 +1,241 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.4.2\n"
+
+msgid "locGameTitle"
+msgstr "GodotTemplate"
+
+msgid "locLanguageName"
+msgstr "English"
+
+msgid "locTranslators"
+msgstr ""
+
+msgid "locLangEng"
+msgstr "English"
+
+msgid "locLangChs"
+msgstr "Chinese"
+
+msgid "locLangChsS"
+msgstr "Chinese (Simplified)"
+
+msgid "locLangChsT"
+msgstr "Chinese (Traditional)"
+
+msgid "locLangJapan"
+msgstr "Japanese"
+
+msgid "locLangChsMandarin"
+msgstr "Chinese (Mandarin)"
+
+msgid "locLangChsCantonese"
+msgstr "Chinese (Cantonese)"
+
+msgid "locWarningDriverD3d12"
+msgstr "You're currently using Direct3D 12 rendering API\n"
+"It's experimental and might having some issues\n"
+"Please report every bugs you encounter"
+
+msgid "locWarningDriverOpenGL3"
+msgstr "You're currently using OpenGL 3 rendering API\n"
+"It's only for compatibility with\n"
+"outdated hardwares and it won't be supported\n"
+"Display effect might won't work as expected"
+
+msgid "locEnabledMod"
+msgstr "Mod Loader Enabled"
+
+msgid "locInfoMod"
+msgstr "{ModsLoaded} {ModS} loaded\n"
+""
+
+msgid "locLocInfo"
+msgstr "{LocalesLoaded} localization {fileS} loaded\n"
+""
+
+msgid "locNotice"
+msgstr "Notice"
+
+msgid "locNoticeUpper"
+msgstr "NOTICE"
+
+msgid "locWarning"
+msgstr "Warning"
+
+msgid "locWarningUpper"
+msgstr "WARNING"
+
+msgid "locSelectLang"
+msgstr "Please choose a language"
+
+msgid "locAnyKeySkip"
+msgstr "Press any key to Skip"
+
+msgid "locAnyKeyStart"
+msgstr "Press any key to Start"
+
+msgid "locOff"
+msgstr "Disable"
+
+msgid "locOn"
+msgstr "Enable"
+
+msgid "locYes"
+msgstr "Yes"
+
+msgid "locNo"
+msgstr "No"
+
+msgid "locConfirm"
+msgstr "Confirm"
+
+msgid "locCancel"
+msgstr "Cancel"
+
+msgid "locDone"
+msgstr "Done"
+
+msgid "locClose"
+msgstr "Close"
+
+msgid "locAccept"
+msgstr "Accept"
+
+msgid "locDeny"
+msgstr "Deny"
+
+msgid "locLoading"
+msgstr "Loading"
+
+msgid "locSettings"
+msgstr "Settings"
+
+msgid "locQuit"
+msgstr "Quit"
+
+msgid "locLanguage"
+msgstr "Language"
+
+msgid "locLanguageDisplay"
+msgstr "Display Language"
+
+msgid "locLanguageAudio"
+msgstr "Audio Language"
+
+msgid "locDisplayMode"
+msgstr "Display Mode"
+
+msgid "locWindowed"
+msgstr "Windowed"
+
+msgid "locFullscreen"
+msgstr "Fullscreen"
+
+msgid "locWindowedFull"
+msgstr "Windowed Fullscreen"
+
+msgid "locResolution"
+msgstr "Window Size"
+
+msgid "locFpsLimit"
+msgstr "FPS Limit"
+
+msgid "locRefreshRate"
+msgstr "Refresh Rate"
+
+msgid "locUnlimited"
+msgstr "Unlimited"
+
+msgid "locVSync"
+msgstr "V-Sync"
+
+msgid "locVolume"
+msgstr "Master Volume"
+
+msgid "locUseHDR"
+msgstr "Use HDR (Experimental)"
+
+msgid "locControl"
+msgstr "Control Options"
+
+msgid "locBack"
+msgstr "Back"
+
+msgid "locSaveBack"
+msgstr "Save & Back"
+
+msgid "locOpenScreenshotsFolder"
+msgstr "Open Screenshots Folder"
+
+msgid "locContinue"
+msgstr "Continue"
+
+msgid "locOpenModsFolder"
+msgstr "Open Mods Folder"
+
+msgid "locOpenLocsFolder"
+msgstr "Open Locale Folder"
+
+msgid "locLoad"
+msgstr "Load"
+
+msgid "locOnlyMainMenu"
+msgstr "This settings is only available in Main Menu"
+
+msgid "locControlMode"
+msgstr "Control Mode"
+
+msgid "locKeyboardMouse"
+msgstr "Keyboard + Mouse"
+
+msgid "locController"
+msgstr "Controller(WIP)"
+
+msgid "locVirturalController"
+msgstr "Virtural Controller(WIP)"
+
+msgid "locKeybinds"
+msgstr "Keybinds"
+
+msgid "locWaitingForInput"
+msgstr "Waiting For Input..."
+
+msgid "locResetDefault"
+msgstr "Reset to Default"
+
+msgid "locResetAllDefault"
+msgstr "Reset all to default"
+
+msgid "locResetAllDefaultConfirm"
+msgstr "Are you sure you want to reset all keybinds to default?"
+
+msgid "locAddKey"
+msgstr "Add Key"
+
+msgid "locEditKey"
+msgstr "Edit Key"
+
+msgid "locRemoveKey"
+msgstr "Remove Key"
+
+msgid "locKeyCheckList"
+msgstr "Check List"
+
+msgid "locKeyStamps"
+msgstr "Stamps Panel"
+
+msgid "locKeyScreenshot"
+msgstr "Screenshot"
+
+msgid "locKeyFullscreen"
+msgstr "Windowed/Fullscreen"

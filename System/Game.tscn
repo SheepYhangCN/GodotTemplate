@@ -1,0 +1,93 @@
+[gd_scene load_steps=9 format=3 uid="uid://c5pwh1txfuv3y"]
+
+[ext_resource type="Script" uid="uid://oq1e2pnx4hqp" path="res://System/Game.cs" id="1_lj1nl"]
+[ext_resource type="FontFile" uid="uid://bcqdtd77ogca5" path="res://Resources/Fonts/Unifont/unifont.otf" id="2_kmn4m"]
+[ext_resource type="Script" uid="uid://coohngc75ukq2" path="res://System/DebugOverlay.cs" id="3_pv4w4"]
+[ext_resource type="Script" uid="uid://bxx88k7nyturl" path="res://System/DebugOverlay2.cs" id="4_eyiqo"]
+[ext_resource type="Theme" uid="uid://i08fml3es67j" path="res://Theme/24_Button.tres" id="5_60vmh"]
+[ext_resource type="Script" uid="uid://tffq4r2kvcff" path="res://System/GameWindows.cs" id="5_d58pd"]
+[ext_resource type="PackedScene" uid="uid://cxjok0kumjnvk" path="res://Menu/Debug/DebugMenu.tscn" id="6_rmm8j"]
+
+[sub_resource type="Theme" id="Theme_orl8r"]
+default_font = ExtResource("2_kmn4m")
+default_font_size = 32
+
+[node name="Game" type="Node2D"]
+z_index = 4096
+script = ExtResource("1_lj1nl")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+offset = Vector2(640, 360)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = 128
+
+[node name="Fader" type="ColorRect" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(1, 1, 1, 0)
+
+[node name="Messages" type="VBoxContainer" parent="CanvasLayer"]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+grow_horizontal = 0
+theme_override_constants/separation = 144
+
+[node name="Windows" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme = SubResource("Theme_orl8r")
+script = ExtResource("5_d58pd")
+
+[node name="DebugMenu" type="Window" parent="CanvasLayer/Windows"]
+title = "res://Menu/Debug/DebugMenu.tscn"
+initial_position = 2
+size = Vector2i(960, 540)
+visible = false
+
+[node name="DebugMenu" parent="CanvasLayer/Windows/DebugMenu" instance=ExtResource("6_rmm8j")]
+
+[node name="DebugOverlay" type="Label" parent="CanvasLayer"]
+visible = false
+texture_filter = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("5_60vmh")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_constants/line_spacing = -5
+theme_override_font_sizes/font_size = 12
+text = "Debug Overlay"
+autowrap_mode = 2
+script = ExtResource("3_pv4w4")
+
+[node name="DebugOverlay2" type="Label" parent="CanvasLayer"]
+visible = false
+texture_filter = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("5_60vmh")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_constants/line_spacing = -5
+theme_override_font_sizes/font_size = 12
+text = "Debug Overlay2"
+horizontal_alignment = 2
+autowrap_mode = 2
+script = ExtResource("4_eyiqo")
+
+[connection signal="close_requested" from="CanvasLayer/Windows/DebugMenu" to="CanvasLayer/Windows" method="_on_debug_menu_close_requested"]

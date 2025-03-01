@@ -1,0 +1,241 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.4.2\n"
+
+msgid "locGameTitle"
+msgstr "GodotTemplate"
+
+msgid "locLanguageName"
+msgstr "日本語"
+
+msgid "locTranslators"
+msgstr ""
+
+msgid "locLangEng"
+msgstr "英語"
+
+msgid "locLangChs"
+msgstr "中国語"
+
+msgid "locLangChsS"
+msgstr "中国語（簡体字）"
+
+msgid "locLangChsT"
+msgstr "中国語（繁体字）"
+
+msgid "locLangJapan"
+msgstr "日本語"
+
+msgid "locLangChsMandarin"
+msgstr "中国語（官話）"
+
+msgid "locLangChsCantonese"
+msgstr "中国語（粤語）"
+
+msgid "locWarningDriverD3d12"
+msgstr "現在Direct 3D 12レンダリングAPIを使用しています\n"
+"これは実験的なもので、いくつか問題があるかもしれません\n"
+"あなたが遭遇したすべてのバグを報告してください"
+
+msgid "locWarningDriverOpenGL3"
+msgstr "現在OpenGL 3レンダリングAPIを使用しています\n"
+"これは古いハードウェアと互換性があり、\n"
+"サポートされていない\n"
+"表示効果が期待通りに動作しない可能性があります"
+
+msgid "locEnabledMod"
+msgstr "MODローダー有効"
+
+msgid "locInfoMod"
+msgstr "{ModsLoaded}つのMODをロード\n"
+""
+
+msgid "locLocInfo"
+msgstr "{LocalesLoaded}つの翻訳ファイルをロード\n"
+""
+
+msgid "locNotice"
+msgstr "注意"
+
+msgid "locNoticeUpper"
+msgstr "注 意"
+
+msgid "locWarning"
+msgstr "警告"
+
+msgid "locWarningUpper"
+msgstr "警 告"
+
+msgid "locSelectLang"
+msgstr "言語を選択してください"
+
+msgid "locAnyKeySkip"
+msgstr "スキップするには任意のキーを押してください"
+
+msgid "locAnyKeyStart"
+msgstr "開始するには任意のキーを押してください"
+
+msgid "locOff"
+msgstr "オフ"
+
+msgid "locOn"
+msgstr "オン"
+
+msgid "locYes"
+msgstr "はい"
+
+msgid "locNo"
+msgstr "いいえ"
+
+msgid "locConfirm"
+msgstr "確認"
+
+msgid "locCancel"
+msgstr "キャンセル"
+
+msgid "locDone"
+msgstr "完了"
+
+msgid "locClose"
+msgstr "閉じる"
+
+msgid "locAccept"
+msgstr "受け入れる"
+
+msgid "locDeny"
+msgstr "拒否"
+
+msgid "locLoading"
+msgstr "ロード中"
+
+msgid "locSettings"
+msgstr "ゲームの設定"
+
+msgid "locQuit"
+msgstr "ゲームを終了"
+
+msgid "locLanguage"
+msgstr "言語"
+
+msgid "locLanguageDisplay"
+msgstr "表示言語"
+
+msgid "locLanguageAudio"
+msgstr "音声言語"
+
+msgid "locDisplayMode"
+msgstr "ディスプレイモード"
+
+msgid "locWindowed"
+msgstr "ウィンドウ化"
+
+msgid "locFullscreen"
+msgstr "全画面"
+
+msgid "locWindowedFull"
+msgstr "ウィンドウ化全画面"
+
+msgid "locResolution"
+msgstr "ウィンドウサイズ"
+
+msgid "locFpsLimit"
+msgstr "FPS 制限"
+
+msgid "locRefreshRate"
+msgstr "リフレッシュレート"
+
+msgid "locUnlimited"
+msgstr "制限なし"
+
+msgid "locVSync"
+msgstr "垂直同期"
+
+msgid "locVolume"
+msgstr "しゅおんりょう"
+
+msgid "locUseHDR"
+msgstr "HDRを使用 (実験)"
+
+msgid "locControl"
+msgstr "コントロールのオプション"
+
+msgid "locBack"
+msgstr "戻る"
+
+msgid "locSaveBack"
+msgstr "保存して戻る"
+
+msgid "locOpenScreenshotsFolder"
+msgstr "スクリーンショットフォルダを開く"
+
+msgid "locContinue"
+msgstr "続ける"
+
+msgid "locOpenModsFolder"
+msgstr "Modsフォルダを開く"
+
+msgid "locOpenLocsFolder"
+msgstr "翻訳フォルダを開く"
+
+msgid "locLoad"
+msgstr "ロード"
+
+msgid "locOnlyMainMenu"
+msgstr "この設定はメインメニューでのみ使用できます"
+
+msgid "locControlMode"
+msgstr "制御モード"
+
+msgid "locKeyboardMouse"
+msgstr "キーボード　+　マウス"
+
+msgid "locController"
+msgstr "コントローラー(WIP)"
+
+msgid "locVirturalController"
+msgstr "仮想コントローラ(WIP)"
+
+msgid "locKeybinds"
+msgstr "鍵のバインド"
+
+msgid "locWaitingForInput"
+msgstr "待ち入力鍵..."
+
+msgid "locResetDefault"
+msgstr "デフォルトにリセット"
+
+msgid "locResetAllDefault"
+msgstr "すべてデフォルトにリセット"
+
+msgid "locResetAllDefaultConfirm"
+msgstr "本当にすべてのバインドのキーをデフォルトにリセットしたいですか？"
+
+msgid "locAddKey"
+msgstr "鍵の追加"
+
+msgid "locEditKey"
+msgstr "鍵の編集"
+
+msgid "locRemoveKey"
+msgstr "鍵の削除"
+
+msgid "locKeyCheckList"
+msgstr "チェックリスト"
+
+msgid "locKeyStamps"
+msgstr "印鑑パネル"
+
+msgid "locKeyScreenshot"
+msgstr "スクリーンショット"
+
+msgid "locKeyFullscreen"
+msgstr "ウィンドウ化/全画面"

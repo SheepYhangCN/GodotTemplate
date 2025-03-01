@@ -1,0 +1,422 @@
+[gd_scene load_steps=12 format=3 uid="uid://cq80xmedoxjyn"]
+
+[ext_resource type="Script" uid="uid://drerjpqckwxgy" path="res://Menu/Settings/Settings.cs" id="1_3rux8"]
+[ext_resource type="Theme" uid="uid://cygadlkjm161d" path="res://Theme/32_Button.tres" id="2_ujgvq"]
+[ext_resource type="Script" uid="uid://sum0i7vskdmc" path="res://Menu/Settings/Language.cs" id="4_aymw8"]
+[ext_resource type="Script" uid="uid://c6hbcpspt7s8n" path="res://Menu/Settings/DisplayMode.cs" id="6_plsye"]
+[ext_resource type="Script" uid="uid://dtksp8bm1c38i" path="res://Menu/Settings/Resolution.cs" id="7_7puv0"]
+[ext_resource type="Script" uid="uid://di28k3yldsorn" path="res://Menu/Settings/LanguageA.cs" id="7_ui0nk"]
+[ext_resource type="Script" uid="uid://b6wx7vlg602fv" path="res://Menu/Settings/FpsLimit.cs" id="8_x2csm"]
+[ext_resource type="Script" uid="uid://bvxv3h3y0cp66" path="res://Menu/Settings/VSync.cs" id="9_7h5l6"]
+[ext_resource type="Script" uid="uid://dx84icfqotyfa" path="res://Menu/Settings/Volume.cs" id="10_0cgt6"]
+[ext_resource type="Script" uid="uid://bb8t01cdl2sd2" path="res://Menu/Settings/HDR.cs" id="12_qd5us"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_q8qu3"]
+
+[node name="Settings" type="Control"]
+texture_filter = 1
+layout_mode = 3
+anchors_preset = 0
+theme = ExtResource("2_ujgvq")
+script = ExtResource("1_3rux8")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 640.0
+offset_top = 360.0
+offset_right = 640.0
+offset_bottom = 360.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Title" type="Label" parent="Control"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -176.0
+offset_top = -320.0
+offset_right = 176.0
+offset_bottom = -256.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 64
+text = "locSettings"
+horizontal_alignment = 1
+
+[node name="Buttons" type="VBoxContainer" parent="Control"]
+layout_mode = 0
+offset_left = -640.0
+offset_top = -360.0
+offset_right = -640.0
+offset_bottom = -360.0
+
+[node name="LocsFolder" type="HBoxContainer" parent="Control/Buttons"]
+visible = false
+layout_mode = 2
+
+[node name="LocsFolder" type="Button" parent="Control/Buttons/LocsFolder"]
+layout_mode = 2
+text = "locOpenLocsFolder"
+alignment = 0
+
+[node name="Space" type="Control" parent="Control/Buttons/LocsFolder"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="ModsFolder" type="HBoxContainer" parent="Control/Buttons"]
+visible = false
+layout_mode = 2
+
+[node name="ModsFolder" type="Button" parent="Control/Buttons/ModsFolder"]
+layout_mode = 2
+text = "locOpenModsFolder"
+alignment = 0
+
+[node name="Space" type="Control" parent="Control/Buttons/ModsFolder"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="ButtonsR" type="VBoxContainer" parent="Control"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = 392.0
+offset_top = -360.0
+offset_right = 640.0
+offset_bottom = -320.0
+grow_horizontal = 0
+
+[node name="DebugMenu" type="HBoxContainer" parent="Control/ButtonsR"]
+visible = false
+layout_mode = 2
+
+[node name="Space" type="Control" parent="Control/ButtonsR/DebugMenu"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="DebugMenu" type="Button" parent="Control/ButtonsR/DebugMenu"]
+layout_mode = 2
+text = "Open Debug Menu"
+alignment = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -250.0
+offset_top = -174.0
+offset_right = 250.0
+offset_bottom = 174.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 0
+alignment = 1
+
+[node name="Language" type="HBoxContainer" parent="Control/VBoxContainer"]
+layout_mode = 2
+script = ExtResource("4_aymw8")
+
+[node name="Language" type="Label" parent="Control/VBoxContainer/Language"]
+layout_mode = 2
+text = "locLanguageDisplay"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="Space" type="Control" parent="Control/VBoxContainer/Language"]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 1
+
+[node name="Language1" type="OptionButton" parent="Control/VBoxContainer/Language"]
+layout_mode = 2
+mouse_filter = 1
+alignment = 2
+selected = 0
+fit_to_longest_item = false
+item_count = 1
+popup/item_0/text = "English"
+popup/item_0/id = 0
+
+[node name="LanguageA" type="HBoxContainer" parent="Control/VBoxContainer"]
+visible = false
+layout_mode = 2
+script = ExtResource("7_ui0nk")
+
+[node name="Language" type="Label" parent="Control/VBoxContainer/LanguageA"]
+layout_mode = 2
+text = "locLanguageAudio"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="Space" type="Control" parent="Control/VBoxContainer/LanguageA"]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 1
+
+[node name="Language1" type="OptionButton" parent="Control/VBoxContainer/LanguageA"]
+layout_mode = 2
+mouse_filter = 1
+alignment = 2
+selected = 0
+fit_to_longest_item = false
+item_count = 4
+popup/item_0/text = "locLangJapan"
+popup/item_0/id = 0
+popup/item_1/text = "locLangEng"
+popup/item_1/id = 1
+popup/item_2/text = "locLangChsMandarin"
+popup/item_2/id = 2
+popup/item_3/text = "locLangChsCantonese"
+popup/item_3/id = 3
+
+[node name="DisplayMode" type="HBoxContainer" parent="Control/VBoxContainer"]
+layout_mode = 2
+script = ExtResource("6_plsye")
+
+[node name="DisplayMode" type="Label" parent="Control/VBoxContainer/DisplayMode"]
+layout_mode = 2
+text = "locDisplayMode"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="Space" type="Control" parent="Control/VBoxContainer/DisplayMode"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="DisplayMode1" type="OptionButton" parent="Control/VBoxContainer/DisplayMode"]
+layout_mode = 2
+disabled = true
+alignment = 2
+selected = 0
+fit_to_longest_item = false
+item_count = 3
+popup/item_0/text = "locWindowed"
+popup/item_0/id = 0
+popup/item_1/text = "locFullscreen"
+popup/item_1/id = 1
+popup/item_2/text = "locWindowedFull"
+popup/item_2/id = 2
+
+[node name="Resolution" type="HBoxContainer" parent="Control/VBoxContainer"]
+layout_mode = 2
+script = ExtResource("7_7puv0")
+
+[node name="Resolution" type="Label" parent="Control/VBoxContainer/Resolution"]
+layout_mode = 2
+text = "locResolution"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="Space" type="Control" parent="Control/VBoxContainer/Resolution"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Resolution1" type="OptionButton" parent="Control/VBoxContainer/Resolution"]
+layout_mode = 2
+disabled = true
+alignment = 2
+selected = 2
+fit_to_longest_item = false
+item_count = 8
+popup/item_0/text = "640x360"
+popup/item_0/id = 0
+popup/item_1/text = "960x540"
+popup/item_1/id = 1
+popup/item_2/text = "1280x720"
+popup/item_2/id = 2
+popup/item_3/text = "1600x900"
+popup/item_3/id = 3
+popup/item_4/text = "1920x1080"
+popup/item_4/id = 4
+popup/item_5/text = "2560x1440"
+popup/item_5/id = 5
+popup/item_6/text = "3200x1800"
+popup/item_6/id = 6
+popup/item_7/text = "3840x2160"
+popup/item_7/id = 7
+
+[node name="FpsLimit" type="HBoxContainer" parent="Control/VBoxContainer"]
+layout_mode = 2
+script = ExtResource("8_x2csm")
+
+[node name="FpsLimit" type="Label" parent="Control/VBoxContainer/FpsLimit"]
+layout_mode = 2
+text = "locFpsLimit"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="Space" type="Control" parent="Control/VBoxContainer/FpsLimit"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="FpsLimit1" type="OptionButton" parent="Control/VBoxContainer/FpsLimit"]
+layout_mode = 2
+alignment = 2
+selected = 8
+fit_to_longest_item = false
+item_count = 9
+popup/item_0/text = "24"
+popup/item_0/id = 0
+popup/item_1/text = "30"
+popup/item_1/id = 1
+popup/item_2/text = "60"
+popup/item_2/id = 2
+popup/item_3/text = "90"
+popup/item_3/id = 3
+popup/item_4/text = "120"
+popup/item_4/id = 4
+popup/item_5/text = "144"
+popup/item_5/id = 5
+popup/item_6/text = "240"
+popup/item_6/id = 6
+popup/item_7/text = "locRefreshRate"
+popup/item_7/id = 7
+popup/item_8/text = "locUnlimited"
+popup/item_8/id = 8
+
+[node name="Volume" type="HBoxContainer" parent="Control/VBoxContainer"]
+layout_mode = 2
+script = ExtResource("10_0cgt6")
+
+[node name="Volume" type="Label" parent="Control/VBoxContainer/Volume"]
+layout_mode = 2
+size_flags_vertical = 0
+text = "locVolume"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="Space" type="Control" parent="Control/VBoxContainer/Volume"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Space2" type="Control" parent="Control/VBoxContainer/Volume"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="Control/VBoxContainer/Volume"]
+layout_mode = 2
+text = "100%"
+
+[node name="V" type="PanelContainer" parent="Control/VBoxContainer/Volume"]
+custom_minimum_size = Vector2(160, 40)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = SubResource("StyleBoxEmpty_q8qu3")
+
+[node name="VolumeBar" type="ProgressBar" parent="Control/VBoxContainer/Volume/V"]
+layout_mode = 2
+size_flags_vertical = 1
+value = 100.0
+rounded = true
+show_percentage = false
+
+[node name="Volume1" type="HSlider" parent="Control/VBoxContainer/Volume/V"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(160, 0)
+layout_mode = 2
+size_flags_vertical = 1
+value = 100.0
+rounded = true
+ticks_on_borders = true
+
+[node name="VSync" type="HBoxContainer" parent="Control/VBoxContainer"]
+layout_mode = 2
+script = ExtResource("9_7h5l6")
+
+[node name="VSync" type="Label" parent="Control/VBoxContainer/VSync"]
+layout_mode = 2
+text = "locVSync"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="Space" type="Control" parent="Control/VBoxContainer/VSync"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VSync1" type="CheckButton" parent="Control/VBoxContainer/VSync"]
+layout_mode = 2
+button_pressed = true
+
+[node name="HDR" type="HBoxContainer" parent="Control/VBoxContainer"]
+visible = false
+layout_mode = 2
+script = ExtResource("12_qd5us")
+
+[node name="HDR" type="Label" parent="Control/VBoxContainer/HDR"]
+layout_mode = 2
+text = "locUseHDR"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="Space" type="Control" parent="Control/VBoxContainer/HDR"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Switch" type="Control" parent="Control/VBoxContainer/HDR"]
+layout_mode = 2
+
+[node name="HDR1" type="CheckButton" parent="Control/VBoxContainer/HDR/Switch"]
+layout_mode = 1
+offset_left = -132.0
+offset_top = -12.0
+offset_right = -88.0
+offset_bottom = 12.0
+scale = Vector2(3, 3)
+
+[node name="ScreenshotsFolder" type="HBoxContainer" parent="Control/VBoxContainer"]
+layout_mode = 2
+
+[node name="Space" type="Control" parent="Control/VBoxContainer/ScreenshotsFolder"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="ScreenshotsFolder" type="Button" parent="Control/VBoxContainer/ScreenshotsFolder"]
+layout_mode = 2
+disabled = true
+text = "locOpenScreenshotsFolder"
+
+[node name="Space2" type="Control" parent="Control/VBoxContainer/ScreenshotsFolder"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Button" type="HBoxContainer" parent="Control/VBoxContainer"]
+layout_mode = 2
+
+[node name="Control" type="Button" parent="Control/VBoxContainer/Button"]
+layout_mode = 2
+text = "locControl"
+
+[node name="Space" type="Control" parent="Control/VBoxContainer/Button"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Back" type="Button" parent="Control/VBoxContainer/Button"]
+layout_mode = 2
+text = "locSaveBack"
+
+[connection signal="pressed" from="Control/Buttons/LocsFolder/LocsFolder" to="." method="_on_locs_folder_pressed"]
+[connection signal="pressed" from="Control/Buttons/ModsFolder/ModsFolder" to="." method="_on_mods_folder_pressed"]
+[connection signal="pressed" from="Control/ButtonsR/DebugMenu/DebugMenu" to="." method="_on_debug_menu_pressed"]
+[connection signal="item_selected" from="Control/VBoxContainer/Language/Language1" to="Control/VBoxContainer/Language" method="_on_language_1_item_selected"]
+[connection signal="item_selected" from="Control/VBoxContainer/LanguageA/Language1" to="Control/VBoxContainer/LanguageA" method="_on_language_1_item_selected"]
+[connection signal="item_selected" from="Control/VBoxContainer/DisplayMode/DisplayMode1" to="Control/VBoxContainer/DisplayMode" method="_on_display_mode_1_item_selected"]
+[connection signal="item_selected" from="Control/VBoxContainer/Resolution/Resolution1" to="Control/VBoxContainer/Resolution" method="_on_resolution_1_item_selected"]
+[connection signal="item_selected" from="Control/VBoxContainer/FpsLimit/FpsLimit1" to="Control/VBoxContainer/FpsLimit" method="_on_fps_limit_1_item_selected"]
+[connection signal="value_changed" from="Control/VBoxContainer/Volume/V/Volume1" to="Control/VBoxContainer/Volume" method="_on_volume_1_value_changed"]
+[connection signal="toggled" from="Control/VBoxContainer/VSync/VSync1" to="Control/VBoxContainer/VSync" method="_on_v_sync_1_toggled"]
+[connection signal="toggled" from="Control/VBoxContainer/HDR/Switch/HDR1" to="Control/VBoxContainer/HDR" method="_on_hdr_1_toggled"]
+[connection signal="pressed" from="Control/VBoxContainer/ScreenshotsFolder/ScreenshotsFolder" to="." method="_on_screenshots_folder_pressed"]
+[connection signal="pressed" from="Control/VBoxContainer/Button/Control" to="." method="_on_control_pressed"]
+[connection signal="pressed" from="Control/VBoxContainer/Button/Back" to="." method="_on_back_pressed"]

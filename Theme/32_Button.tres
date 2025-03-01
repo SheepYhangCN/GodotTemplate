@@ -1,0 +1,7 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://cygadlkjm161d"]
+
+[ext_resource type="FontFile" uid="uid://bcqdtd77ogca5" path="res://Resources/Fonts/Unifont/unifont.otf" id="1_vnts5"]
+
+[resource]
+default_font = ExtResource("1_vnts5")
+default_font_size = 32

@@ -1,0 +1,95 @@
+[gd_scene load_steps=3 format=3 uid="uid://ccdd5dn7k3kmg"]
+
+[ext_resource type="Theme" uid="uid://bwfsmn3qlllbh" path="res://Theme/48_Button.tres" id="1_yb3ud"]
+[ext_resource type="Script" path="res://Menu/InitLang/InitLang.cs" id="2_dk55v"]
+
+[node name="InitLang" type="Control"]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_yb3ud")
+script = ExtResource("2_dk55v")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -156.0
+offset_top = -237.0
+offset_right = 156.0
+offset_bottom = -189.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "locSelectLang"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Language" type="OptionButton" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -106.5
+offset_top = -56.0
+offset_right = 106.5
+grow_horizontal = 2
+grow_vertical = 0
+selected = 0
+fit_to_longest_item = false
+item_count = 4
+popup/item_0/text = "English"
+popup/item_1/text = "简体中文"
+popup/item_1/id = 1
+popup/item_2/text = "繁體中文"
+popup/item_2/id = 2
+popup/item_3/text = "日本語"
+popup/item_3/id = 3
+
+[node name="LanguageA" type="OptionButton" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -166.5
+offset_right = 166.5
+offset_bottom = 56.0
+grow_horizontal = 2
+selected = 0
+fit_to_longest_item = false
+item_count = 4
+popup/item_0/text = "locLangJapan"
+popup/item_1/text = "locLangEng"
+popup/item_1/id = 1
+popup/item_2/text = "locLangChsMandarin"
+popup/item_2/id = 2
+popup/item_3/text = "locLangChsCantonese"
+popup/item_3/id = 3
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -124.0
+offset_top = 185.0
+offset_right = 124.0
+offset_bottom = 241.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "locConfirm"
+
+[connection signal="item_selected" from="Language" to="." method="_on_language_item_selected"]
+[connection signal="item_selected" from="LanguageA" to="." method="_on_language_a_item_selected"]

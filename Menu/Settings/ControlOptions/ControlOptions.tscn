@@ -1,0 +1,386 @@
+[gd_scene load_steps=7 format=3 uid="uid://cyi0okbls4fa3"]
+
+[ext_resource type="Script" uid="uid://7dy753vquj8k" path="res://Menu/Settings/ControlOptions/ControlOptions.cs" id="1_u67ep"]
+[ext_resource type="Theme" uid="uid://cygadlkjm161d" path="res://Theme/32_Button.tres" id="2_brrpt"]
+[ext_resource type="Script" uid="uid://0h84rb0tdvy7" path="res://Menu/Settings/ControlOptions/ControlOption.cs" id="3_jxibh"]
+[ext_resource type="PackedScene" uid="uid://dbawotsrp4g8g" path="res://Menu/Settings/ControlOptions/Actions.tscn" id="6_6801r"]
+[ext_resource type="Script" uid="uid://bpb7mix0ctmfj" path="res://Menu/Settings/ControlOptions/Keybinds.cs" id="6_gmkej"]
+[ext_resource type="Script" uid="uid://ditcquu6jsj1u" path="res://Menu/Settings/ControlOptions/InputKey.cs" id="7_e1mck"]
+
+[node name="ControlOptions" type="Control"]
+texture_filter = 1
+layout_mode = 3
+anchors_preset = 0
+theme = ExtResource("2_brrpt")
+script = ExtResource("1_u67ep")
+
+[node name="ControlOption" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 640.0
+offset_top = 360.0
+offset_right = 640.0
+offset_bottom = 360.0
+script = ExtResource("3_jxibh")
+
+[node name="Title" type="Label" parent="ControlOption"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -180.0
+offset_top = -324.0
+offset_right = 180.0
+offset_bottom = -252.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 72
+text = "locControl"
+horizontal_alignment = 1
+
+[node name="ControlMode" type="Control" parent="ControlOption"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Mode" type="Label" parent="ControlOption/ControlMode"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -224.0
+offset_top = -16.0
+offset_bottom = 16.0
+grow_horizontal = 0
+grow_vertical = 2
+text = "locControlMode"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="Mode1" type="OptionButton" parent="ControlOption/ControlMode"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -20.0
+offset_right = 381.0
+offset_bottom = 20.0
+grow_vertical = 2
+disabled = true
+selected = 0
+item_count = 3
+popup/item_0/text = "locKeyboardMouse"
+popup/item_0/id = 0
+popup/item_1/text = "locController"
+popup/item_1/id = 1
+popup/item_1/disabled = true
+popup/item_2/text = "locVirturalController"
+popup/item_2/id = 2
+popup/item_2/disabled = true
+
+[node name="Button" type="Control" parent="ControlOption"]
+anchors_preset = 0
+offset_top = 270.0
+offset_bottom = 270.0
+
+[node name="Keybinds" type="Button" parent="ControlOption/Button"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -184.0
+offset_top = -20.0
+offset_bottom = 20.0
+grow_horizontal = 0
+grow_vertical = 2
+text = "locKeybinds"
+
+[node name="Back" type="Button" parent="ControlOption/Button"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -20.0
+offset_right = 184.0
+offset_bottom = 20.0
+grow_vertical = 2
+text = "locSaveBack"
+
+[node name="Keybinds" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 640.0
+offset_top = 360.0
+offset_right = 640.0
+offset_bottom = 360.0
+script = ExtResource("6_gmkej")
+
+[node name="Title" type="Label" parent="Keybinds"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -176.0
+offset_top = -320.0
+offset_right = 176.0
+offset_bottom = -256.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 64
+text = "locKeybinds"
+horizontal_alignment = 1
+
+[node name="PanelContainer" type="PanelContainer" parent="Keybinds"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -266.5
+offset_top = -216.0
+offset_right = 266.5
+offset_bottom = 216.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Keybinds/PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Keybinds/PanelContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Keybinds/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="List" type="VBoxContainer" parent="Keybinds/PanelContainer/MarginContainer/VBoxContainer/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Actions" parent="Keybinds/PanelContainer/MarginContainer/VBoxContainer/ScrollContainer/List" instance=ExtResource("6_6801r")]
+layout_mode = 2
+
+[node name="Button" type="Control" parent="Keybinds"]
+anchors_preset = 0
+offset_left = 40.0
+offset_top = 270.0
+offset_right = 40.0
+offset_bottom = 270.0
+
+[node name="Reset" type="Button" parent="Keybinds/Button"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -296.0
+offset_top = -20.0
+offset_bottom = 20.0
+grow_horizontal = 0
+grow_vertical = 2
+text = "locResetAllDefault"
+
+[node name="Back" type="Button" parent="Keybinds/Button"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -20.0
+offset_right = 184.0
+offset_bottom = 20.0
+grow_vertical = 2
+text = "locSaveBack"
+
+[node name="ResetConfirm" type="Control" parent="Keybinds"]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_left = -640.0
+offset_top = -360.0
+offset_right = -640.0
+offset_bottom = -360.0
+
+[node name="Blocker" type="Panel" parent="Keybinds/ResetConfirm"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_right = 1280.0
+offset_bottom = 720.0
+
+[node name="Panel" type="Panel" parent="Keybinds/ResetConfirm"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 160.0
+offset_top = 180.0
+offset_right = 1120.0
+offset_bottom = 540.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Keybinds/ResetConfirm"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 340.0
+offset_top = 246.0
+offset_right = 940.0
+offset_bottom = 294.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 48
+text = "locResetAllDefaultConfirm"
+horizontal_alignment = 1
+
+[node name="Button" type="Control" parent="Keybinds/ResetConfirm"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 640.0
+offset_top = 450.0
+offset_right = 640.0
+offset_bottom = 450.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Yes" type="Button" parent="Keybinds/ResetConfirm/Button"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -152.0
+offset_top = -28.0
+offset_bottom = 28.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_font_sizes/font_size = 48
+text = "locYes"
+
+[node name="No" type="Button" parent="Keybinds/ResetConfirm/Button"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -28.0
+offset_right = 128.0
+offset_bottom = 28.0
+grow_vertical = 2
+theme_override_font_sizes/font_size = 48
+text = "locNo"
+
+[node name="InputKey" type="Control" parent="Keybinds"]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_left = -640.0
+offset_top = -360.0
+offset_right = -640.0
+offset_bottom = -360.0
+script = ExtResource("7_e1mck")
+
+[node name="Blocker" type="Panel" parent="Keybinds/InputKey"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_right = 1280.0
+offset_bottom = 720.0
+
+[node name="Panel" type="Panel" parent="Keybinds/InputKey"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 160.0
+offset_top = 180.0
+offset_right = 1120.0
+offset_bottom = 540.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Edit" type="Button" parent="Keybinds/InputKey"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 340.0
+offset_top = 242.0
+offset_right = 940.0
+offset_bottom = 298.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 48
+text = "locWaitingForInput"
+
+[node name="Button" type="Control" parent="Keybinds/InputKey"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 640.0
+offset_top = 450.0
+offset_right = 640.0
+offset_bottom = 450.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Yes" type="Button" parent="Keybinds/InputKey/Button"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -248.0
+offset_top = -28.0
+offset_bottom = 28.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_font_sizes/font_size = 48
+text = "locConfirm"
+
+[node name="No" type="Button" parent="Keybinds/InputKey/Button"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -28.0
+offset_right = 224.0
+offset_bottom = 28.0
+grow_vertical = 2
+theme_override_font_sizes/font_size = 48
+text = "locCancel"

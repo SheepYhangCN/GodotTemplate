@@ -1,0 +1,257 @@
+[gd_scene load_steps=4 format=3 uid="uid://cxjok0kumjnvk"]
+
+[ext_resource type="Theme" uid="uid://cygadlkjm161d" path="res://Theme/32_Button.tres" id="1_x2rfj"]
+[ext_resource type="Script" uid="uid://cvh5y36flnb23" path="res://Menu/Debug/DebugMenu.cs" id="2_m4po0"]
+[ext_resource type="Script" uid="uid://sum0i7vskdmc" path="res://Menu/Settings/Language.cs" id="3_4r3qn"]
+
+[node name="DebugMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+theme = ExtResource("1_x2rfj")
+script = ExtResource("2_m4po0")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+clip_contents = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 16
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Back2Settings" type="Button" parent="ScrollContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "Back To Settings"
+
+[node name="Control" type="Control" parent="ScrollContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 1
+
+[node name="Control" type="Control" parent="ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+mouse_filter = 1
+
+[node name="ChangeSceneToFile" type="HBoxContainer" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="ChangeSceneToFile" type="LineEdit" parent="ScrollContainer/VBoxContainer/ChangeSceneToFile"]
+custom_minimum_size = Vector2(460, 0)
+layout_mode = 2
+placeholder_text = "GetTree().ChangeSceneToFile"
+
+[node name="ChangeSceneToFileB" type="Button" parent="ScrollContainer/VBoxContainer/ChangeSceneToFile"]
+layout_mode = 2
+text = "Change"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="DebugOverlay" type="CheckButton" parent="ScrollContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+text = "DebugOverlay"
+
+[node name="DebugOverlayRight" type="CheckButton" parent="ScrollContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+text = "DebugOverlayRight"
+
+[node name="Control" type="Control" parent="ScrollContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 1
+
+[node name="HBoxContainer6" type="HBoxContainer" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="RestartGame" type="Button" parent="ScrollContainer/VBoxContainer/HBoxContainer6"]
+layout_mode = 2
+text = "Restart Game"
+
+[node name="RestartScene" type="Button" parent="ScrollContainer/VBoxContainer/HBoxContainer6"]
+layout_mode = 2
+text = "Restart Current Scene"
+
+[node name="Control" type="Control" parent="ScrollContainer/VBoxContainer/HBoxContainer6"]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 1
+
+[node name="Language" type="HBoxContainer" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+script = ExtResource("3_4r3qn")
+
+[node name="Language" type="Label" parent="ScrollContainer/VBoxContainer/Language"]
+layout_mode = 2
+text = "locLanguageDisplay"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="Language1" type="OptionButton" parent="ScrollContainer/VBoxContainer/Language"]
+layout_mode = 2
+mouse_filter = 1
+alignment = 2
+selected = 0
+fit_to_longest_item = false
+item_count = 1
+popup/item_0/text = "English"
+popup/item_0/id = 0
+
+[node name="Space" type="Control" parent="ScrollContainer/VBoxContainer/Language"]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 1
+
+[node name="CreatePopUpMessage" type="VBoxContainer" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="args" type="HBoxContainer" parent="ScrollContainer/VBoxContainer/CreatePopUpMessage"]
+layout_mode = 2
+
+[node name="message" type="TextEdit" parent="ScrollContainer/VBoxContainer/CreatePopUpMessage/args"]
+clip_contents = false
+custom_minimum_size = Vector2(460, 0)
+layout_mode = 2
+tooltip_text = "message"
+text = "Test Message"
+scroll_fit_content_height = true
+
+[node name="type" type="OptionButton" parent="ScrollContainer/VBoxContainer/CreatePopUpMessage/args"]
+layout_mode = 2
+tooltip_text = "type"
+selected = 0
+item_count = 3
+popup/item_0/text = "MESSAGE"
+popup/item_0/id = 0
+popup/item_1/text = "WARNING"
+popup/item_1/id = 1
+popup/item_2/text = "ERROR"
+popup/item_2/id = 2
+
+[node name="copy_button" type="CheckButton" parent="ScrollContainer/VBoxContainer/CreatePopUpMessage/args"]
+layout_mode = 2
+tooltip_text = "copy_button"
+button_pressed = true
+
+[node name="shown_time" type="SpinBox" parent="ScrollContainer/VBoxContainer/CreatePopUpMessage/args"]
+layout_mode = 2
+tooltip_text = "shown_time"
+max_value = 5.0
+value = 5.0
+rounded = true
+allow_greater = true
+
+[node name="close_button" type="CheckButton" parent="ScrollContainer/VBoxContainer/CreatePopUpMessage/args"]
+layout_mode = 2
+tooltip_text = "close_button"
+button_pressed = true
+
+[node name="custom_button" type="CheckButton" parent="ScrollContainer/VBoxContainer/CreatePopUpMessage/args"]
+layout_mode = 2
+tooltip_text = "custom_button"
+
+[node name="custom_button_text" type="TextEdit" parent="ScrollContainer/VBoxContainer/CreatePopUpMessage/args"]
+clip_contents = false
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+tooltip_text = "custom_button_text"
+scroll_fit_content_height = true
+
+[node name="custom_method_name" type="TextEdit" parent="ScrollContainer/VBoxContainer/CreatePopUpMessage/args"]
+clip_contents = false
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+tooltip_text = "custom_method_name"
+scroll_fit_content_height = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer/VBoxContainer/CreatePopUpMessage"]
+layout_mode = 2
+
+[node name="CreatePopUpMessage" type="Button" parent="ScrollContainer/VBoxContainer/CreatePopUpMessage/HBoxContainer"]
+layout_mode = 2
+text = "CreatePopUpMessage()"
+
+[node name="ClearMessageList" type="Button" parent="ScrollContainer/VBoxContainer/CreatePopUpMessage/HBoxContainer"]
+layout_mode = 2
+text = "ClearMessageList()"
+
+[node name="Control" type="Control" parent="ScrollContainer/VBoxContainer/CreatePopUpMessage/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="fader_color" type="VBoxContainer" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="ScrollContainer/VBoxContainer/fader_color"]
+layout_mode = 2
+text = "Global.fader_color"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer/VBoxContainer/fader_color"]
+layout_mode = 2
+
+[node name="ColorPicker" type="ColorPicker" parent="ScrollContainer/VBoxContainer/fader_color/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/sv_width = 200
+theme_override_constants/sv_height = 200
+color = Color(1, 1, 1, 0)
+presets_visible = false
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 2
+alignment = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Control" type="Control" parent="ScrollContainer/HBoxContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 1
+
+[node name="CheckButton" type="CheckButton" parent="ScrollContainer/HBoxContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "Show Debug Keybinds"
+
+[node name="Keybinds" type="Label" parent="ScrollContainer/HBoxContainer/VBoxContainer"]
+visible = false
+layout_mode = 2
+text = "F1 - Restart Game
+F2 - Restart Current Scene
+F3 - Debug Overlay
+F4 - Debug Overlay Right
+F6 - Show GDTask tracker window
+F12 - Show Debug Menu as Window
+Mouse Side key forward - Zoom In
+Mouse Side key backward - Zoom Out
+Mouse Middle key - Zoom Reset"
+horizontal_alignment = 2
+
+[connection signal="pressed" from="ScrollContainer/VBoxContainer/HBoxContainer/Back2Settings" to="." method="_on_back_2_settings_pressed"]
+[connection signal="pressed" from="ScrollContainer/VBoxContainer/ChangeSceneToFile/ChangeSceneToFileB" to="." method="_on_change_scene_to_file_b_pressed"]
+[connection signal="toggled" from="ScrollContainer/VBoxContainer/HBoxContainer2/DebugOverlay" to="." method="_on_debug_overlay_toggled"]
+[connection signal="toggled" from="ScrollContainer/VBoxContainer/HBoxContainer2/DebugOverlayRight" to="." method="_on_debug_overlay_right_toggled"]
+[connection signal="pressed" from="ScrollContainer/VBoxContainer/HBoxContainer6/RestartGame" to="." method="_on_restart_game_pressed"]
+[connection signal="pressed" from="ScrollContainer/VBoxContainer/HBoxContainer6/RestartScene" to="." method="_on_restart_scene_pressed"]
+[connection signal="item_selected" from="ScrollContainer/VBoxContainer/Language/Language1" to="ScrollContainer/VBoxContainer/Language" method="_on_language_1_item_selected"]
+[connection signal="pressed" from="ScrollContainer/VBoxContainer/CreatePopUpMessage/HBoxContainer/CreatePopUpMessage" to="." method="_on_create_pop_up_message_pressed"]
+[connection signal="pressed" from="ScrollContainer/VBoxContainer/CreatePopUpMessage/HBoxContainer/ClearMessageList" to="." method="_on_clear_message_list_pressed"]
+[connection signal="color_changed" from="ScrollContainer/VBoxContainer/fader_color/HBoxContainer/ColorPicker" to="." method="_on_color_picker_color_changed"]
+[connection signal="toggled" from="ScrollContainer/HBoxContainer/VBoxContainer/HBoxContainer/CheckButton" to="." method="_on_check_button_toggled"]

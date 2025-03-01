@@ -1,0 +1,240 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.4.2\n"
+
+msgid "locGameTitle"
+msgstr "GodotTemplate"
+
+msgid "locLanguageName"
+msgstr "中文（繁體）"
+
+msgid "locTranslators"
+msgstr ""
+
+msgid "locLangEng"
+msgstr "英語"
+
+msgid "locLangChs"
+msgstr "中文"
+
+msgid "locLangChsS"
+msgstr "中文（簡體）"
+
+msgid "locLangChsT"
+msgstr "中文（繁體）"
+
+msgid "locLangJapan"
+msgstr "日語"
+
+msgid "locLangChsMandarin"
+msgstr "漢語（官話）"
+
+msgid "locLangChsCantonese"
+msgstr "漢語（粵語）"
+
+msgid "locWarningDriverD3d12"
+msgstr "你目前正在使用Direct3D 12渲染API\n"
+"這是實驗性的且可能會出現某些問題\n"
+"請報告你遇到的任何Bug"
+
+msgid "locWarningDriverOpenGL3"
+msgstr "你目前正在使用OpenGL 3渲染API\n"
+"這僅用於老舊硬體相容且不被支援\n"
+"可能會與預期的顯示效果不符"
+
+msgid "locEnabledMod"
+msgstr "Mod 裝載器已啟用"
+
+msgid "locInfoMod"
+msgstr "載入了 {ModsLoaded} 個 Mod\n"
+""
+
+msgid "locLocInfo"
+msgstr "載入了 {LocalesLoaded} 份在地化檔案\n"
+""
+
+msgid "locNotice"
+msgstr "注意"
+
+msgid "locNoticeUpper"
+msgstr "注 意"
+
+msgid "locWarning"
+msgstr "警告"
+
+msgid "locWarningUpper"
+msgstr "警 告"
+
+msgid "locSelectLang"
+msgstr "請選擇語言"
+
+msgid "locAnyKeySkip"
+msgstr "按下任意鍵跳過"
+
+msgid "locAnyKeyStart"
+msgstr "按下任意鍵開始"
+
+msgid "locOff"
+msgstr "禁用"
+
+msgid "locOn"
+msgstr "啟用"
+
+msgid "locYes"
+msgstr "是"
+
+msgid "locNo"
+msgstr "否"
+
+msgid "locConfirm"
+msgstr "確認"
+
+msgid "locCancel"
+msgstr "取消"
+
+msgid "locDone"
+msgstr "完成"
+
+msgid "locClose"
+msgstr "關閉"
+
+msgid "locAccept"
+msgstr "接受"
+
+msgid "locDeny"
+msgstr "拒绝"
+
+msgid "locLoading"
+msgstr "加載中"
+
+msgid "locSettings"
+msgstr "遊戲設定"
+
+msgid "locQuit"
+msgstr "退出遊戲"
+
+msgid "locLanguage"
+msgstr "語言"
+
+msgid "locLanguageDisplay"
+msgstr "視訊語言"
+
+msgid "locLanguageAudio"
+msgstr "音訊語言"
+
+msgid "locDisplayMode"
+msgstr "顯示模式"
+
+msgid "locWindowed"
+msgstr "視窗化"
+
+msgid "locFullscreen"
+msgstr "全熒幕"
+
+msgid "locWindowedFull"
+msgstr "視窗化全熒幕"
+
+msgid "locResolution"
+msgstr "視窗尺寸"
+
+msgid "locFpsLimit"
+msgstr "FPS 限制"
+
+msgid "locRefreshRate"
+msgstr "刷新率"
+
+msgid "locUnlimited"
+msgstr "無限制"
+
+msgid "locVSync"
+msgstr "垂直同步"
+
+msgid "locVolume"
+msgstr "主音量"
+
+msgid "locUseHDR"
+msgstr "使用 HDR (實驗性)"
+
+msgid "locControl"
+msgstr "操縱選項"
+
+msgid "locBack"
+msgstr "返回"
+
+msgid "locSaveBack"
+msgstr "儲存並返回"
+
+msgid "locOpenScreenshotsFolder"
+msgstr "開啟截屏資料夾"
+
+msgid "locContinue"
+msgstr "繼續"
+
+msgid "locOpenModsFolder"
+msgstr "開啟 Mod 資料夾"
+
+msgid "locOpenLocsFolder"
+msgstr "開啟在地化資料夾"
+
+msgid "locLoad"
+msgstr "載入"
+
+msgid "locOnlyMainMenu"
+msgstr "此設定僅在主選單可用"
+
+msgid "locControlMode"
+msgstr "操縱模式"
+
+msgid "locKeyboardMouse"
+msgstr "鍵盤 + 滑鼠"
+
+msgid "locController"
+msgstr "手柄(WIP)"
+
+msgid "locVirturalController"
+msgstr "虛擬控制器(WIP)"
+
+msgid "locKeybinds"
+msgstr "按鍵綁定"
+
+msgid "locWaitingForInput"
+msgstr "等待輸入按鍵..."
+
+msgid "locResetDefault"
+msgstr "重設為預設"
+
+msgid "locResetAllDefault"
+msgstr "全部重設為預設"
+
+msgid "locResetAllDefaultConfirm"
+msgstr "你確定你想要重設所有按鍵為預設值嗎？"
+
+msgid "locAddKey"
+msgstr "添加按鍵"
+
+msgid "locEditKey"
+msgstr "編輯按鍵"
+
+msgid "locRemoveKey"
+msgstr "移除按鍵"
+
+msgid "locKeyCheckList"
+msgstr "檢查清單"
+
+msgid "locKeyStamps"
+msgstr "印章面板"
+
+msgid "locKeyScreenshot"
+msgstr "截屏"
+
+msgid "locKeyFullscreen"
+msgstr "視窗化/全熒幕"

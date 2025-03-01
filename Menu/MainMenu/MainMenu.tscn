@@ -1,0 +1,49 @@
+[gd_scene load_steps=3 format=3 uid="uid://csbvr4fwuqth4"]
+
+[ext_resource type="Script" uid="uid://beqqjawp64ys4" path="res://Menu/MainMenu/MainMenu.cs" id="1_8fe0e"]
+[ext_resource type="Theme" uid="uid://dcx0rucrortmr" path="res://Theme/48_Button.tres" id="2_m6d0h"]
+
+[node name="MainMenu" type="Control"]
+texture_filter = 1
+layout_mode = 3
+anchors_preset = 0
+theme = ExtResource("2_m6d0h")
+script = ExtResource("1_8fe0e")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="Settings" type="Button" parent="Control"]
+layout_mode = 1
+offset_right = 272.0
+offset_bottom = 56.0
+text = "locSettings"
+alignment = 2
+
+[node name="Quit" type="Button" parent="Control"]
+layout_mode = 1
+offset_top = 64.0
+offset_right = 176.0
+offset_bottom = 120.0
+text = "locQuit"
+alignment = 2
+
+[node name="Version" type="Label" parent="Control"]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = 688.0
+offset_right = 144.0
+offset_bottom = 720.0
+grow_vertical = 0
+theme_override_font_sizes/font_size = 32
+text = "v11.45.14"
+vertical_alignment = 2
