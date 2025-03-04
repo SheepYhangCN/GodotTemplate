@@ -1,10 +1,12 @@
 using Godot;
 using System;
+using GodotTask;
 
 public partial class Empty : Node2D
 {
-	public override void _Ready()
+	public override async void _Ready()
 	{
+		await GDTask.Delay(100);
 		var tree = GetTree();
 		if (!FileAccess.FileExists("user://GodotTemplate/Settings/settings.ini"))
 		{
