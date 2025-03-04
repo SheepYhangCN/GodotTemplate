@@ -14,18 +14,27 @@ public partial class Game : Node2D
 	internal int max_fps_sel = 0;//选中的最大fps选项
 	public enum LANG_AUDIO//语音语言
 	{
-		JAPANESE,//日语
 		ENGLISH,//英语
+		JAPANESE,//日语
 		CHS_MANDARIN,//汉语（普通话）
-		CHS_CANTONESE//汉语（粤语）
+		CHS_CANTONESE,//汉语（粤语
+
+		MAX//最大值，用于计数
 	}
+	public static readonly Dictionary<LANG_AUDIO,string> lang_audio_name = new()//语音语言文本
+	{
+		{LANG_AUDIO.ENGLISH,"locLangEng"},//英语
+		{LANG_AUDIO.JAPANESE,"locLangJapan"},//日语
+		{LANG_AUDIO.CHS_MANDARIN,"locLangChsMandarin"},//汉语（普通话）
+		{LANG_AUDIO.CHS_CANTONESE,"locLangChsCantonese"}//汉语（粤语）
+	};
 	public enum CONTROL_MODE//控制模式
 	{
 		KEYBOARD_MOUSE,//键鼠
 		CONTROLLER,//手柄
 		VIRTURAL_CONTROLLER//虚拟控制器
 	}
-	internal static readonly Dictionary<string,string> actions=new()//各个按键的名称
+	internal static readonly Dictionary<string,string> actions = new()//各个按键的名称
 	{
 		{"check_list","locKeyCheckList"},
 		{"stamps","locKeyStamps"},
@@ -105,7 +114,7 @@ public partial class Game : Node2D
 		if (load == Error.Ok)
 		{
 			TranslationServer.SetLocale(file.GetValue("Settings","language_display","en").AsString());
-			//lang_audio=(LANG_AUDIO)file.GetValue("Settings","language_audio",0).AsInt32();
+			lang_audio=(LANG_AUDIO)file.GetValue("Settings","language_audio",0).AsInt32();
 			DisplayServer.WindowSetMode((DisplayServer.WindowMode)file.GetValue("Settings","display_mode",(int)DisplayServer.WindowMode.Fullscreen).AsInt32());
 			if (DisplayServer.WindowGetMode()==DisplayServer.WindowMode.Windowed)
 			{

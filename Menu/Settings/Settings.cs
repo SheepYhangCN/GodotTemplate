@@ -55,7 +55,7 @@ public partial class Settings : Control
 		var Global = GetNode<Game>("/root/Global");
 		var file=new ConfigFile();
 		file.SetValue("Settings","language_display",TranslationServer.GetLocale());
-		//file.SetValue("Settings","language_audio",(int)Global.lang_audio);
+		file.SetValue("Settings","language_audio",(int)Global.lang_audio);
 		file.SetValue("Settings","display_mode",(int)DisplayServer.WindowGetMode());
 		file.SetValue("Settings","resolution",GetNode<OptionButton>("Control/VBoxContainer/Resolution/Resolution1").Selected);
 		file.SetValue("Settings","fps_limit",GetNode<OptionButton>("Control/VBoxContainer/FpsLimit/FpsLimit1").Selected);

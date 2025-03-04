@@ -10,14 +10,20 @@ public partial class InitLang : Control
 	string[] locales;
 	public override void _Ready()
 	{
-		var node=GetNode<OptionButton>("Language");
-		locales=TranslationServer.GetLoadedLocales();
+		var node = GetNode<OptionButton>("Language");
+		locales = TranslationServer.GetLoadedLocales();
 		node.ItemCount=locales.Length;
 		foreach (var current in locales)
 		{
 			node.Set("popup/item_"+Array.IndexOf(locales,current).ToString()+"/text",TranslationServer.GetTranslationObject(current).GetMessage("locLanguageName"));
 		}
 		node.Selected=Array.IndexOf(locales.ToArray(),locales.Contains(TranslationServer.GetLocale()) ? TranslationServer.GetLocale() : TranslationServer.GetLocale().Left(2));
+		node = GetNode<OptionButton>("LanguageA");
+		node.ItemCount = (int)Game.LANG_AUDIO.MAX;
+		for (var i = 0;i < (int)Game.LANG_AUDIO.MAX;i += 1)
+		{
+			node.Set("popup/item_"+i.ToString()+"/text",Game.lang_audio_name[(Game.LANG_AUDIO)i]);
+		}
 	}
 
 	public override void _Process(double delta)
@@ -38,7 +44,7 @@ public partial class InitLang : Control
 			GetNode<Button>("Button").Disabled=true;
 			fading=true;
 			Game.UpdateConfigFile("user://GodotTemplate/Settings/settings.ini","Settings","language_display",TranslationServer.GetLocale());
-			//Game.UpdateConfigFile("user://GodotTemplate/Settings/settings.ini","Settings","language_audio",(int)Global.lang_audio);
+			Game.UpdateConfigFile("user://GodotTemplate/Settings/settings.ini","Settings","language_audio",(int)Global.lang_audio);
 		}
 	}
 	public void _on_language_item_selected(int selected)
@@ -51,6 +57,6 @@ public partial class InitLang : Control
 	}
 	public void _on_language_a_item_selected(int selected)
 	{
-
+		GetNode<Game>("/root/Global").lang_audio=(Game.LANG_AUDIO)selected;
 	}
 }
