@@ -36,7 +36,7 @@ msgid "locLangJapan"
 msgstr "日語"
 
 msgid "locLangChsMandarin"
-msgstr "漢語（官話）"
+msgstr "漢語（國語）"
 
 msgid "locLangChsCantonese"
 msgstr "漢語（粵語）"

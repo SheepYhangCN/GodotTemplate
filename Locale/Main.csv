@@ -8,7 +8,7 @@ locLangChs,Chinese,中文,中文,中国語
 locLangChsS,Chinese (Simplified),中文（简体）,中文（簡體）,中国語（簡体字）
 locLangChsT,Chinese (Traditional),中文（繁体）,中文（繁體）,中国語（繁体字）
 locLangJapan,Japanese,日语,日語,日本語
-locLangChsMandarin,Chinese (Mandarin),汉语（普通话）,漢語（官話）,中国語（官話）
+locLangChsMandarin,Chinese (Mandarin),汉语（普通话）,漢語（國語）,中国語（官話）
 locLangChsCantonese,Chinese (Cantonese),汉语（粤语）,漢語（粵語）,中国語（粤語）
 
 locWarningDriverD3d12,You're currently using Direct3D 12 rendering API\nIt's experimental and might having some issues\nPlease report every bugs you encounter,你目前正在使用Direct3D 12渲染API\n这是实验性的且可能会出现某些问题\n请报告你遇到的任何Bug,你目前正在使用Direct3D 12渲染API\n這是實驗性的且可能會出現某些問題\n請報告你遇到的任何Bug,現在Direct 3D 12レンダリングAPIを使用しています\nこれは実験的なもので、いくつか問題があるかもしれません\nあなたが遭遇したすべてのバグを報告してください
