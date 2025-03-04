@@ -251,7 +251,7 @@ public partial class Game : Node2D
 			Text+="\nSystem: "+OS.GetName()+"("+OS.GetDistributionName()+") "+OS.GetVersion()+" "+Engine.GetArchitectureName();
 			Text+="\nSystem Locale: "+OS.GetLocale()+" ("+TranslationServer.GetLocaleName(OS.GetLocale())+")";
 			Text+="\nGame Locale: "+TranslationServer.GetLocale()+" ("+TranslationServer.GetLocaleName(TranslationServer.GetLocale())+")";
-			//Text+="\nAudio Language: "+lang_audio.ToString();
+			Text+="\nAudio Language: "+lang_audio.ToString();
 			Text+="\nEditor Locale: "+TranslationServer.GetToolLocale()+" ("+TranslationServer.GetLocaleName(TranslationServer.GetToolLocale())+")";
 			Text+="\nDevice ID: "+((OS.GetUniqueId()==null || OS.GetUniqueId()=="") ? "N/A" : OS.GetUniqueId());
 			Text+="\nModel Name: "+OS.GetModelName();
@@ -272,7 +272,6 @@ public partial class Game : Node2D
 			Text+="\nUser Data Directory: \""+OS.GetUserDataDir()+"\"";
 			Text+="\nExecutable Path: \""+OS.GetExecutablePath()+"\"";
 			Text+="\nWindow Current Screen: "+DisplayServer.WindowGetCurrentScreen().ToString();
-			//current rendering driver todo
 			var joypads=Input.GetConnectedJoypads();
 			Text+="\nConnected Joypads: ";
 			for (var a=0;a<joypads.Count;a+=1)
@@ -661,12 +660,12 @@ public partial class Game : Node2D
 			{
 				debug_overlay = !debug_overlay;
 				GetNode<DebugOverlay>("CanvasLayer/DebugOverlay").Text = DebugOverlay.Update(GetNode<DebugOverlay>("CanvasLayer/DebugOverlay"),tree,this);
-				GetNode<DebugOverlay2>("CanvasLayer/DebugOverlay2").Text = DebugOverlay2.Update();
+				GetNode<DebugOverlay2>("CanvasLayer/DebugOverlay2").Text = DebugOverlay2.Update(this);
 			}
 			if (debug_overlay && Input.IsActionJustPressed("debug_overlay_r"))
 			{
 				debug_overlay_r = !debug_overlay_r;
-				GetNode<DebugOverlay2>("CanvasLayer/DebugOverlay2").Text = DebugOverlay2.Update();
+				GetNode<DebugOverlay2>("CanvasLayer/DebugOverlay2").Text = DebugOverlay2.Update(this);
 			}
 			if (Input.IsActionJustPressed("debug_restart"))
 			{

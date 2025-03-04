@@ -26,14 +26,14 @@ public partial class DebugOverlay2 : Label
 			}*/
 			if (!Visible)
 			{
-				Text = Update();
+				Text = Update(Global);
 				Visible = true;
 			}
 			timer+=delta;
 			if (timer>=1)
 			{
 				timer=0;
-				Text=Update();
+				Text = Update(Global);
 			}
 		}
 		else
@@ -44,7 +44,7 @@ public partial class DebugOverlay2 : Label
 			}
 		}
 	}
-	internal static string Update()
+	internal static string Update(Game Global)
 	{
 		var Text="System: "+OS.GetName()+"("+OS.GetDistributionName()+") "+OS.GetVersion()+" "+Engine.GetArchitectureName();
 		Text+="\nSystem Locale: "+OS.GetLocale()+" ("+TranslationServer.GetLocaleName(OS.GetLocale())+")";
@@ -61,14 +61,13 @@ public partial class DebugOverlay2 : Label
 		Text+="\nKeyboard Layout: "+DisplayServer.KeyboardGetLayoutName(layout)+" ("+DisplayServer.KeyboardGetLayoutLanguage(layout)+")";
 		Text+="\nScreen DPI: "+((DisplayServer.ScreenGetDpi()==72) ? "N/A" : DisplayServer.ScreenGetDpi(DisplayServer.WindowGetCurrentScreen()));
 		Text+="\nGame Locale: "+TranslationServer.GetLocale()+" ("+TranslationServer.GetLocaleName(TranslationServer.GetLocale())+")";
-		//Text+="\nAudio Language: "+Global.lang_audio.ToString();
+		Text+="\nAudio Language: "+Global.lang_audio.ToString();
 		Text+="\nEditor Locale: "+TranslationServer.GetToolLocale()+" ("+TranslationServer.GetLocaleName(TranslationServer.GetToolLocale())+")";
 		Text+="\nProcess ID: "+OS.GetProcessId().ToString();
 		Text+="\nMain Thread ID: "+OS.GetMainThreadId().ToString();
 		Text+="\nCurrent Thread ID: "+OS.GetThreadCallerId().ToString();
 		Text+="\nUser Data Directory: \""+OS.GetUserDataDir()+"\"";
 		Text+="\nExecutable Path: \""+OS.GetExecutablePath()+"\"";
-		//current rendering driver todo
 		var joypads=Input.GetConnectedJoypads();
 		Text+="\nConnected Joypads: ";
 		for (var a=0;a<joypads.Count;a+=1)
