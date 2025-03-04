@@ -1,7 +1,6 @@
 using Godot;
 using System;
 using System.Linq;
-using System.Collections;
 
 public partial class InitLang : Control
 {
