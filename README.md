@@ -1,6 +1,6 @@
 # Template
 
-Godot Engine 4.4 Mono Stable Official<br><br>
+Godot Engine 4.4 Mono Stable Official<br>
 
 Replacement: <br>
 ```GodotTemplate``` => Game Name<br>
