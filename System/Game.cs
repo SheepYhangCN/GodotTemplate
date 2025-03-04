@@ -54,7 +54,7 @@ public partial class Game : Node2D
 	internal string[] mods_loaded = [];//加载了的mod 储存文件名 带后缀
 	internal string[] locale_loaded = [];//加载了的自定义本地化文件 储存文件名 带后缀
 
-	[Export] internal LANG_AUDIO lang_audio=LANG_AUDIO.JAPANESE;
+	[Export] internal LANG_AUDIO lang_audio=LANG_AUDIO.ENGLISH;
 	internal Color fader_color;//fader颜色 RGBA
 	internal bool menu_pressed;//主菜单按下任意键
 	internal CONTROL_MODE control_mode;//控制模式
