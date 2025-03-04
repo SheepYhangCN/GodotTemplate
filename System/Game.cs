@@ -17,7 +17,7 @@ public partial class Game : Node2D
 		ENGLISH,//英语
 		JAPANESE,//日语
 		CHS_MANDARIN,//汉语（普通话）
-		CHS_CANTONESE,//汉语（粤语
+		CHS_CANTONESE,//汉语（粤语）
 
 		MAX//最大值，用于计数
 	}
