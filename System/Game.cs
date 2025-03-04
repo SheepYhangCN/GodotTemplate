@@ -28,6 +28,10 @@ public partial class Game : Node2D
 		{LANG_AUDIO.CHS_MANDARIN,"locLangChsMandarin"},//汉语（普通话）
 		{LANG_AUDIO.CHS_CANTONESE,"locLangChsCantonese"}//汉语（粤语）
 	};
+	public static readonly Dictionary<string,Dictionary<LANG_AUDIO,string>> audio_lang_replacement = new()//语音语言替换 {语音,{语言,语音}}
+	{
+
+	};
 	public enum CONTROL_MODE//控制模式
 	{
 		KEYBOARD_MOUSE,//键鼠
