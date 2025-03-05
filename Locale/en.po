@@ -117,6 +117,24 @@ msgstr "Deny"
 msgid "locLoading"
 msgstr "Loading"
 
+msgid "locCopyInfo"
+msgstr "Copy Info"
+
+msgid "locMessageInfoCopied"
+msgstr "Info Copied"
+
+msgid "locMessageScreenshot"
+msgstr "Screenshot saved to \"{ScreenshotDirectory}\""
+
+msgid "locMessageScreenshotFailed"
+msgstr "Save to \"{ScreenshotDirectory}\" failed, Error code: "
+
+msgid "locMessageFolder"
+msgstr "Opened \"{Directory}\""
+
+msgid "locMessageFolderFailed"
+msgstr "Open \"{Directory}\" failed, Error code: "
+
 msgid "locSettings"
 msgstr "Settings"
 

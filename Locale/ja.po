@@ -117,6 +117,24 @@ msgstr "拒否"
 msgid "locLoading"
 msgstr "ロード中"
 
+msgid "locCopyInfo"
+msgstr "情報のコピー"
+
+msgid "locMessageInfoCopied"
+msgstr "情報がコピーされました"
+
+msgid "locMessageScreenshot"
+msgstr "スクリーンショットがに保存されました“{ScreenshotDirectory}”"
+
+msgid "locMessageScreenshotFailed"
+msgstr "“{ScreenshotDirectory}”への保存に失敗しました、エラーコード："
+
+msgid "locMessageFolder"
+msgstr "“{Directory}”が開いています"
+
+msgid "locMessageFolderFailed"
+msgstr "“{Directory}”オープンに失敗しました、エラーコード："
+
 msgid "locSettings"
 msgstr "ゲームの設定"
 

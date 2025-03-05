@@ -116,6 +116,24 @@ msgstr "拒绝"
 msgid "locLoading"
 msgstr "加载中"
 
+msgid "locCopyInfo"
+msgstr "复制信息"
+
+msgid "locMessageInfoCopied"
+msgstr "信息已复制"
+
+msgid "locMessageScreenshot"
+msgstr "截图已保存至“{ScreenshotDirectory}”"
+
+msgid "locMessageScreenshotFailed"
+msgstr "保存到“{ScreenshotDirectory}”失败，错误码："
+
+msgid "locMessageFolder"
+msgstr "已打开“{Directory}”"
+
+msgid "locMessageFolderFailed"
+msgstr "打开“{Directory}”失败，错误码："
+
 msgid "locSettings"
 msgstr "游戏设置"
 

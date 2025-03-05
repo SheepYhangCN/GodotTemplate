@@ -38,6 +38,13 @@ locAccept,Accept,接受,接受,受け入れる
 locDeny,Deny,拒绝,拒绝,拒否
 locLoading,Loading,加载中,加載中,ロード中
 
+locCopyInfo,Copy Info,复制信息,拷貝訊息,情報のコピー
+locMessageInfoCopied,Info Copied,信息已复制,訊息已拷貝,情報がコピーされました
+locMessageScreenshot,"Screenshot saved to ""{ScreenshotDirectory}""",截图已保存至“{ScreenshotDirectory}”,截屏已儲存至“{ScreenshotDirectory}”,スクリーンショットがに保存されました“{ScreenshotDirectory}”
+locMessageScreenshotFailed,"Save to ""{ScreenshotDirectory}"" failed, Error code: ",保存到“{ScreenshotDirectory}”失败，错误码：,儲存到“{ScreenshotDirectory}”失敗，錯誤代號：,“{ScreenshotDirectory}”への保存に失敗しました、エラーコード：
+locMessageFolder,"Opened ""{Directory}""",已打开“{Directory}”,已開啟“{Directory}”,“{Directory}”が開いています
+locMessageFolderFailed,"Open ""{Directory}"" failed, Error code: ",打开“{Directory}”失败，错误码：,開啟“{Directory}”失敗，錯誤代號：,“{Directory}”オープンに失敗しました、エラーコード：
+
 locSettings,Settings,游戏设置,遊戲設定,ゲームの設定
 locQuit,Quit,退出游戏,退出遊戲,ゲームを終了
 
