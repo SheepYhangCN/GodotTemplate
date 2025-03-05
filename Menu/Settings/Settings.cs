@@ -61,7 +61,7 @@ public partial class Settings : Control
 		file.SetValue("Settings","fps_limit",GetNode<OptionButton>("Control/VBoxContainer/FpsLimit/FpsLimit1").Selected);
 		file.SetValue("Settings","vsync",(int)DisplayServer.WindowGetVsyncMode());
 		file.SetValue("Settings","volume",AudioServer.GetBusVolumeDb(AudioServer.GetBusIndex("Master")));
-		//file.SetValue("Settings","use_hdr",GetViewport().UseHdr2D);
+		file.SetValue("Settings","use_hdr",GetViewport().UseHdr2D);
 		Error err=file.Save("user://GodotTemplate/Settings/settings.ini");
 		if (err != Error.Ok)
 		{

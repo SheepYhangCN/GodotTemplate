@@ -343,7 +343,6 @@ layout_mode = 2
 button_pressed = true
 
 [node name="HDR" type="HBoxContainer" parent="Control/VBoxContainer"]
-visible = false
 layout_mode = 2
 script = ExtResource("12_qd5us")
 
@@ -357,16 +356,8 @@ vertical_alignment = 1
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="Switch" type="Control" parent="Control/VBoxContainer/HDR"]
+[node name="HDR1" type="CheckButton" parent="Control/VBoxContainer/HDR"]
 layout_mode = 2
-
-[node name="HDR1" type="CheckButton" parent="Control/VBoxContainer/HDR/Switch"]
-layout_mode = 1
-offset_left = -132.0
-offset_top = -12.0
-offset_right = -88.0
-offset_bottom = 12.0
-scale = Vector2(3, 3)
 
 [node name="ScreenshotsFolder" type="HBoxContainer" parent="Control/VBoxContainer"]
 layout_mode = 2
@@ -409,7 +400,7 @@ text = "locSaveBack"
 [connection signal="item_selected" from="Control/VBoxContainer/FpsLimit/FpsLimit1" to="Control/VBoxContainer/FpsLimit" method="_on_fps_limit_1_item_selected"]
 [connection signal="value_changed" from="Control/VBoxContainer/Volume/V/Volume1" to="Control/VBoxContainer/Volume" method="_on_volume_1_value_changed"]
 [connection signal="toggled" from="Control/VBoxContainer/VSync/VSync1" to="Control/VBoxContainer/VSync" method="_on_v_sync_1_toggled"]
-[connection signal="toggled" from="Control/VBoxContainer/HDR/Switch/HDR1" to="Control/VBoxContainer/HDR" method="_on_hdr_1_toggled"]
+[connection signal="toggled" from="Control/VBoxContainer/HDR/HDR1" to="Control/VBoxContainer/HDR" method="_on_hdr_1_toggled"]
 [connection signal="pressed" from="Control/VBoxContainer/ScreenshotsFolder/ScreenshotsFolder" to="." method="_on_screenshots_folder_pressed"]
 [connection signal="pressed" from="Control/VBoxContainer/Button/Control" to="." method="_on_control_pressed"]
 [connection signal="pressed" from="Control/VBoxContainer/Button/Back" to="." method="_on_back_pressed"]

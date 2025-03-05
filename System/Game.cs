@@ -197,7 +197,7 @@ public partial class Game : Node2D
 			}
 			DisplayServer.WindowSetVsyncMode((DisplayServer.VSyncMode)file.GetValue("Settings","vsync",(int)DisplayServer.VSyncMode.Enabled).AsInt32());
 			AudioServer.SetBusVolumeDb(AudioServer.GetBusIndex("Master"),file.GetValue("Settings","volume",0).AsSingle());
-			//GetViewport().UseHdr2D=file.GetValue("Settings","use_hdr",false).AsBool();
+			GetViewport().UseHdr2D=file.GetValue("Settings","use_hdr",false).AsBool();
 		}
 		else
 		{

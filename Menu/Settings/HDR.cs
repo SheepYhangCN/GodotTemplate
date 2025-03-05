@@ -5,7 +5,7 @@ public partial class HDR : HBoxContainer
 {
 	public override void _Ready()
 	{
-		GetNode<CheckButton>("Switch/HDR1").ButtonPressed=GetViewport().UseHdr2D;
+		GetNode<CheckButton>("HDR1").ButtonPressed=GetViewport().UseHdr2D;
 	}
 
 	public override void _Process(double delta)
