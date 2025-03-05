@@ -118,6 +118,7 @@ grow_vertical = 2
 text = "locSaveBack"
 
 [node name="Keybinds" type="Control" parent="."]
+visible = false
 layout_mode = 3
 anchors_preset = 0
 offset_left = 640.0
