@@ -228,12 +228,6 @@ msgstr "Edit Key"
 msgid "locRemoveKey"
 msgstr "Remove Key"
 
-msgid "locKeyCheckList"
-msgstr "Check List"
-
-msgid "locKeyStamps"
-msgstr "Stamps Panel"
-
 msgid "locKeyScreenshot"
 msgstr "Screenshot"
 

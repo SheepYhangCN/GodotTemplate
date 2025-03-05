@@ -78,7 +78,5 @@ locAddKey,Add Key,添加按键,添加按鍵,鍵の追加
 locEditKey,Edit Key,编辑按键,編輯按鍵,鍵の編集
 locRemoveKey,Remove Key,移除按键,移除按鍵,鍵の削除
 
-locKeyCheckList,Check List,检查清单,檢查清單,チェックリスト
-locKeyStamps,Stamps Panel,印章面板,印章面板,印鑑パネル
 locKeyScreenshot,Screenshot,屏幕截图,截屏,スクリーンショット
 locKeyFullscreen,Windowed/Fullscreen,窗口化/全屏,視窗化/全熒幕,ウィンドウ化/全画面

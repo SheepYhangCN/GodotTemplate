@@ -228,12 +228,6 @@ msgstr "鍵の編集"
 msgid "locRemoveKey"
 msgstr "鍵の削除"
 
-msgid "locKeyCheckList"
-msgstr "チェックリスト"
-
-msgid "locKeyStamps"
-msgstr "印鑑パネル"
-
 msgid "locKeyScreenshot"
 msgstr "スクリーンショット"
 

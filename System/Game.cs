@@ -40,8 +40,6 @@ public partial class Game : Node2D
 	}
 	internal static readonly Dictionary<string,string> actions = new()//各个按键的名称
 	{
-		{"check_list","locKeyCheckList"},
-		{"stamps","locKeyStamps"},
 		{"screenshot","locKeyScreenshot"},
 		{"fullscreen","locKeyFullscreen"}
 	};
