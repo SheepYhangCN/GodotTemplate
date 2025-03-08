@@ -39,7 +39,7 @@ project/assembly_name="GodotTemplate"
 
 [editor]
 
-run/main_run_args="--verbose -- -custom-chars"
+run/main_run_args="--verbose"
 
 [editor_plugins]
 
