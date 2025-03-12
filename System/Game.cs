@@ -54,9 +54,7 @@ public partial class Game : Node2D
 
 	[Export] internal LANG_AUDIO lang_audio=LANG_AUDIO.ENGLISH;
 	internal Color fader_color;//fader颜色 RGBA
-	internal bool menu_pressed;//主菜单按下任意键
 	internal CONTROL_MODE control_mode;//控制模式
-	internal double duration;//游戏时长
 
 	internal void GameInit(bool first_time=false)
 	{
@@ -66,9 +64,7 @@ public partial class Game : Node2D
 			GD.Print("Verbose stdout was enabled.");
 		}
 		fader_color = new Color(0,0,0,0);
-		menu_pressed = false;
 		control_mode = CONTROL_MODE.KEYBOARD_MOUSE;
-		duration = 0;
 		mod = OS.GetCmdlineUserArgs().Contains("-mod");
 		locale = OS.GetCmdlineUserArgs().Contains("-locales");
 		mods_loaded = [];
@@ -595,8 +591,6 @@ public partial class Game : Node2D
 	public override void _Process(double delta)
 	{
 		var tree = GetTree();
-		//duration增加
-		duration += delta;
 		//场景更新
 		if (tree.CurrentScene != null && current_scene_path != tree.CurrentScene.SceneFilePath)
 		{

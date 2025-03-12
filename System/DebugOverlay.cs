@@ -68,7 +68,6 @@ public partial class DebugOverlay : Label
 		Text+="\nWindow Size,Decorations: "+DisplayServer.WindowGetSize().ToString()+","+DisplayServer.WindowGetSizeWithDecorations().ToString();
 		Text+="\nWindow Focused: "+DisplayServer.WindowIsFocused().ToString();
 		Text+="\nGlobal.fader_color = "+Global.fader_color.ToString();
-		Text+="\nGlobal.duration = "+Global.duration.ToString();
 		Text+="\nGlobal.control_mode = "+((int)Global.control_mode).ToString()+"("+Global.control_mode.ToString()+")";
 		if (Global.mod)
 		{
