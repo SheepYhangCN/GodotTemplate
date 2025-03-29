@@ -209,6 +209,12 @@ msgstr "載入"
 msgid "locOnlyMainMenu"
 msgstr "此設定僅在主選單可用"
 
+msgid "locNotInEmbedded"
+msgstr "此設定在內嵌於 Godot 編輯器內時不可用"
+
+msgid "locNotForOS"
+msgstr "此設定在你的作業系統中不可用"
+
 msgid "locControlMode"
 msgstr "操縱模式"
 

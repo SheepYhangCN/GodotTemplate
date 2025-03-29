@@ -70,7 +70,9 @@ locContinue,Continue,继续,繼續,続ける
 locOpenModsFolder,Open Mods Folder,打开 Mod 文件夹,開啟 Mod 資料夾,Modsフォルダを開く
 locOpenLocsFolder,Open Locale Folder,打开本地化文件夹,開啟在地化資料夾,翻訳フォルダを開く
 locLoad,Load,载入,載入,ロード
-locOnlyMainMenu,This settings is only available in Main Menu,此设置仅在主菜单可用,此設定僅在主選單可用,この設定はメインメニューでのみ使用できます
+locOnlyMainMenu,This setting is only available in Main Menu,此设置仅在主菜单可用,此設定僅在主選單可用,この設定はメインメニューでのみ使用できます
+locNotInEmbedded,This setting is not available when embedded in Godot editor,此设置在内嵌于 Godot 编辑器内时不可用,此設定在內嵌於 Godot 編輯器內時不可用,Godotエディタに埋め込まれている場合、\nこの設定は使用できません
+locNotForOS,This setting is not available in your OS,此设置在你的操作系统中不可用,此設定在你的作業系統中不可用,この設定はあなたのオペレーティングシステムでは使用できません
 
 locControlMode,Control Mode,操作模式,操縱模式,制御モード
 locKeyboardMouse,Keyboard + Mouse,键盘 + 鼠标,鍵盤 + 滑鼠,キーボード　+　マウス

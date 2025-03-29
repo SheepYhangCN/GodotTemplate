@@ -210,6 +210,13 @@ msgstr "ロード"
 msgid "locOnlyMainMenu"
 msgstr "この設定はメインメニューでのみ使用できます"
 
+msgid "locNotInEmbedded"
+msgstr "Godotエディタに埋め込まれている場合、\n"
+"この設定は使用できません"
+
+msgid "locNotForOS"
+msgstr "この設定はあなたのオペレーティングシステムでは使用できません"
+
 msgid "locControlMode"
 msgstr "制御モード"
 

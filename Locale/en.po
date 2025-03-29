@@ -208,7 +208,13 @@ msgid "locLoad"
 msgstr "Load"
 
 msgid "locOnlyMainMenu"
-msgstr "This settings is only available in Main Menu"
+msgstr "This setting is only available in Main Menu"
+
+msgid "locNotInEmbedded"
+msgstr "This setting is not available when embedded in Godot editor"
+
+msgid "locNotForOS"
+msgstr "This setting is not available in your OS"
 
 msgid "locControlMode"
 msgstr "Control Mode"

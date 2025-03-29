@@ -633,7 +633,7 @@ public partial class Game : Node2D
 			RenderingServer.FramePostDraw+=SaveScreenshot;
 		}
 		//全屏
-		if (Input.IsActionJustPressed("fullscreen"))
+		if (Input.IsActionJustPressed("fullscreen") && !Engine.IsEmbeddedInEditor())
 		{
 			if (DisplayServer.WindowGetMode()==DisplayServer.WindowMode.Windowed)
 			{
