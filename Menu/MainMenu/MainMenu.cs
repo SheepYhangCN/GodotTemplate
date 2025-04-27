@@ -4,7 +4,7 @@ using System;
 public partial class MainMenu : Control
 {
 	double timer=0;
-	bool pressed=false;
+	bool pressed=true;
 	public override void _Ready()
 	{
 		Game Global=GetNode<Game>("/root/Global");
