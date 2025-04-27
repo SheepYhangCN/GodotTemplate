@@ -190,7 +190,6 @@ size_flags_horizontal = 3
 
 [node name="DisplayMode1" type="OptionButton" parent="Control/VBoxContainer/DisplayMode"]
 layout_mode = 2
-disabled = true
 alignment = 2
 selected = 0
 fit_to_longest_item = false
@@ -218,7 +217,6 @@ size_flags_horizontal = 3
 
 [node name="Resolution1" type="OptionButton" parent="Control/VBoxContainer/Resolution"]
 layout_mode = 2
-disabled = true
 alignment = 2
 selected = 2
 fit_to_longest_item = false
@@ -368,7 +366,6 @@ size_flags_horizontal = 3
 
 [node name="ScreenshotsFolder" type="Button" parent="Control/VBoxContainer/ScreenshotsFolder"]
 layout_mode = 2
-disabled = true
 text = "locOpenScreenshotsFolder"
 
 [node name="Space2" type="Control" parent="Control/VBoxContainer/ScreenshotsFolder"]

@@ -67,7 +67,7 @@ public partial class Resolution : HBoxContainer
 	}
 	private static void Update(OptionButton option)
 	{
-		if (DisplayServer.WindowGetMode()==DisplayServer.WindowMode.Windowed && ((OS.GetName()=="Windows") || (OS.GetName()=="macOS") || (OS.GetName()=="Linux") || (OS.GetName()=="BSD")) && !Engine.IsEmbeddedInEditor())
+		/*if (DisplayServer.WindowGetMode()==DisplayServer.WindowMode.Windowed && ((OS.GetName()=="Windows") || (OS.GetName()=="macOS") || (OS.GetName()=="Linux") || (OS.GetName()=="BSD")) && !Engine.IsEmbeddedInEditor())
 		{
 			option.Disabled=false;
 			option.Set("popup/item_2/text","1280x720");
@@ -75,7 +75,8 @@ public partial class Resolution : HBoxContainer
 		else
 		{
 			option.Disabled=true;
+			option.Selected = -1;
 			option.Set("popup/item_2/text",DisplayServer.ScreenGetSize().X.ToString()+"x"+DisplayServer.ScreenGetSize().Y.ToString());
-		}
+		}*/
 	}
 }

@@ -11,43 +11,62 @@ public partial class Settings : Control
 		GetNode<HBoxContainer>("Control/VBoxContainer/Resolution").TooltipText = "";
 		if ((OS.GetName()=="Windows") || (OS.GetName()=="macOS") || (OS.GetName()=="Linux") || (OS.GetName()=="BSD"))
 		{
-			GetNode<Button>("Control/VBoxContainer/ScreenshotsFolder/ScreenshotsFolder").Disabled = false;
-			GetNode<Button>("Control/VBoxContainer/ScreenshotsFolder/ScreenshotsFolder").TooltipText = "";
+			/*GetNode<Button>("Control/VBoxContainer/ScreenshotsFolder/ScreenshotsFolder").Disabled = false;
+			GetNode<Button>("Control/VBoxContainer/ScreenshotsFolder/ScreenshotsFolder").TooltipText = "";*/
+			GetNode<Button>("Control/VBoxContainer/ScreenshotsFolder/ScreenshotsFolder").Visible = true;
+			GetNode<HBoxContainer>("Control/VBoxContainer/DisplayMode").Visible = true;
+			GetNode<HBoxContainer>("Control/VBoxContainer/Resolution").Visible = true;
 			GetNode<HBoxContainer>("Control/Buttons/ModsFolder").Visible = GetNode<Game>("/root/Global").mod;
 			GetNode<HBoxContainer>("Control/Buttons/LocsFolder").Visible = GetNode<Game>("/root/Global").locale;
 		}
 		else
-		{
+		{/*
 			GetNode<Button>("Control/VBoxContainer/ScreenshotsFolder/ScreenshotsFolder").Disabled = true;
 			GetNode<OptionButton>("Control/VBoxContainer/DisplayMode/DisplayMode1").Disabled = true;
 			GetNode<OptionButton>("Control/VBoxContainer/Resolution/Resolution1").Disabled = true;
 			GetNode<Button>("Control/VBoxContainer/ScreenshotsFolder/ScreenshotsFolder").TooltipText = "locNotForOS";
 			GetNode<HBoxContainer>("Control/VBoxContainer/DisplayMode").TooltipText = "locNotForOS";
-			GetNode<HBoxContainer>("Control/VBoxContainer/Resolution").TooltipText = "locNotForOS";
+			GetNode<HBoxContainer>("Control/VBoxContainer/Resolution").TooltipText = "locNotForOS";*/
+			GetNode<Button>("Control/VBoxContainer/ScreenshotsFolder/ScreenshotsFolder").Visible = false;
+			GetNode<HBoxContainer>("Control/VBoxContainer/DisplayMode").Visible = false;
+			GetNode<HBoxContainer>("Control/VBoxContainer/Resolution").Visible = false;
 		}
 		if (Engine.IsEmbeddedInEditor())
 		{
 			GetNode<OptionButton>("Control/VBoxContainer/DisplayMode/DisplayMode1").Disabled = true;
 			GetNode<OptionButton>("Control/VBoxContainer/Resolution/Resolution1").Disabled = true;
+			GetNode<OptionButton>("Control/VBoxContainer/DisplayMode/DisplayMode1").TooltipText = "locNotInEmbedded";
+			GetNode<OptionButton>("Control/VBoxContainer/Resolution/Resolution1").TooltipText = "locNotInEmbedded";
 			GetNode<HBoxContainer>("Control/VBoxContainer/DisplayMode").TooltipText = "locNotInEmbedded";
 			GetNode<HBoxContainer>("Control/VBoxContainer/Resolution").TooltipText = "locNotInEmbedded";
 		}
 		if (GetTree().CurrentScene.SceneFilePath == "res://Menu/Settings/Settings.tscn")
 		{
 			GetNode<OptionButton>("Control/VBoxContainer/Language/Language1").Disabled = false;
+			GetNode<OptionButton>("Control/VBoxContainer/Language/Language1").TooltipText = "";
 			GetNode<HBoxContainer>("Control/VBoxContainer/Language").TooltipText = "";
-			GetNode<CheckButton>("Control/VBoxContainer/Perfect/Perfect2").Disabled = false;
-			GetNode<HBoxContainer>("Control/VBoxContainer/Perfect").TooltipText = "locPerfectModeTooltip";
 		}
 		else
 		{
 			GetNode<OptionButton>("Control/VBoxContainer/Language/Language1").Disabled = true;
+			GetNode<OptionButton>("Control/VBoxContainer/Language/Language1").TooltipText = "locOnlyMainMenu";
 			GetNode<HBoxContainer>("Control/VBoxContainer/Language").TooltipText = "locOnlyMainMenu";
-			GetNode<CheckButton>("Control/VBoxContainer/Perfect/Perfect2").Disabled = true;
-			GetNode<HBoxContainer>("Control/VBoxContainer/Perfect").TooltipText = "locOnlyMainMenu";
 		}
 		GetNode<HBoxContainer>("Control/ButtonsR/DebugMenu").Visible=GetNode<Game>("/root/Global").debug;
 		ContainerUpdate();
+		foreach (var node in GetNode<VBoxContainer>("Control/VBoxContainer").GetChildren())
+		{
+			if (node is HBoxContainer hbox && hbox.TooltipText == "locNotForOS")
+			{
+				foreach (var child in hbox.GetChildren())
+				{
+					if (child is OptionButton option && option.Disabled)
+					{
+						option.Selected = -1;
+					}
+				}
+			}
+		}
 	}
 	public override void _Process(double delta)
 	{
