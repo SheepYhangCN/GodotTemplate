@@ -11,8 +11,9 @@ locLangJapan,Japanese,日语,日語,日本語
 locLangChsMandarin,Chinese (Mandarin),汉语（普通话）,漢語（國語）,中国語（官話）
 locLangChsCantonese,Chinese (Cantonese),汉语（粤语）,漢語（粵語）,中国語（粤語）
 
+locWarningDriverVulkanWindows,You're currently using Vulkan rendering API on Windows\nDisplay effect might won't work as expected,你目前正在Windows上使用Vulkan渲染API\n显示效果可能会与预期不符,你目前正在Windows上使用Vulkan渲染API\n顯示效果可能會與預期不符,現在WindowsでVulkanレンダリングAPIを使用しています\n表示効果が期待通りに動作しない可能性があります
 locWarningDriverD3d12,You're currently using Direct3D 12 rendering API\nIt's experimental and might having some issues\nPlease report every bugs you encounter,你目前正在使用Direct3D 12渲染API\n这是实验性的且可能会出现某些问题\n请报告你遇到的任何Bug,你目前正在使用Direct3D 12渲染API\n這是實驗性的且可能會出現某些問題\n請報告你遇到的任何Bug,現在Direct 3D 12レンダリングAPIを使用しています\nこれは実験的なもので、いくつか問題があるかもしれません\nあなたが遭遇したすべてのバグを報告してください
-locWarningDriverOpenGL3,You're currently using OpenGL 3 rendering API\nIt's only for compatibility with\noutdated hardwares and it won't be supported\nDisplay effect might won't work as expected,你目前正在使用OpenGL 3渲染API\n这仅用于兼容老旧硬件且不被支持\n可能会与预期的显示效果不符,你目前正在使用OpenGL 3渲染API\n這僅用於老舊硬體相容且不被支援\n可能會與預期的顯示效果不符,現在OpenGL 3レンダリングAPIを使用しています\nこれは古いハードウェアと互換性があり、\nサポートされていない\n表示効果が期待通りに動作しない可能性があります
+locWarningDriverOpenGL3,You're currently using OpenGL 3 rendering API\nIt's only for compatibility with\noutdated hardwares and it won't be supported\nDisplay effect might won't work as expected,你目前正在使用OpenGL 3渲染API\n这仅用于兼容老旧硬件且不被支持\n显示效果可能会与预期不符,你目前正在使用OpenGL 3渲染API\n這僅用於老舊硬體相容且不被支援\n顯示效果可能會與預期不符,現在OpenGL 3レンダリングAPIを使用しています\nこれは古いハードウェアと互換性があり、\nサポートされていない\n表示効果が期待通りに動作しない可能性があります
 
 locEnabledMod,Mod Loader Enabled,Mod 加载器已启用,Mod 裝載器已啟用,MODローダー有効
 locInfoMod,{ModsLoaded} {ModS} loaded\n,载入了 {ModsLoaded} 个 Mod\n,載入了 {ModsLoaded} 個 Mod\n,{ModsLoaded}つのMODをロード\n

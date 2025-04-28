@@ -41,6 +41,10 @@ msgstr "中国語（官話）"
 msgid "locLangChsCantonese"
 msgstr "中国語（粤語）"
 
+msgid "locWarningDriverVulkanWindows"
+msgstr "現在WindowsでVulkanレンダリングAPIを使用しています\n"
+"表示効果が期待通りに動作しない可能性があります"
+
 msgid "locWarningDriverD3d12"
 msgstr "現在Direct 3D 12レンダリングAPIを使用しています\n"
 "これは実験的なもので、いくつか問題があるかもしれません\n"

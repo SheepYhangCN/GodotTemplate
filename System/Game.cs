@@ -559,13 +559,17 @@ public partial class Game : Node2D
 		ClearMessageList();
 		//检测RenderingDriver
 		var driver = RenderingServer.GetCurrentRenderingDriverName();
-		if (driver == "d3d12")
+		/*if (driver == "d3d12")
 		{
 			CreatePopUpMessage("locWarningDriverD3d12",Message.TYPE.WARNING);
 		}
-		else if (driver.StartsWith("opengl3"))
+		else */if (driver.StartsWith("opengl3"))
 		{
 			CreatePopUpMessage("locWarningDriverOpenGL3",Message.TYPE.WARNING);
+		}
+		if (OS.GetName() == "Windows" && driver == "vulkan")
+		{
+			CreatePopUpMessage("locWarningDriverVulkanWindows",Message.TYPE.WARNING);
 		}
 		//GDTask Tracker
 		TaskTracker.EnableTracking = debug;

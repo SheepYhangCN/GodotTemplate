@@ -41,6 +41,10 @@ msgstr "Chinese (Mandarin)"
 msgid "locLangChsCantonese"
 msgstr "Chinese (Cantonese)"
 
+msgid "locWarningDriverVulkanWindows"
+msgstr "You're currently using Vulkan rendering API on Windows\n"
+"Display effect might won't work as expected"
+
 msgid "locWarningDriverD3d12"
 msgstr "You're currently using Direct3D 12 rendering API\n"
 "It's experimental and might having some issues\n"
