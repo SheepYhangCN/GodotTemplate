@@ -842,7 +842,7 @@ public partial class Game : Node2D
 		return result;
 	}
 	//文件目录
-	internal static string GetGameDirPath(string str)
+	internal static string GetGameDirPath(string str = "")
 	{
 		if (OS.HasFeature("editor"))
 		{
