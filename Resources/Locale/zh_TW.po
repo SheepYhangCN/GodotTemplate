@@ -127,16 +127,16 @@ msgid "locMessageInfoCopied"
 msgstr "訊息已拷貝"
 
 msgid "locMessageScreenshot"
-msgstr "截屏已儲存至“{ScreenshotDirectory}”"
+msgstr "截屏已儲存至「{ScreenshotDirectory}」"
 
 msgid "locMessageScreenshotFailed"
-msgstr "儲存到“{ScreenshotDirectory}”失敗，錯誤代號："
+msgstr "儲存到「{ScreenshotDirectory}」失敗，錯誤代號："
 
 msgid "locMessageFolder"
-msgstr "已開啟“{Directory}”"
+msgstr "已開啟「{Directory}」"
 
 msgid "locMessageFolderFailed"
-msgstr "開啟“{Directory}”失敗，錯誤代號："
+msgstr "開啟「{Directory}」失敗，錯誤代號："
 
 msgid "locSettings"
 msgstr "遊戲設定"

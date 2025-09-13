@@ -1,0 +1,170 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.4.2\n"
+
+msgid "Left Mouse Button"
+msgstr "鼠标左键"
+
+msgid "Right Mouse Button"
+msgstr "鼠标右键"
+
+msgid "Middle Mouse Button"
+msgstr "鼠标中键"
+
+msgid "Mouse Wheel Up"
+msgstr "鼠标滚轮向上"
+
+msgid "Mouse Wheel Down"
+msgstr "鼠标滚轮向下"
+
+msgid "Mouse Wheel Left"
+msgstr "鼠标滚轮向左"
+
+msgid "Mouse Wheel Right"
+msgstr "鼠标滚轮向右"
+
+msgid "Mouse Thumb Button 1"
+msgstr "鼠标侧键 1"
+
+msgid "Mouse Thumb Button 2"
+msgstr "鼠标侧键 2"
+
+msgid "Button"
+msgstr "按钮"
+
+msgid "Double Click"
+msgstr "双击"
+
+msgid "Mouse motion at position (%s) with velocity (%s)"
+msgstr "鼠标移动至（%s）速度为（%s）"
+
+msgid "Left Stick X-Axis, Joystick 0 X-Axis"
+msgstr "左摇杆 X 轴、控制杆 0 X 轴"
+
+msgid "Left Stick Y-Axis, Joystick 0 Y-Axis"
+msgstr "左摇杆 Y 轴、控制杆 0 Y 轴"
+
+msgid "Right Stick X-Axis, Joystick 1 X-Axis"
+msgstr "右摇杆 X 轴、控制杆 1 X 轴"
+
+msgid "Right Stick Y-Axis, Joystick 1 Y-Axis"
+msgstr "右摇杆 Y 轴、控制杆 1 Y 轴"
+
+msgid "Joystick 2 X-Axis, Left Trigger, Sony L2, Xbox LT"
+msgstr "控制杆 2 X 轴、左扳机、索尼 L2、Xbox LT"
+
+msgid "Joystick 2 Y-Axis, Right Trigger, Sony R2, Xbox RT"
+msgstr "控制杆 2 Y 轴、右扳机、索尼 R2、Xbox RT"
+
+msgid "Joystick 3 X-Axis"
+msgstr "控制杆 3 X 轴"
+
+msgid "Joystick 3 Y-Axis"
+msgstr "控制杆 3 Y 轴"
+
+msgid "Joystick 4 X-Axis"
+msgstr "控制杆 4 X 轴"
+
+msgid "Joystick 4 Y-Axis"
+msgstr "控制杆 4 Y 轴"
+
+msgid "Unknown Joypad Axis"
+msgstr "未知控制杆轴"
+
+msgid "Joypad Motion on Axis %d (%s) with Value %.2f"
+msgstr "手柄 %d（%s）轴运动 %.2f"
+
+msgid "Bottom Action, Sony Cross, Xbox A, Nintendo B"
+msgstr "下侧动作、索尼叉键、Xbox A、任天堂 B"
+
+msgid "Right Action, Sony Circle, Xbox B, Nintendo A"
+msgstr "右侧动作、索尼圆圈、Xbox B、任天堂 A"
+
+msgid "Left Action, Sony Square, Xbox X, Nintendo Y"
+msgstr "左侧动作、索尼方块、Xbox X、任天堂 Y"
+
+msgid "Top Action, Sony Triangle, Xbox Y, Nintendo X"
+msgstr "上侧动作、索尼三角、Xbox Y、任天堂 X"
+
+msgid "Back, Sony Select, Xbox Back, Nintendo -"
+msgstr "返回、索尼 Select、Xbox Back、任天堂 -"
+
+msgid "Guide, Sony PS, Xbox Home"
+msgstr "指南、索尼 PS、Xbox Home"
+
+msgid "Start, Xbox Menu, Nintendo +"
+msgstr "开始、Xbox 菜单、任天堂 +"
+
+msgid "Left Stick, Sony L3, Xbox L/LS"
+msgstr "左摇杆、索尼 L3、Xbox L/LS"
+
+msgid "Right Stick, Sony R3, Xbox R/RS"
+msgstr "右摇杆、索尼 R3、Xbox R/RS"
+
+msgid "Left Shoulder, Sony L1, Xbox LB"
+msgstr "左肩键、索尼 L1、Xbox LB"
+
+msgid "Right Shoulder, Sony R1, Xbox RB"
+msgstr "右肩键、索尼 R1、Xbox RB"
+
+msgid "D-pad Up"
+msgstr "方向键上"
+
+msgid "D-pad Down"
+msgstr "方向键下"
+
+msgid "D-pad Left"
+msgstr "方向键左"
+
+msgid "D-pad Right"
+msgstr "方向键右"
+
+msgid "Xbox Share, PS5 Microphone, Nintendo Capture"
+msgstr "Xbox 分享、PS5 麦克风、任天堂截屏"
+
+msgid "Xbox Paddle 1"
+msgstr "Xbox 拨片 1"
+
+msgid "Xbox Paddle 2"
+msgstr "Xbox 拨片 2"
+
+msgid "Xbox Paddle 3"
+msgstr "Xbox 拨片 3"
+
+msgid "Xbox Paddle 4"
+msgstr "Xbox 拨片 4"
+
+msgid "PS4/5 Touchpad"
+msgstr "PS4/5 触控板"
+
+msgid "Joypad Button %d"
+msgstr "手柄按钮 %d"
+
+msgid "Pressure:"
+msgstr "压力："
+
+msgid "canceled"
+msgstr "取消"
+
+msgid "touched"
+msgstr "触摸"
+
+msgid "released"
+msgstr "放开"
+
+msgctxt "Indentation"
+msgid "Space"
+msgstr "空格"
+
+msgctxt "Indentation"
+msgid "Tabs"
+msgstr "制表符"

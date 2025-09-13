@@ -60,7 +60,6 @@ public partial class InputKey : Control
 	public override void _Input(InputEvent @event)
 	{
 		base._Input(@event);
-		Game Global=GetNode<Game>("/root/Global");
 		if (remapping&&(@event is InputEventKey||@event is InputEventMouseButton))//||@event is InputEventJoypadButton||@event is InputEventJoypadMotion))
 		{
 			if (@event is InputEventMouseButton inpute && inpute.DoubleClick)
@@ -73,7 +72,7 @@ public partial class InputKey : Control
 			}
 			else
 			{
-				GetNode<Button>("Edit").Text=@event.AsText().TrimSuffix(" (Physical)");
+				GetNode<Button>("Edit").Text = TranslationServer.Translate(@event.AsText().TrimSuffix(" (Physical)"), "Indentation");
 				ievent=@event;
 			}
 		}

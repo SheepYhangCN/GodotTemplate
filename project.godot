@@ -168,7 +168,7 @@ locale/translation_remaps={
 "res://Resources/Fonts/FusionPixel/FusionPixel8.otf": PackedStringArray("res://Resources/Fonts/FusionPixel/FusionPixel8_cn.otf:zh_CN", "res://Resources/Fonts/FusionPixel/FusionPixel8_tw.otf:zh_TW", "res://Resources/Fonts/FusionPixel/FusionPixel8_jp.otf:ja"),
 "res://Resources/Fonts/Unifont/unifont.otf": PackedStringArray("res://Resources/Fonts/Unifont/unifont_jp.otf:ja")
 }
-locale/translations=PackedStringArray("res://Locale/en.po", "res://Locale/ja.po", "res://Locale/zh_CN.po", "res://Locale/zh_TW.po")
+locale/translations=PackedStringArray("res://Resources/Locale/en.po", "res://Resources/Locale/ja.po", "res://Resources/Locale/zh_CN.po", "res://Resources/Locale/zh_TW.po", "res://Resources/Locale/GodotInternal/ja.po", "res://Resources/Locale/GodotInternal/zh_CN.po", "res://Resources/Locale/GodotInternal/zh_TW.po")
 
 [rendering]
 

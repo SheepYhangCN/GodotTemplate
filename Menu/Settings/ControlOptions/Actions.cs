@@ -19,7 +19,7 @@ public partial class Actions : Control
 			{
 				b+=1;
 				var button=scene.Instantiate<ActionButton>();
-				button.GetNode<Label>("MarginContainer/HBoxContainer/Name").Text="　"+events[a].AsText().TrimSuffix(" (Physical)");
+				button.GetNode<Label>("MarginContainer/HBoxContainer/Name").Text="　"+TranslationServer.Translate(events[a].AsText().TrimSuffix(" (Physical)"), "Indentation");
 				button.action=Game.actions.Keys.ToArray()[num];
 				button.eventa=events[a];
 				action_list.AddChild(button);

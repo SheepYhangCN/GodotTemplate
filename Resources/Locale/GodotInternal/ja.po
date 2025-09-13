@@ -1,0 +1,170 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.4.2\n"
+
+msgid "Left Mouse Button"
+msgstr "マウス左ボタン"
+
+msgid "Right Mouse Button"
+msgstr "マウス右ボタン"
+
+msgid "Middle Mouse Button"
+msgstr "マウス中央ボタン"
+
+msgid "Mouse Wheel Up"
+msgstr "マウスホイール上"
+
+msgid "Mouse Wheel Down"
+msgstr "マウスホイール下"
+
+msgid "Mouse Wheel Left"
+msgstr "マウスホイール左"
+
+msgid "Mouse Wheel Right"
+msgstr "マウスホイール右"
+
+msgid "Mouse Thumb Button 1"
+msgstr "マウスボタン1"
+
+msgid "Mouse Thumb Button 2"
+msgstr "マウスボタン2"
+
+msgid "Button"
+msgstr "ボタン"
+
+msgid "Double Click"
+msgstr "ダブルクリック"
+
+msgid "Mouse motion at position (%s) with velocity (%s)"
+msgstr "マウス移動 位置:(%s), 速度:(%s)"
+
+msgid "Left Stick X-Axis, Joystick 0 X-Axis"
+msgstr "左スティック X軸、ジョイスティック0 X軸"
+
+msgid "Left Stick Y-Axis, Joystick 0 Y-Axis"
+msgstr "左スティック Y軸、ジョイスティック0 Y軸"
+
+msgid "Right Stick X-Axis, Joystick 1 X-Axis"
+msgstr "右スティック X軸、ジョイスティック1 X軸"
+
+msgid "Right Stick Y-Axis, Joystick 1 Y-Axis"
+msgstr "右スティック Y軸、ジョイスティック1 Y軸"
+
+msgid "Joystick 2 X-Axis, Left Trigger, Sony L2, Xbox LT"
+msgstr "ジョイスティック2 X軸、左トリガー、Sony L2、Xbox LT"
+
+msgid "Joystick 2 Y-Axis, Right Trigger, Sony R2, Xbox RT"
+msgstr "ジョイスティック2 Y軸、右トリガー、Sony R2、Xbox RT"
+
+msgid "Joystick 3 X-Axis"
+msgstr "ジョイスティック3 X軸"
+
+msgid "Joystick 3 Y-Axis"
+msgstr "ジョイスティック3 Y軸"
+
+msgid "Joystick 4 X-Axis"
+msgstr "ジョイスティック4 X軸"
+
+msgid "Joystick 4 Y-Axis"
+msgstr "ジョイスティック4 Y軸"
+
+msgid "Unknown Joypad Axis"
+msgstr "不明なジョイパッド軸"
+
+msgid "Joypad Motion on Axis %d (%s) with Value %.2f"
+msgstr "ジョイパッドモーション 軸:%d (%s) 値:%.2f"
+
+msgid "Bottom Action, Sony Cross, Xbox A, Nintendo B"
+msgstr "下アクション、Sony ✕、Xbox A、Nintendo B"
+
+msgid "Right Action, Sony Circle, Xbox B, Nintendo A"
+msgstr "右アクション、Sony ○、Xbox B，Nintendo A"
+
+msgid "Left Action, Sony Square, Xbox X, Nintendo Y"
+msgstr "左アクション、Sony □、Xbox X、Nintendo Y"
+
+msgid "Top Action, Sony Triangle, Xbox Y, Nintendo X"
+msgstr "上アクション、Sony △、Xbox Y、Nintendo X"
+
+msgid "Back, Sony Select, Xbox Back, Nintendo -"
+msgstr "Back、Sony Select、Xbox Back、Nintendo -"
+
+msgid "Guide, Sony PS, Xbox Home"
+msgstr "Guide、Sony PS、Xbox Home"
+
+msgid "Start, Xbox Menu, Nintendo +"
+msgstr "Start、Xbox Menu、Nintendo +"
+
+msgid "Left Stick, Sony L3, Xbox L/LS"
+msgstr "左スティック、Sony L3、Xbox L/LS"
+
+msgid "Right Stick, Sony R3, Xbox R/RS"
+msgstr "右スティック、Sony R3、Xbox R/RS"
+
+msgid "Left Shoulder, Sony L1, Xbox LB"
+msgstr "左ショルダー、Sony L1、Xbox LB"
+
+msgid "Right Shoulder, Sony R1, Xbox RB"
+msgstr "右ショルダー、Sony R1、Xbox RB"
+
+msgid "D-pad Up"
+msgstr "D-pad 上"
+
+msgid "D-pad Down"
+msgstr "D-pad 下"
+
+msgid "D-pad Left"
+msgstr "D-pad 左"
+
+msgid "D-pad Right"
+msgstr "D-pad 右"
+
+msgid "Xbox Share, PS5 Microphone, Nintendo Capture"
+msgstr "Xbox シェア、PS5 マイク、Nintendo キャプチャ"
+
+msgid "Xbox Paddle 1"
+msgstr "Xbox パドル 1"
+
+msgid "Xbox Paddle 2"
+msgstr "Xbox パドル 2"
+
+msgid "Xbox Paddle 3"
+msgstr "Xbox パドル 3"
+
+msgid "Xbox Paddle 4"
+msgstr "Xbox パドル 4"
+
+msgid "PS4/5 Touchpad"
+msgstr "PS4/5 タッチパッド"
+
+msgid "Joypad Button %d"
+msgstr "ジョイパッドのボタン %d"
+
+msgid "Pressure:"
+msgstr "圧力:"
+
+msgid "canceled"
+msgstr "キャンセル"
+
+msgid "touched"
+msgstr "タッチ"
+
+msgid "released"
+msgstr "リリース"
+
+msgctxt "Indentation"
+msgid "Space"
+msgstr "スペース"
+
+msgctxt "Indentation"
+msgid "Tabs"
+msgstr "タブ"

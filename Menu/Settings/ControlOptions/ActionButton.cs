@@ -12,7 +12,6 @@ public partial class ActionButton : Control
 	public override void _Process(double delta)
 	{
 		var funcs=GetNode<Keybinds>("../../../../../../../../../../");
-		Game Global=GetNode<Game>("/root/Global");
 		if (GetNode<TextureButton>("MarginContainer/HBoxContainer/Edit").ButtonPressed)
 		{
 			var input_key=GetNode<InputKey>("../../../../../../../../../../InputKey");
