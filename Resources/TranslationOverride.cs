@@ -17,7 +17,7 @@ public partial class TranslationOverride : Translation
 
 	public override StringName _GetMessage(StringName srcMessage, StringName context)
 	{
-		var src = new_obj.GetMessage(srcMessage);
+		var src = new_obj.GetMessage(srcMessage, context);
 		return (src.Equals("") ? old_obj.GetMessage(srcMessage) : src);
 	}
 }
