@@ -1,6 +1,6 @@
 [gd_scene load_steps=12 format=3 uid="uid://c10ydjmb1rbse"]
 
-[ext_resource type="FontFile" uid="uid://bcqdtd77ogca5" path="res://Resources/Fonts/Unifont/unifont.otf" id="1_6uagy"]
+[ext_resource type="FontFile" uid="uid://bcqdtd77ogca5" path="res://Assets/Fonts/Unifont/unifont.otf" id="1_6uagy"]
 [ext_resource type="Script" uid="uid://bxkge0hxl573n" path="res://System/Message.cs" id="2_32ci2"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_t8puc"]

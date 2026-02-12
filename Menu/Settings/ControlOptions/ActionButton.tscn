@@ -2,8 +2,8 @@
 
 [ext_resource type="Theme" uid="uid://cygadlkjm161d" path="res://Theme/32_Button.tres" id="1_x2yn0"]
 [ext_resource type="Script" uid="uid://b7w2kbintm3m8" path="res://Menu/Settings/ControlOptions/ActionButton.cs" id="2_41rt8"]
-[ext_resource type="Texture2D" uid="uid://bv6qwas3og42d" path="res://Resources/Sprites/pen.png" id="2_sisq3"]
-[ext_resource type="Texture2D" uid="uid://qtms4q8sp3ly" path="res://Resources/Sprites/trash_can.png" id="3_3ct3u"]
+[ext_resource type="Texture2D" uid="uid://bv6qwas3og42d" path="res://Assets/Sprites/pen.png" id="2_sisq3"]
+[ext_resource type="Texture2D" uid="uid://qtms4q8sp3ly" path="res://Assets/Sprites/trash_can.png" id="3_3ct3u"]
 
 [node name="ActionButton" type="Control"]
 custom_minimum_size = Vector2(0, 40)

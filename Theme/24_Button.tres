@@ -1,6 +1,6 @@
 [gd_resource type="Theme" load_steps=2 format=3 uid="uid://i08fml3es67j"]
 
-[ext_resource type="FontFile" uid="uid://de06t05g1mevt" path="res://Resources/Fonts/FusionPixel/FusionPixel12.otf" id="1_snhy8"]
+[ext_resource type="FontFile" uid="uid://de06t05g1mevt" path="res://Assets/Fonts/FusionPixel/FusionPixel12.otf" id="1_snhy8"]
 
 [resource]
 default_font = ExtResource("1_snhy8")

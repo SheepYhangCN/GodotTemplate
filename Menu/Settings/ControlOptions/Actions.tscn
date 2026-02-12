@@ -1,9 +1,9 @@
 [gd_scene load_steps=6 format=3 uid="uid://dbawotsrp4g8g"]
 
 [ext_resource type="Theme" uid="uid://cygadlkjm161d" path="res://Theme/32_Button.tres" id="1_htf1e"]
-[ext_resource type="Texture2D" uid="uid://y7ursq0wdhls" path="res://Resources/Sprites/plus.png" id="2_304r6"]
+[ext_resource type="Texture2D" uid="uid://y7ursq0wdhls" path="res://Assets/Sprites/plus.png" id="2_304r6"]
 [ext_resource type="Script" uid="uid://cl4ty6nwtncta" path="res://Menu/Settings/ControlOptions/Actions.cs" id="2_c2520"]
-[ext_resource type="Texture2D" uid="uid://y1qtsvmheenl" path="res://Resources/Sprites/reset.png" id="3_8il3k"]
+[ext_resource type="Texture2D" uid="uid://y1qtsvmheenl" path="res://Assets/Sprites/reset.png" id="3_8il3k"]
 [ext_resource type="PackedScene" uid="uid://31s1qpyqadpt" path="res://Menu/Settings/ControlOptions/ActionButton.tscn" id="4_pu07b"]
 
 [node name="Actions" type="Control"]

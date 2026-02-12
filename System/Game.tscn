@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=3 uid="uid://c5pwh1txfuv3y"]
 
 [ext_resource type="Script" uid="uid://oq1e2pnx4hqp" path="res://System/Game.cs" id="1_lj1nl"]
-[ext_resource type="FontFile" uid="uid://bcqdtd77ogca5" path="res://Resources/Fonts/Unifont/unifont.otf" id="2_kmn4m"]
+[ext_resource type="FontFile" uid="uid://bcqdtd77ogca5" path="res://Assets/Fonts/Unifont/unifont.otf" id="2_kmn4m"]
 [ext_resource type="Script" uid="uid://coohngc75ukq2" path="res://System/DebugOverlay.cs" id="3_pv4w4"]
 [ext_resource type="Script" uid="uid://bxx88k7nyturl" path="res://System/DebugOverlay2.cs" id="4_eyiqo"]
 [ext_resource type="Theme" uid="uid://i08fml3es67j" path="res://Theme/24_Button.tres" id="5_60vmh"]

@@ -40,21 +40,21 @@ public partial class Game : Node2D
 	}
 	internal static readonly Dictionary<string, Texture2D> placeholders = new()
 	{
-		{"2", GD.Load<Texture2D>("res://Resources/Sprites/Placeholders/MissingNo2.png")},
-		{"8", GD.Load<Texture2D>("res://Resources/Sprites/Placeholders/MissingNo8.png")},
-		{"16", GD.Load<Texture2D>("res://Resources/Sprites/Placeholders/MissingNo16.png")},
-		{"32", GD.Load<Texture2D>("res://Resources/Sprites/Placeholders/MissingNo32.png")},
-		{"64", GD.Load<Texture2D>("res://Resources/Sprites/Placeholders/MissingNo64.png")},
-		{"double4", GD.Load<Texture2D>("res://Resources/Sprites/Placeholders/MissingNoDouble4.png")},
-		{"double16", GD.Load<Texture2D>("res://Resources/Sprites/Placeholders/MissingNoDouble16.png")},
-		{"double32", GD.Load<Texture2D>("res://Resources/Sprites/Placeholders/MissingNoDouble32.png")},
-		{"double64", GD.Load<Texture2D>("res://Resources/Sprites/Placeholders/MissingNoDouble64.png")},
-		{"128", GD.Load<Texture2D>("res://Resources/Sprites/Placeholders/MissingNoDouble128.png")},
-		{"fourfold4", GD.Load<Texture2D>("res://Resources/Sprites/Placeholders/MissingNoFourfold8.png")},
-		{"fourfold32", GD.Load<Texture2D>("res://Resources/Sprites/Placeholders/MissingNoFourfold32.png")},
-		{"fourfold64", GD.Load<Texture2D>("res://Resources/Sprites/Placeholders/MissingNoFourfold64.png")},
-		{"fourfold128", GD.Load<Texture2D>("res://Resources/Sprites/Placeholders/MissingNoFourfold128.png")},
-		{"256", GD.Load<Texture2D>("res://Resources/Sprites/Placeholders/MissingNoFourfold256.png")}
+		{"2", GD.Load<Texture2D>("res://Assets/Sprites/Placeholders/MissingNo2.png")},
+		{"8", GD.Load<Texture2D>("res://Assets/Sprites/Placeholders/MissingNo8.png")},
+		{"16", GD.Load<Texture2D>("res://Assets/Sprites/Placeholders/MissingNo16.png")},
+		{"32", GD.Load<Texture2D>("res://Assets/Sprites/Placeholders/MissingNo32.png")},
+		{"64", GD.Load<Texture2D>("res://Assets/Sprites/Placeholders/MissingNo64.png")},
+		{"double4", GD.Load<Texture2D>("res://Assets/Sprites/Placeholders/MissingNoDouble4.png")},
+		{"double16", GD.Load<Texture2D>("res://Assets/Sprites/Placeholders/MissingNoDouble16.png")},
+		{"double32", GD.Load<Texture2D>("res://Assets/Sprites/Placeholders/MissingNoDouble32.png")},
+		{"double64", GD.Load<Texture2D>("res://Assets/Sprites/Placeholders/MissingNoDouble64.png")},
+		{"128", GD.Load<Texture2D>("res://Assets/Sprites/Placeholders/MissingNoDouble128.png")},
+		{"fourfold4", GD.Load<Texture2D>("res://Assets/Sprites/Placeholders/MissingNoFourfold8.png")},
+		{"fourfold32", GD.Load<Texture2D>("res://Assets/Sprites/Placeholders/MissingNoFourfold32.png")},
+		{"fourfold64", GD.Load<Texture2D>("res://Assets/Sprites/Placeholders/MissingNoFourfold64.png")},
+		{"fourfold128", GD.Load<Texture2D>("res://Assets/Sprites/Placeholders/MissingNoFourfold128.png")},
+		{"256", GD.Load<Texture2D>("res://Assets/Sprites/Placeholders/MissingNoFourfold256.png")}
 	};
 	internal static readonly Dictionary<string,string> actions = new()//各个按键的名称
 	{

@@ -168,11 +168,11 @@ fullscreen={
 [internationalization]
 
 locale/translation_remaps={
-"res://Resources/Fonts/FusionPixel/FusionPixel12.otf": PackedStringArray("res://Resources/Fonts/FusionPixel/FusionPixel12_cn.otf:zh_CN", "res://Resources/Fonts/FusionPixel/FusionPixel12_tw.otf:zh_TW", "res://Resources/Fonts/FusionPixel/FusionPixel12_jp.otf:ja"),
-"res://Resources/Fonts/FusionPixel/FusionPixel8.otf": PackedStringArray("res://Resources/Fonts/FusionPixel/FusionPixel8_cn.otf:zh_CN", "res://Resources/Fonts/FusionPixel/FusionPixel8_tw.otf:zh_TW", "res://Resources/Fonts/FusionPixel/FusionPixel8_jp.otf:ja"),
-"res://Resources/Fonts/Unifont/unifont.otf": PackedStringArray("res://Resources/Fonts/Unifont/unifont_jp.otf:ja")
+"res://Assets/Fonts/FusionPixel/FusionPixel12.otf": PackedStringArray("res://Assets/Fonts/FusionPixel/FusionPixel12_cn.otf:zh_CN", "res://Assets/Fonts/FusionPixel/FusionPixel12_tw.otf:zh_TW", "res://Assets/Fonts/FusionPixel/FusionPixel12_jp.otf:ja"),
+"res://Assets/Fonts/FusionPixel/FusionPixel8.otf": PackedStringArray("res://Assets/Fonts/FusionPixel/FusionPixel8_cn.otf:zh_CN", "res://Assets/Fonts/FusionPixel/FusionPixel8_tw.otf:zh_TW", "res://Assets/Fonts/FusionPixel/FusionPixel8_jp.otf:ja"),
+"res://Assets/Fonts/Unifont/unifont.otf": PackedStringArray("res://Assets/Fonts/Unifont/unifont_jp.otf:ja")
 }
-locale/translations=PackedStringArray("res://Resources/Locale/en.po", "res://Resources/Locale/ja.po", "res://Resources/Locale/zh_CN.po", "res://Resources/Locale/zh_TW.po", "res://Resources/Locale/GodotInternal/ja.po", "res://Resources/Locale/GodotInternal/zh_CN.po", "res://Resources/Locale/GodotInternal/zh_TW.po")
+locale/translations=PackedStringArray("res://Assets/Locale/en.po", "res://Assets/Locale/ja.po", "res://Assets/Locale/zh_CN.po", "res://Assets/Locale/zh_TW.po", "res://Assets/Locale/GodotInternal/ja.po", "res://Assets/Locale/GodotInternal/zh_CN.po", "res://Assets/Locale/GodotInternal/zh_TW.po")
 
 [physics]
 
