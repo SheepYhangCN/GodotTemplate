@@ -73,6 +73,7 @@ public partial class Game : Node2D
 	[Export] internal LANG_AUDIO lang_audio=LANG_AUDIO.ENGLISH;
 	internal Color fader_color;//fader颜色 RGBA
 	internal CONTROL_MODE control_mode;//控制模式
+	internal bool input_remapping = false;//正在设置按键
 
 	internal void GameInit(bool first_time=false)
 	{
@@ -372,8 +373,9 @@ public partial class Game : Node2D
 										{
 											fff.Close();
 											fff=FileAccess.Open(csvm,FileAccess.ModeFlags.Read);
-											var translation_old=TranslationServer.GetTranslationObject(lang);
-											var translation=new Translation();
+											var old_trans = TranslationServer.FindTranslations(lang, true);
+											var translation_old = old_trans.Count == 0 ? null : old_trans[0];
+											var translation = new Translation();
 											translation.Locale=lang;
 											foreach (var b in lines)
 											{
@@ -412,7 +414,8 @@ public partial class Game : Node2D
 											break;
 										}
 									}
-									var translation_old=TranslationServer.GetTranslationObject(lang);
+									var old_trans = TranslationServer.FindTranslations(lang, true);
+									var translation_old = old_trans.Count == 0 ? null : old_trans[0];
 									var translation=new Translation();
 									translation.Locale=lang;
 									foreach (var line in lines)
@@ -636,7 +639,7 @@ public partial class Game : Node2D
 		//fader颜色
 		GetNode<ColorRect>("CanvasLayer/Fader").Color=fader_color;
 		//截图
-		if (Input.IsActionJustPressed("screenshot"))
+		if ((!input_remapping) && Input.IsActionJustPressed("screenshot"))
 		{
 			var datetime=Time.GetDatetimeStringFromSystem(false,true).Replace(" ","_").Replace(":","-");
 			screenshot_target_dir="user://GodotTemplate/Screenshots/"+datetime+".png";
@@ -655,7 +658,7 @@ public partial class Game : Node2D
 			RenderingServer.FramePostDraw+=SaveScreenshot;
 		}
 		//全屏
-		if (Input.IsActionJustPressed("fullscreen") && !Engine.IsEmbeddedInEditor())
+		if ((!input_remapping) && Input.IsActionJustPressed("fullscreen") && !Engine.IsEmbeddedInEditor())
 		{
 			if (DisplayServer.WindowGetMode()==DisplayServer.WindowMode.Windowed)
 			{
@@ -748,7 +751,7 @@ public partial class Game : Node2D
 		if (TranslationServer.Translate(message) != message)
 		{
 			t+="(en)";
-			message=TranslationServer.GetTranslationObject("en").GetMessage(message);
+			message=TranslationServer.FindTranslations("en", true)[0].GetMessage(message);
 		}
 		if (close_button)
 		{
@@ -762,18 +765,18 @@ public partial class Game : Node2D
 		{
 			if (custom_button_text == null)
 			{
-				GD.PushError("Error: Null custom_method_name with CustomButton enabled");
+				GD.PushError("Error: Null custom_button_text with CustomButton enabled");
 			}
 			else if (custom_button_text == "")
 			{
-				GD.PushError("Error: Empty custom_method_name with CustomButton enabled");
+				GD.PushError("Error: Empty custom_button_text with CustomButton enabled");
 			}
 			else
 			{
 				var bt=custom_button_text;
 				if (bt.StartsWith("loc"))
 				{
-					bt="(en)"+TranslationServer.GetTranslationObject("en").GetMessage(bt);
+					bt="(en)"+TranslationServer.FindTranslations("en", true)[0].GetMessage(bt);
 				}
 				t+=",CustomButton{\""+bt+"\",\""+custom_method_name+"\"}";
 			}
@@ -870,6 +873,15 @@ public partial class Game : Node2D
 		{
 			return OS.GetExecutablePath().GetBaseDir()+"/"+str;
 		}
+	}
+	//语言是否是中日韩
+	internal static bool IsLocaleCJK(string loc = null)
+	{
+		if (loc == null)
+		{
+			loc = TranslationServer.GetLocale();
+		}
+		return (loc.StartsWith("zh") || loc.StartsWith("ja") || loc.StartsWith("ko"));
 	}
 	//游戏退出
 	public override void _Notification(int what)

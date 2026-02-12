@@ -5,7 +5,6 @@ using System.Linq;
 public partial class InputKey : Control
 {
 	internal string input_action;
-	internal bool remapping=false;
 	internal bool edit=false;
 	internal InputEvent edit_event;
 	InputEvent ievent;
@@ -16,7 +15,8 @@ public partial class InputKey : Control
 
 	public override void _Process(double delta)
 	{
-		if (!remapping)
+		var Global=GetNode<Game>("/root/Global");
+		if (!Global.input_remapping)
 		{
 			if (alarm>0)
 			{
@@ -26,7 +26,7 @@ public partial class InputKey : Control
 			{
 				GetNode<Button>("Edit").Text="locWaitingForInput";
 				Visible=false;
-				remapping=false;
+				Global.input_remapping=false;
 				edit=false;
 				alarm=0;
 			}
@@ -40,11 +40,11 @@ public partial class InputKey : Control
 				Keybinds.SaveKeybindsToTemp();
 				GetNode<Keybinds>("../").CreateActionListFromTemp();
 				Visible=false;
-				remapping=false;
+				Global.input_remapping=false;
 				edit=false;
 				alarm=0;
 			}
-			if (GetNode<Button>("Edit").ButtonPressed && !remapping && alarm==0)
+			if (GetNode<Button>("Edit").ButtonPressed && !Global.input_remapping && alarm==0)
 			{
 				GetNode<Button>("Edit").Text="locWaitingForInput";
 				alarm=0.2;
@@ -52,7 +52,7 @@ public partial class InputKey : Control
 			if (alarm<0)
 			{
 				alarm=0;
-				remapping=true;
+				Global.input_remapping=true;
 			}
 		}
 	}
@@ -60,7 +60,8 @@ public partial class InputKey : Control
 	public override void _Input(InputEvent @event)
 	{
 		base._Input(@event);
-		if (remapping&&(@event is InputEventKey||@event is InputEventMouseButton))//||@event is InputEventJoypadButton||@event is InputEventJoypadMotion))
+		var Global=GetNode<Game>("/root/Global");
+		if (Global.input_remapping&&(@event is InputEventKey||@event is InputEventMouseButton))//||@event is InputEventJoypadButton||@event is InputEventJoypadMotion))
 		{
 			if (@event is InputEventMouseButton inpute && inpute.DoubleClick)
 			{
@@ -68,11 +69,11 @@ public partial class InputKey : Control
 			}
 			if (@event.IsReleased())
 			{
-				remapping=false;
+				Global.input_remapping=false;
 			}
 			else
 			{
-				GetNode<Button>("Edit").Text = TranslationServer.Translate(@event.AsText().TrimSuffix(" (Physical)"), "Indentation");
+				GetNode<Button>("Edit").Text = TranslationServer.Translate(@event.AsText().TrimSuffix(" - Physical"), "Indentation");
 				ievent=@event;
 			}
 		}

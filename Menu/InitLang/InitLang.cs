@@ -14,7 +14,7 @@ public partial class InitLang : Control
 		node.ItemCount=locales.Length;
 		foreach (var current in locales)
 		{
-			node.Set("popup/item_"+Array.IndexOf(locales,current).ToString()+"/text",TranslationServer.GetTranslationObject(current).GetMessage("locLanguageName"));
+			node.Set("popup/item_"+Array.IndexOf(locales,current).ToString()+"/text", TranslationServer.FindTranslations(current, true)[0].GetMessage("locLanguageName"));
 		}
 		node.Selected=Array.IndexOf(locales.ToArray(),locales.Contains(TranslationServer.GetLocale()) ? TranslationServer.GetLocale() : TranslationServer.GetLocale().Left(2));
 		node = GetNode<OptionButton>("LanguageA");

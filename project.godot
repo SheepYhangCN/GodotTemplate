@@ -8,6 +8,10 @@
 
 config_version=5
 
+[animation]
+
+compatibility/default_parent_skeleton_in_mesh_instance_3d=true
+
 [application]
 
 config/name="GodotTemplate"
@@ -17,7 +21,7 @@ run/main_scene="res://System/Empty.tscn"
 config/use_custom_user_dir=true
 config/custom_user_dir_name="GameAuthor/GodotTemplate"
 config/quit_on_go_back=false
-config/features=PackedStringArray("4.5", "C#", "Mobile")
+config/features=PackedStringArray("4.6", "C#", "Mobile")
 config/icon="res://icon.svg"
 
 [autoload]
@@ -169,6 +173,10 @@ locale/translation_remaps={
 "res://Resources/Fonts/Unifont/unifont.otf": PackedStringArray("res://Resources/Fonts/Unifont/unifont_jp.otf:ja")
 }
 locale/translations=PackedStringArray("res://Resources/Locale/en.po", "res://Resources/Locale/ja.po", "res://Resources/Locale/zh_CN.po", "res://Resources/Locale/zh_TW.po", "res://Resources/Locale/GodotInternal/ja.po", "res://Resources/Locale/GodotInternal/zh_CN.po", "res://Resources/Locale/GodotInternal/zh_TW.po")
+
+[physics]
+
+3d/physics_engine="Jolt Physics"
 
 [rendering]
 

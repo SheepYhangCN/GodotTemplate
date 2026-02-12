@@ -69,6 +69,7 @@ public partial class DebugOverlay : Label
 		Text+="\nWindow Focused: "+DisplayServer.WindowIsFocused().ToString();
 		Text+="\nGlobal.fader_color = "+Global.fader_color.ToString();
 		Text+="\nGlobal.control_mode = "+((int)Global.control_mode).ToString()+"("+Global.control_mode.ToString()+")";
+		Text+="\nGlobal.input_remapping = "+Global.input_remapping.ToString();
 		if (Global.mod)
 		{
 			Text+="\nMods Loaded: {\"";
