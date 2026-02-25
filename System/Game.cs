@@ -2,6 +2,7 @@ using Godot;
 using Godot.Bridge;
 using Godot.Collections;
 using GodotTask;
+using GodotTask.GlobalCancellation;
 using System;
 using System.Linq;
 using System.Reflection;
@@ -892,6 +893,8 @@ public partial class Game : Node2D
 			{
 				GD.Print($"[{Time.GetDatetimeStringFromSystem(false,true)}] Game shutting down.");
 			}
+			//停止所有GDTask
+			GDTaskGlobalCancellationManager.Cancel();
 		}
 	}
 }

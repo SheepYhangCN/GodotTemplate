@@ -6,7 +6,8 @@
 		<PublishAOT>true</PublishAOT>
 	</PropertyGroup>
 	<ItemGroup>
-		<PackageReference Include="GDTask" Version="1.7.0" />
+		<PackageReference Include="GDTask" Version="2.0.0" />
+		<PackageReference Include="GDTask.GlobalCancellation" Version="1.1.0" />
 		<PackageReference Include="SheepYhangCN.RandomExtension" Version="1.0.4" />
 		<TrimmerRootAssembly Include="GodotSharp" />
 		<TrimmerRootAssembly Include="$(TargetName)" />
