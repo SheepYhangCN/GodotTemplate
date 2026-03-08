@@ -6,6 +6,7 @@ using GodotTask.GlobalCancellation;
 using System;
 using System.Linq;
 using System.Reflection;
+using System.Runtime.Loader;
 
 public partial class Game : Node2D
 {
@@ -512,7 +513,8 @@ public partial class Game : Node2D
 							Assembly a = null;
 							try
 							{
-								a = Assembly.LoadFrom(dll);
+								//a = Assembly.LoadFrom(dll);
+								a = AssemblyLoadContext.GetLoadContext(Assembly.GetExecutingAssembly()).LoadFromAssemblyPath(dll);
 								ScriptManagerBridge.LookupScriptsInAssembly(a);
 							}
 							catch (Exception e)
