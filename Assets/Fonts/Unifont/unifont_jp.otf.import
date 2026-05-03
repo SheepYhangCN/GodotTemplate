@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://cqixct3msq6sk"
-path="res://.godot/imported/unifont_jp.otf-563024b8cfba571e5209616ccf970647.fontdata"
+path="res://.godot/imported/unifont_jp.otf-1fb25370b4993be0bfd4e8dde5d3cc11.fontdata"
 
 [deps]
 
 source_file="res://Assets/Fonts/Unifont/unifont_jp.otf"
-dest_files=["res://.godot/imported/unifont_jp.otf-563024b8cfba571e5209616ccf970647.fontdata"]
+dest_files=["res://.godot/imported/unifont_jp.otf-1fb25370b4993be0bfd4e8dde5d3cc11.fontdata"]
 
 [params]
 
@@ -21,6 +21,7 @@ msdf_pixel_range=8
 msdf_size=48
 allow_system_fallback=true
 force_autohinter=false
+modulate_color_glyphs=false
 hinting=1
 subpixel_positioning=1
 keep_rounding_remainders=true

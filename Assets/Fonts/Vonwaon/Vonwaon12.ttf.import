@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://bfo3bee76ok36"
-path="res://.godot/imported/Vonwaon12.ttf-74cddfb58c4732a67e2e1f19cc6c6775.fontdata"
+path="res://.godot/imported/Vonwaon12.ttf-30219b2d31d1c36cff32b3084c71b069.fontdata"
 
 [deps]
 
 source_file="res://Assets/Fonts/Vonwaon/Vonwaon12.ttf"
-dest_files=["res://.godot/imported/Vonwaon12.ttf-74cddfb58c4732a67e2e1f19cc6c6775.fontdata"]
+dest_files=["res://.godot/imported/Vonwaon12.ttf-30219b2d31d1c36cff32b3084c71b069.fontdata"]
 
 [params]
 
@@ -21,6 +21,7 @@ msdf_pixel_range=8
 msdf_size=48
 allow_system_fallback=true
 force_autohinter=false
+modulate_color_glyphs=false
 hinting=1
 subpixel_positioning=1
 keep_rounding_remainders=true

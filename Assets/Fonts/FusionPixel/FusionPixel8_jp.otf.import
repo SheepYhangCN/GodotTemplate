@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://c8rfujmjwmpy7"
-path="res://.godot/imported/FusionPixel8_jp.otf-7d4a9fa22fb16162bc59fff427a91d32.fontdata"
+path="res://.godot/imported/FusionPixel8_jp.otf-a61d6dbd9a8494c9f0b78b98971e2295.fontdata"
 
 [deps]
 
 source_file="res://Assets/Fonts/FusionPixel/FusionPixel8_jp.otf"
-dest_files=["res://.godot/imported/FusionPixel8_jp.otf-7d4a9fa22fb16162bc59fff427a91d32.fontdata"]
+dest_files=["res://.godot/imported/FusionPixel8_jp.otf-a61d6dbd9a8494c9f0b78b98971e2295.fontdata"]
 
 [params]
 
@@ -21,6 +21,7 @@ msdf_pixel_range=8
 msdf_size=48
 allow_system_fallback=true
 force_autohinter=false
+modulate_color_glyphs=false
 hinting=1
 subpixel_positioning=1
 keep_rounding_remainders=true

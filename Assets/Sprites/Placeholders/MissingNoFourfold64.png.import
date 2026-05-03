@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://jbi4172nfjnm"
-path="res://.godot/imported/MissingNoFourfold64.png-81347f564ecf6b242158ad2fafd7638e.ctex"
+path="res://.godot/imported/MissingNoFourfold64.png-c367ef30f736ea3c93db2c920dfabd4d.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,13 +11,15 @@ metadata={
 [deps]
 
 source_file="res://Assets/Sprites/Placeholders/MissingNoFourfold64.png"
-dest_files=["res://.godot/imported/MissingNoFourfold64.png-81347f564ecf6b242158ad2fafd7638e.ctex"]
+dest_files=["res://.godot/imported/MissingNoFourfold64.png-c367ef30f736ea3c93db2c920dfabd4d.ctex"]
 
 [params]
 
 compress/mode=0
 compress/high_quality=false
 compress/lossy_quality=0.7
+compress/uastc_level=0
+compress/rdo_quality_loss=0.0
 compress/hdr_compression=1
 compress/normal_map=0
 compress/channel_pack=0
@@ -25,6 +27,10 @@ mipmaps/generate=false
 mipmaps/limit=-1
 roughness/mode=0
 roughness/src_normal=""
+process/channel_remap/red=0
+process/channel_remap/green=1
+process/channel_remap/blue=2
+process/channel_remap/alpha=3
 process/fix_alpha_border=true
 process/premult_alpha=false
 process/normal_map_invert_y=false
