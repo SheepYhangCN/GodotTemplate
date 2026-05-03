@@ -896,7 +896,7 @@ public partial class Game : Node2D
 				GD.Print($"[{Time.GetDatetimeStringFromSystem(false,true)}] Game shutting down.");
 			}
 			//停止所有GDTask
-			GDTaskGlobalCancellationManager.Cancel();
+			GDTaskGlobalCancellation.Cancel();
 		}
 	}
 }
