@@ -139,6 +139,26 @@ msgstr "「{Directory}」が開いています"
 msgid "locMessageFolderFailed"
 msgstr "「{Directory}」オープンに失敗しました、エラーコード："
 
+msgid "locCrashed"
+msgstr "ゲームがクラッシュしました"
+
+msgid "locCrashInfo"
+msgstr "ゲームが予期せぬ状況によりクラッシュしました\n"
+"以下の情報を添えて、ゲーム開発者までご連絡ください\n"
+"添付ファイルとして、ログとゲムファイを追加することをお勧めします。"
+
+msgid "locClickToCopy"
+msgstr "クリックしてコピー"
+
+msgid "locSavesDir"
+msgstr "ファイルディレクトリ"
+
+msgid "locLogsDir"
+msgstr "ログディレクトリ"
+
+msgid "locGithubRepo"
+msgstr "Github リポジトリ"
+
 msgid "locSettings"
 msgstr "ゲームの設定"
 

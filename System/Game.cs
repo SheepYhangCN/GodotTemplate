@@ -76,6 +76,7 @@ public partial class Game : Node2D
 	internal Color fader_color;//fader颜色 RGBA
 	internal CONTROL_MODE control_mode;//控制模式
 	internal bool input_remapping = false;//正在设置按键
+	internal static string crash_info = "";// crash handler 崩溃讯息
 
 	internal void GameInit(bool first_time=false)
 	{
@@ -864,6 +865,12 @@ public partial class Game : Node2D
 			result=false;
 		}
 		return result;
+	}
+	// Crash Handler
+	internal void Crashed(string crashinfo)
+	{
+		crash_info = crashinfo;
+		GetTree().ChangeSceneToFile("res://System/CrashHandler.tscn");
 	}
 	//文件目录
 	internal static string GetGameDirPath(string str = "")

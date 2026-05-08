@@ -139,6 +139,26 @@ msgstr "Opened \"{Directory}\""
 msgid "locMessageFolderFailed"
 msgstr "Open \"{Directory}\" failed, Error code: "
 
+msgid "locCrashed"
+msgstr "Game Crashed"
+
+msgid "locCrashInfo"
+msgstr "Game crashed due to unexpected situation\n"
+"Please contact game developer with information below\n"
+"Additional add log and save files as attachments is recommended."
+
+msgid "locClickToCopy"
+msgstr "Click to copy"
+
+msgid "locSavesDir"
+msgstr "Saves' Directory"
+
+msgid "locLogsDir"
+msgstr "Logs' Directory"
+
+msgid "locGithubRepo"
+msgstr "Github Repository"
+
 msgid "locSettings"
 msgstr "Settings"
 

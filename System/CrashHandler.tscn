@@ -1,0 +1,114 @@
+[gd_scene format=3 uid="uid://cp0sa744gmwy3"]
+
+[ext_resource type="Theme" uid="uid://cygadlkjm161d" path="res://Theme/32_Button.tres" id="1_2trp0"]
+[ext_resource type="Script" uid="uid://56gbu4tuj37v" path="res://System/CrashHandler.cs" id="2_pk7xg"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pk7xg"]
+bg_color = Color(0.08, 0.08, 0.08, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_pk7xg"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wiawe"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8od7f"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_u4pxv"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2lhla"]
+
+[node name="CrashHandler" type="Control" unique_id=1777554968]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_2trp0")
+script = ExtResource("2_pk7xg")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=830154153]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 128
+theme_override_constants/margin_top = 128
+theme_override_constants/margin_right = 128
+theme_override_constants/margin_bottom = 128
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=1561706966]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer" unique_id=793493192]
+layout_mode = 2
+theme_override_font_sizes/font_size = 64
+text = "locCrashed"
+
+[node name="Label2" type="Label" parent="MarginContainer/VBoxContainer" unique_id=840742334]
+layout_mode = 2
+text = "locCrashInfo"
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer" unique_id=1623315839]
+layout_mode = 2
+size_flags_vertical = 3
+tooltip_text = "locClickToCopy"
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="ScrollContainer" type="ScrollContainer" parent="MarginContainer/VBoxContainer/MarginContainer" unique_id=324844369]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_pk7xg")
+
+[node name="CrashInfo" type="Label" parent="MarginContainer/VBoxContainer/MarginContainer/ScrollContainer" unique_id=2049000648]
+layout_mode = 2
+
+[node name="Copy" type="Button" parent="MarginContainer/VBoxContainer/MarginContainer" unique_id=1575933624]
+layout_mode = 2
+mouse_filter = 1
+theme_override_styles/normal = SubResource("StyleBoxEmpty_pk7xg")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_wiawe")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_8od7f")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_u4pxv")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_2lhla")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=2087544437]
+layout_mode = 2
+
+[node name="Saves" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=962817886]
+layout_mode = 2
+text = "locSavesDir"
+
+[node name="Space" type="Control" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=1242866985]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Logs" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=1063901366]
+layout_mode = 2
+text = "locLogsDir"
+
+[node name="Space2" type="Control" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=738411605]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Github" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=390902208]
+layout_mode = 2
+text = "locGithubRepo"
+
+[node name="Space3" type="Control" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=534498776]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Quit" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=53506111]
+layout_mode = 2
+text = "locQuit"
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/MarginContainer/Copy" to="." method="_on_copy_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer/Saves" to="." method="_on_saves_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer/Logs" to="." method="_on_logs_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer/Github" to="." method="_on_github_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer/Quit" to="." method="_on_quit_pressed"]

@@ -138,6 +138,26 @@ msgstr "已開啟「{Directory}」"
 msgid "locMessageFolderFailed"
 msgstr "開啟「{Directory}」失敗，錯誤代號："
 
+msgid "locCrashed"
+msgstr "遊戲發生了崩潰"
+
+msgid "locCrashInfo"
+msgstr "遊戲由於意料之外的情況發生了崩潰\n"
+"請攜帶一下訊息聯繫遊戲開發者\n"
+"建議添加日誌與存儲檔案作為附件。"
+
+msgid "locClickToCopy"
+msgstr "點擊拷貝"
+
+msgid "locSavesDir"
+msgstr "存檔資料夾"
+
+msgid "locLogsDir"
+msgstr "日誌資料夾"
+
+msgid "locGithubRepo"
+msgstr "Github 倉庫"
+
 msgid "locSettings"
 msgstr "遊戲設定"
 

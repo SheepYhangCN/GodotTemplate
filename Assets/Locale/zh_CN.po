@@ -138,6 +138,26 @@ msgstr "已打开“{Directory}”"
 msgid "locMessageFolderFailed"
 msgstr "打开“{Directory}”失败，错误码："
 
+msgid "locCrashed"
+msgstr "游戏发生了崩溃"
+
+msgid "locCrashInfo"
+msgstr "游戏由于意料之外的情况发生了崩溃\n"
+"请携带以下讯息联系游戏开发者\n"
+"建议添加日志与存档文件作为附件。"
+
+msgid "locClickToCopy"
+msgstr "点击复制"
+
+msgid "locSavesDir"
+msgstr "存档目录"
+
+msgid "locLogsDir"
+msgstr "日志目录"
+
+msgid "locGithubRepo"
+msgstr "Github 仓库"
+
 msgid "locSettings"
 msgstr "游戏设置"
 

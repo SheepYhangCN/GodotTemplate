@@ -46,6 +46,13 @@ locMessageScreenshotFailed,"Save to ""{ScreenshotDirectory}"" failed, Error code
 locMessageFolder,"Opened ""{Directory}""",已打开“{Directory}”,已開啟「{Directory}」,「{Directory}」が開いています
 locMessageFolderFailed,"Open ""{Directory}"" failed, Error code: ",打开“{Directory}”失败，错误码：,開啟「{Directory}」失敗，錯誤代號：,「{Directory}」オープンに失敗しました、エラーコード：
 
+locCrashed,Game Crashed,游戏发生了崩溃,遊戲發生了崩潰,ゲームがクラッシュしました
+locCrashInfo,"Game crashed due to unexpected situation\nPlease contact game developer with information below\nAdditional add log and save files as attachments is recommended.",游戏由于意料之外的情况发生了崩溃\n请携带以下讯息联系游戏开发者\n建议添加日志与存档文件作为附件。,遊戲由於意料之外的情況發生了崩潰\n請攜帶一下訊息聯繫遊戲開發者\n建議添加日誌與存儲檔案作為附件。,ゲームが予期せぬ状況によりクラッシュしました\n以下の情報を添えて、ゲーム開発者までご連絡ください\n添付ファイルとして、ログとゲムファイを追加することをお勧めします。
+locClickToCopy,Click to copy,点击复制,點擊拷貝,クリックしてコピー
+locSavesDir,Saves' Directory,存档目录,存檔資料夾,ファイルディレクトリ
+locLogsDir,Logs' Directory,日志目录,日誌資料夾,ログディレクトリ
+locGithubRepo,Github Repository,Github 仓库,Github 倉庫,Github リポジトリ
+
 locSettings,Settings,游戏设置,遊戲設定,ゲームの設定
 locQuit,Quit,退出游戏,退出遊戲,ゲームを終了
 
