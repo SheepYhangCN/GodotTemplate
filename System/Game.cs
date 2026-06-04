@@ -637,8 +637,7 @@ public partial class Game : Node2D
 		//Game.tscn防进入
 		if (tree.CurrentScene!=null && tree.CurrentScene.SceneFilePath=="res://System/Game.tscn")
 		{
-			GameInit();
-			CreatePopUpMessage("locErrorGameScene",Message.TYPE.ERROR);
+			Crashed(TranslationServer.Translate("locErrorGameScene"));
 		}
 		//fader颜色
 		GetNode<ColorRect>("CanvasLayer/Fader").Color=fader_color;

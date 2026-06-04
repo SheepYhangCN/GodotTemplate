@@ -8,8 +8,7 @@ public partial class DebugMenu : Control
 		Game Global=GetNode<Game>("/root/Global");
 		if (!Global.debug)
 		{
-			Global.GameInit();
-			Global.CreatePopUpMessage("Debug Mode only\nAdd \"-debug\" launch option",Message.TYPE.ERROR);
+			Global.Crashed("Debug Menu is debug mode only\nAdd \"-debug\" launch option");
 		}
 		GetNode<CheckButton>("ScrollContainer/VBoxContainer/HBoxContainer2/DebugOverlay").ButtonPressed = Global.debug_overlay;
 		GetNode<CheckButton>("ScrollContainer/VBoxContainer/HBoxContainer2/DebugOverlayRight").ButtonPressed = Global.debug_overlay_r;
