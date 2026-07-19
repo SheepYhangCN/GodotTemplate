@@ -6,7 +6,7 @@ public partial class Typer : RichTextLabel
 {
 	[Export] internal double Speed = 8d;
 	[Export] internal bool Sound = true;
-	[Export] internal AudioStream SoundAudio = GD.Load<AudioStream>("res://Assets/Audios/TextType.wav");
+	[Export] internal AudioStream SoundAudio = null;//GD.Load<AudioStream>("res://Assets/Audios/TextType.wav");
 	double timer = 0f;
 	AudioStreamPlayer player;
 	[Signal] public delegate void finished_typingEventHandler();
