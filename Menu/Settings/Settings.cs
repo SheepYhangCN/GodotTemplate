@@ -16,8 +16,8 @@ public partial class Settings : Control
 			GetNode<Button>("Control/VBoxContainer/ScreenshotsFolder/ScreenshotsFolder").Visible = true;
 			GetNode<HBoxContainer>("Control/VBoxContainer/DisplayMode").Visible = true;
 			GetNode<HBoxContainer>("Control/VBoxContainer/Resolution").Visible = true;
-			GetNode<HBoxContainer>("Control/Buttons/ModsFolder").Visible = GetNode<Game>("/root/Global").mod;
-			GetNode<HBoxContainer>("Control/Buttons/LocsFolder").Visible = GetNode<Game>("/root/Global").locale;
+			GetNode<HBoxContainer>("Control/Buttons/ModsFolder").Visible = Singleton.Game.mod;
+			GetNode<HBoxContainer>("Control/Buttons/LocsFolder").Visible = Singleton.Game.locale;
 		}
 		else
 		{/*
@@ -52,7 +52,7 @@ public partial class Settings : Control
 			GetNode<OptionButton>("Control/VBoxContainer/Language/Language1").TooltipText = "locOnlyMainMenu";
 			GetNode<HBoxContainer>("Control/VBoxContainer/Language").TooltipText = "locOnlyMainMenu";
 		}
-		GetNode<HBoxContainer>("Control/ButtonsR/DebugMenu").Visible=GetNode<Game>("/root/Global").debug;
+		GetNode<HBoxContainer>("Control/ButtonsR/DebugMenu").Visible=Singleton.Game.debug;
 		ContainerUpdate();
 		foreach (var node in GetNode<VBoxContainer>("Control/VBoxContainer").GetChildren())
 		{
@@ -77,15 +77,14 @@ public partial class Settings : Control
 	}
 	public void _on_screenshots_folder_pressed()
 	{
-		Game Global=GetNode<Game>("/root/Global");
 		var err=OS.ShellOpen(OS.GetUserDataDir()+"/GodotTemplate/Screenshots");
 		if (err == Error.Ok)
 		{
-			Global.CreatePopUpMessage(TranslationServer.Translate("locMessageFolder").ToString().Replace("{Directory}",OS.GetUserDataDir()+"/GodotTemplate/Screenshots"));
+			Singleton.Game.CreatePopUpMessage(TranslationServer.Translate("locMessageFolder").ToString().Replace("{Directory}",OS.GetUserDataDir()+"/GodotTemplate/Screenshots"));
 		}
 		else
 		{
-			Global.CreatePopUpMessage(TranslationServer.Translate("locMessageFolderFailed").ToString().Replace("{Directory}",OS.GetUserDataDir()+"/GodotTemplate/Screenshots")+((int)err).ToString()+"("+err.ToString()+")",Message.TYPE.ERROR);
+			Singleton.Game.CreatePopUpMessage(TranslationServer.Translate("locMessageFolderFailed").ToString().Replace("{Directory}",OS.GetUserDataDir()+"/GodotTemplate/Screenshots")+((int)err).ToString()+"("+err.ToString()+")",Message.TYPE.ERROR);
 			GD.PushError($"Screenshot folder open failed, error code: {(int)err}("+err.ToString()+")");
 		}
 	}
@@ -102,10 +101,9 @@ public partial class Settings : Control
 	}
 	public void _on_back_pressed()
 	{
-		var Global = GetNode<Game>("/root/Global");
 		var file=new ConfigFile();
 		file.SetValue("Settings","language_display",TranslationServer.GetLocale());
-		file.SetValue("Settings","language_audio",(int)Global.lang_audio);
+		file.SetValue("Settings","language_audio",(int)Singleton.Game.lang_audio);
 		file.SetValue("Settings","display_mode",(int)DisplayServer.WindowGetMode());
 		file.SetValue("Settings","resolution",GetNode<OptionButton>("Control/VBoxContainer/Resolution/Resolution1").Selected);
 		file.SetValue("Settings","fps_limit",GetNode<OptionButton>("Control/VBoxContainer/FpsLimit/FpsLimit1").Selected);
@@ -133,43 +131,40 @@ public partial class Settings : Control
 	}
 	public void _on_mods_folder_pressed()
 	{
-		Game Global=GetNode<Game>("/root/Global");
 		var err=OS.ShellOpen(Game.GetGameDirPath("Mods"));
 		if (err == Error.Ok)
 		{
-			Global.CreatePopUpMessage(TranslationServer.Translate("locMessageFolder").ToString().Replace("{Directory}",Game.GetGameDirPath("Mods")));
+			Singleton.Game.CreatePopUpMessage(TranslationServer.Translate("locMessageFolder").ToString().Replace("{Directory}",Game.GetGameDirPath("Mods")));
 		}
 		else
 		{
-			Global.CreatePopUpMessage(TranslationServer.Translate("locMessageFolderFailed").ToString().Replace("{Directory}",Game.GetGameDirPath("Mods"))+((int)err).ToString()+"("+err.ToString()+")",Message.TYPE.ERROR);
+			Singleton.Game.CreatePopUpMessage(TranslationServer.Translate("locMessageFolderFailed").ToString().Replace("{Directory}",Game.GetGameDirPath("Mods"))+((int)err).ToString()+"("+err.ToString()+")",Message.TYPE.ERROR);
 			GD.PushError($"Mods folder open failed, error code: {(int)err}("+err.ToString()+")");
 		}
 	}
 	public void _on_locs_folder_pressed()
 	{
-		Game Global=GetNode<Game>("/root/Global");
 		var err=OS.ShellOpen(Game.GetGameDirPath("Locales"));
 		if (err == Error.Ok)
 		{
-			Global.CreatePopUpMessage(TranslationServer.Translate("locMessageFolder").ToString().Replace("{Directory}",Game.GetGameDirPath("Locales")));
+			Singleton.Game.CreatePopUpMessage(TranslationServer.Translate("locMessageFolder").ToString().Replace("{Directory}",Game.GetGameDirPath("Locales")));
 		}
 		else
 		{
-			Global.CreatePopUpMessage(TranslationServer.Translate("locMessageFolderFailed").ToString().Replace("{Directory}",Game.GetGameDirPath("Locales"))+((int)err).ToString()+"("+err.ToString()+")",Message.TYPE.ERROR);
+			Singleton.Game.CreatePopUpMessage(TranslationServer.Translate("locMessageFolderFailed").ToString().Replace("{Directory}",Game.GetGameDirPath("Locales"))+((int)err).ToString()+"("+err.ToString()+")",Message.TYPE.ERROR);
 			GD.PushError($"Locale folder open failed, error code: {(int)err}("+err.ToString()+")");
 		}
 	}
 	public void _on_chars_folder_pressed()
 	{
-		Game Global=GetNode<Game>("/root/Global");
 		var err=OS.ShellOpen(Game.GetGameDirPath("CustomChars"));
 		if (err == Error.Ok)
 		{
-			Global.CreatePopUpMessage(TranslationServer.Translate("locMessageFolder").ToString().Replace("{Directory}",Game.GetGameDirPath("CustomChars")));
+			Singleton.Game.CreatePopUpMessage(TranslationServer.Translate("locMessageFolder").ToString().Replace("{Directory}",Game.GetGameDirPath("CustomChars")));
 		}
 		else
 		{
-			Global.CreatePopUpMessage(TranslationServer.Translate("locMessageFolderFailed").ToString().Replace("{Directory}",Game.GetGameDirPath("CustomChars"))+((int)err).ToString()+"("+err.ToString()+")",Message.TYPE.ERROR);
+			Singleton.Game.CreatePopUpMessage(TranslationServer.Translate("locMessageFolderFailed").ToString().Replace("{Directory}",Game.GetGameDirPath("CustomChars"))+((int)err).ToString()+"("+err.ToString()+")",Message.TYPE.ERROR);
 			GD.PushError($"Custom character packs folder open failed, error code: {(int)err}("+err.ToString()+")");
 		}
 	}

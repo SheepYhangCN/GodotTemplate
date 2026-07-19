@@ -27,15 +27,14 @@ public partial class InitLang : Control
 
 	public override void _Process(double delta)
 	{
-		Game Global=GetNode<Game>("/root/Global");
 		if (fading)
 		{
 			timer+=delta;
-			Global.fader_color=new Color(0,0,0,(float)timer);
+			Singleton.Game.fader_color=new Color(0,0,0,(float)timer);
 		}
 		if (timer>=1)
 		{
-			Global.fader_color.A=0;
+			Singleton.Game.fader_color.A=0;
 			GetTree().ChangeSceneToFile("res://Menu/MainMenu/MainMenu.tscn");
 		}
 		if (GetNode<Button>("Button").ButtonPressed)
@@ -43,7 +42,7 @@ public partial class InitLang : Control
 			GetNode<Button>("Button").Disabled=true;
 			fading=true;
 			Game.UpdateConfigFile("user://GodotTemplate/Settings/settings.ini","Settings","language_display",TranslationServer.GetLocale());
-			Game.UpdateConfigFile("user://GodotTemplate/Settings/settings.ini","Settings","language_audio",(int)Global.lang_audio);
+			Game.UpdateConfigFile("user://GodotTemplate/Settings/settings.ini","Settings","language_audio",(int)Singleton.Game.lang_audio);
 		}
 	}
 	public void _on_language_item_selected(int selected)
@@ -56,6 +55,6 @@ public partial class InitLang : Control
 	}
 	public void _on_language_a_item_selected(int selected)
 	{
-		GetNode<Game>("/root/Global").lang_audio=(Game.LANG_AUDIO)selected;
+		Singleton.Game.lang_audio=(Game.LANG_AUDIO)selected;
 	}
 }

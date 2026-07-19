@@ -11,8 +11,7 @@ public partial class DebugOverlay2 : Label
 	}*/
 	public override void _Process(double delta)
 	{
-		Game Global=GetNode<Game>("/root/Global");
-		enabled = Global.debug_overlay && Global.debug_overlay_r;
+		enabled = Singleton.Game.debug_overlay && Singleton.Game.debug_overlay_r;
 		if (enabled)
 		{
 			/*var tree=GetTree();
@@ -26,14 +25,14 @@ public partial class DebugOverlay2 : Label
 			}*/
 			if (!Visible)
 			{
-				Text = Update(Global);
+				Text = Update();
 				Visible = true;
 			}
 			timer+=delta;
 			if (timer>=1)
 			{
 				timer=0;
-				Text = Update(Global);
+				Text = Update();
 			}
 		}
 		else
@@ -44,7 +43,7 @@ public partial class DebugOverlay2 : Label
 			}
 		}
 	}
-	internal static string Update(Game Global)
+	internal static string Update()
 	{
 		var Text="System: "+OS.GetName()+"("+OS.GetDistributionName()+") "+OS.GetVersion()+" "+Engine.GetArchitectureName();
 		Text+="\nSystem Locale: "+OS.GetLocale()+" ("+TranslationServer.GetLocaleName(OS.GetLocale())+")";
@@ -61,7 +60,7 @@ public partial class DebugOverlay2 : Label
 		Text+="\nKeyboard Layout: "+DisplayServer.KeyboardGetLayoutName(layout)+" ("+DisplayServer.KeyboardGetLayoutLanguage(layout)+")";
 		Text+="\nScreen DPI: "+((DisplayServer.ScreenGetDpi()==72) ? "N/A" : DisplayServer.ScreenGetDpi(DisplayServer.WindowGetCurrentScreen()));
 		Text+="\nGame Locale: "+TranslationServer.GetLocale()+" ("+TranslationServer.GetLocaleName(TranslationServer.GetLocale())+")";
-		Text+="\nAudio Language: "+Global.lang_audio.ToString();
+		Text+="\nAudio Language: "+Singleton.Game.lang_audio.ToString();
 		Text+="\nEditor Locale: "+TranslationServer.GetToolLocale()+" ("+TranslationServer.GetLocaleName(TranslationServer.GetToolLocale())+")";
 		Text+="\nProcess ID: "+OS.GetProcessId().ToString();
 		Text+="\nMain Thread ID: "+OS.GetMainThreadId().ToString();

@@ -11,10 +11,10 @@ public partial class LanguageA : HBoxContainer
 		{
 			node.Set("popup/item_"+i.ToString()+"/text",Game.lang_audio_name[(Game.LANG_AUDIO)i]);
 		}
-		node.Selected=(int)GetNode<Game>("/root/Global").lang_audio;
+		node.Selected=(int)Singleton.Game.lang_audio;
 	}
 	public void _on_language_1_item_selected(int selected)
 	{
-		GetNode<Game>("/root/Global").lang_audio=(Game.LANG_AUDIO)selected;
+		Singleton.Game.lang_audio=(Game.LANG_AUDIO)selected;
 	}
 }

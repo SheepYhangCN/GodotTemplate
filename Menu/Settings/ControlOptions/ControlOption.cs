@@ -5,8 +5,7 @@ public partial class ControlOption : Control
 {
 	public override void _Ready()
 	{
-		Game Global=GetNode<Game>("/root/Global");
-		GetNode<OptionButton>("ControlMode/Mode1").Selected=(int)Global.control_mode;
+		GetNode<OptionButton>("ControlMode/Mode1").Selected=(int)Singleton.Game.control_mode;
 		GetNode<OptionButton>("ControlMode/Mode1").ResetSize();
 		GetNode<Control>("ControlMode").Position=new Vector2(GetNode<Control>("ControlMode").Position.X,GetNode<Control>("ControlMode").Position.Y-(32+18)*4);
 	}
@@ -15,10 +14,9 @@ public partial class ControlOption : Control
 	{
 		var scene=GetTree().CurrentScene;
 		var mode1=GetNode<OptionButton>("ControlMode/Mode1");
-		Game Global=GetNode<Game>("/root/Global");
-		if (Global.control_mode!=(Game.CONTROL_MODE)mode1.Selected)
+		if (Singleton.Game.control_mode!=(Game.CONTROL_MODE)mode1.Selected)
 		{
-			Global.control_mode=(Game.CONTROL_MODE)mode1.Selected;
+			Singleton.Game.control_mode=(Game.CONTROL_MODE)mode1.Selected;
 		}
 		if (GetNode<Button>("Button/Keybinds").ButtonPressed)
 		{
@@ -35,7 +33,7 @@ public partial class ControlOption : Control
 		}
 		if ((GetNode<Button>("Button/Back").ButtonPressed||Input.IsActionJustPressed("pause"))&&(scene.SceneFilePath=="res://Menu/Settings/ControlOptions/ControlOptions.tscn"||Visible))
 		{
-			Global.control_mode=(Game.CONTROL_MODE)mode1.Selected;
+			Singleton.Game.control_mode=(Game.CONTROL_MODE)mode1.Selected;
 			var file=new ConfigFile();
 			file.SetValue("ControlOptions","control_mode",mode1.Selected);
 			Error err=file.Save("user://GodotTemplate/Settings/control.ini");

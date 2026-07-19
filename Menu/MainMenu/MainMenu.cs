@@ -7,7 +7,6 @@ public partial class MainMenu : Control
 	bool pressed=true;
 	public override void _Ready()
 	{
-		Game Global=GetNode<Game>("/root/Global");
 		var quit=GetNode<Button>("Control/Quit");
 		var settings=GetNode<Button>("Control/Settings");
 		var version=GetNode<Label>("Control/Version");
@@ -15,15 +14,15 @@ public partial class MainMenu : Control
 		settings.ResetSize();
 		version.ResetSize();
 		var t="";
-		if (Global.mod)
+		if (Singleton.Game.mod)
 		{
-			t+=TranslationServer.Translate("locInfoMod").ToString().Replace("{ModsLoaded}",Global.mods_loaded.Length.ToString());
+			t+=TranslationServer.Translate("locInfoMod").ToString().Replace("{ModsLoaded}",Singleton.Game.mods_loaded.Length.ToString());
 		}
-		if (Global.locale)
+		if (Singleton.Game.locale)
 		{
-			t+=TranslationServer.Translate("locLocInfo").ToString().Replace("{LocalesLoaded}",Global.locale_loaded.Length.ToString());
+			t+=TranslationServer.Translate("locLocInfo").ToString().Replace("{LocalesLoaded}",Singleton.Game.locale_loaded.Length.ToString());
 		}
-		if (Global.mods_loaded.Length > 1)
+		if (Singleton.Game.mods_loaded.Length > 1)
 		{
 			t=t.Replace("{ModS}","mods");
 		}
@@ -31,7 +30,7 @@ public partial class MainMenu : Control
 		{
 			t=t.Replace("{ModS}","mod");
 		}
-		if (Global.locale_loaded.Length > 1)
+		if (Singleton.Game.locale_loaded.Length > 1)
 		{
 			t=t.Replace("{fileS}","files");
 		}
@@ -39,7 +38,7 @@ public partial class MainMenu : Control
 		{
 			t=t.Replace("{fileS}","file");
 		}
-		version.Text=t+"v"+Game.version+(Global.mod ? " - "+TranslationServer.Translate("locEnabledMod") : "");
+		version.Text=t+"v"+Game.version+(Singleton.Game.mod ? " - "+TranslationServer.Translate("locEnabledMod") : "");
 	}
 
 	public override void _Process(double delta)

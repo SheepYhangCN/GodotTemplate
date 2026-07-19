@@ -76,7 +76,7 @@ public partial class Message : Control
 	public void _on_copy_pressed()
 	{
 		DisplayServer.ClipboardSet(GetNode<RichTextLabel>("PanelContainer/MarginContainer/Text").Text);
-		GetNode<Game>("/root/Global").CreatePopUpMessage("locMessageInfoCopied",TYPE.MESSAGE,false);
+		Singleton.Game.CreatePopUpMessage("locMessageInfoCopied",TYPE.MESSAGE,false);
 	}
 	public void _on_close_pressed()
 	{

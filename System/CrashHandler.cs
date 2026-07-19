@@ -11,31 +11,29 @@ public partial class CrashHandler : Control
 
 	public void _on_saves_pressed()
 	{
-		Game Global=GetNode<Game>("/root/Global");
 		Error err;
 		err = OS.ShellOpen(OS.GetUserDataDir()+"/GodotTemplate/Saves");
 		if (err == Error.Ok)
 		{
-			Global.CreatePopUpMessage(TranslationServer.Translate("locMessageFolder").ToString().Replace("{Directory}",OS.GetUserDataDir()+"/GSKAOI/Saves"));
+			Singleton.Game.CreatePopUpMessage(TranslationServer.Translate("locMessageFolder").ToString().Replace("{Directory}",OS.GetUserDataDir()+"/GSKAOI/Saves"));
 		}
 		else
 		{
-			Global.CreatePopUpMessage(TranslationServer.Translate("locMessageFolderFailed").ToString().Replace("{Directory}",OS.GetUserDataDir()+"/GSKAOI/Saves")+((int)err).ToString()+"("+err.ToString()+")",Message.TYPE.ERROR);
+			Singleton.Game.CreatePopUpMessage(TranslationServer.Translate("locMessageFolderFailed").ToString().Replace("{Directory}",OS.GetUserDataDir()+"/GSKAOI/Saves")+((int)err).ToString()+"("+err.ToString()+")",Message.TYPE.ERROR);
 			GD.PushError($"Saves' folder open failed, error code: {(int)err}("+err.ToString()+")");
 		}
 	}
 	public void _on_logs_pressed()
 	{
-		Game Global = GetNode<Game>("/root/Global");
 		//var err = OS.ShellOpen(OS.GetUserDataDir()+"/logs");
 		var err = OS.ShellShowInFileManager(OS.GetUserDataDir()+"/logs/godot.log");
 		if (err == Error.Ok)
 		{
-			Global.CreatePopUpMessage(TranslationServer.Translate("locMessageFolder").ToString().Replace("{Directory}",OS.GetUserDataDir()+"/logs"));
+			Singleton.Game.CreatePopUpMessage(TranslationServer.Translate("locMessageFolder").ToString().Replace("{Directory}",OS.GetUserDataDir()+"/logs"));
 		}
 		else
 		{
-			Global.CreatePopUpMessage(TranslationServer.Translate("locMessageFolderFailed").ToString().Replace("{Directory}",OS.GetUserDataDir()+"/logs")+((int)err).ToString()+"("+err.ToString()+")",Message.TYPE.ERROR);
+			Singleton.Game.CreatePopUpMessage(TranslationServer.Translate("locMessageFolderFailed").ToString().Replace("{Directory}",OS.GetUserDataDir()+"/logs")+((int)err).ToString()+"("+err.ToString()+")",Message.TYPE.ERROR);
 			GD.PushError($"Logs' folder open failed, error code: {(int)err}("+err.ToString()+")");
 		}
 	}

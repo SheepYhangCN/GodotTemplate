@@ -18,7 +18,7 @@ public partial class FpsLimit : HBoxContainer
 	}
 	public void _on_fps_limit_1_item_selected(int selected)
 	{
-		GetNode<Game>("/root/Global").max_fps_sel=GetNode<OptionButton>("FpsLimit1").Selected;
+		Singleton.Game.max_fps_sel=GetNode<OptionButton>("FpsLimit1").Selected;
 		if (selected==0)
 		{
 			Engine.MaxFps=24;

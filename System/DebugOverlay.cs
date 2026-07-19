@@ -7,12 +7,11 @@ public partial class DebugOverlay : Label
 	double timer=0;
 	/*public override void _Ready()
 	{
-		Text=Update(this,GetTree(),GetNode<Game>("/root/Global"));
+		Text=Update(this,GetTree(),Singleton.Game);
 	}*/
 	public override void _Process(double delta)
 	{
-		Game Global=GetNode<Game>("/root/Global");
-		enabled=Global.debug_overlay;
+		enabled=Singleton.Game.debug_overlay;
 		if (enabled)
 		{
 			/*var tree=GetTree();
@@ -29,7 +28,7 @@ public partial class DebugOverlay : Label
 			/*if (timer>=1)
 			{
 				timer=0;*/
-				Text=Update(this,GetTree(),Global);
+				Text=Update(this,GetTree());
 			//}
 		}
 		else
@@ -40,10 +39,10 @@ public partial class DebugOverlay : Label
 			}
 		}
 	}
-	internal static string Update(DebugOverlay thisi, SceneTree tree, Game Global)
+	internal static string Update(DebugOverlay thisi, SceneTree tree)
 	{
 		string Text;
-		Text="Version: v"+Game.version + (Global.mod ? " - Modded" : "") + (Global.locale ? " - Locale" : "");
+		Text="Version: v"+Game.version + (Singleton.Game.mod ? " - Modded" : "") + (Singleton.Game.locale ? " - Locale" : "");
 		if (tree.CurrentScene == null)
 		{
 			Text+="\nScene: Null";
@@ -67,15 +66,15 @@ public partial class DebugOverlay : Label
 		Text+="\nWindow Position,Decorations: "+DisplayServer.WindowGetPosition().ToString()+","+DisplayServer.WindowGetPositionWithDecorations().ToString();
 		Text+="\nWindow Size,Decorations: "+DisplayServer.WindowGetSize().ToString()+","+DisplayServer.WindowGetSizeWithDecorations().ToString();
 		Text+="\nWindow Focused: "+DisplayServer.WindowIsFocused().ToString();
-		Text+="\nGlobal.fader_color = "+Global.fader_color.ToString();
-		Text+="\nGlobal.control_mode = "+((int)Global.control_mode).ToString()+"("+Global.control_mode.ToString()+")";
-		Text+="\nGlobal.input_remapping = "+Global.input_remapping.ToString();
-		if (Global.mod)
+		Text+="\nSingleton.Game.fader_color = "+Singleton.Game.fader_color.ToString();
+		Text+="\nSingleton.Game.control_mode = "+((int)Singleton.Game.control_mode).ToString()+"("+Singleton.Game.control_mode.ToString()+")";
+		Text+="\nSingleton.Game.input_remapping = "+Singleton.Game.input_remapping.ToString();
+		if (Singleton.Game.mod)
 		{
 			Text+="\nMods Loaded: {\"";
-			for (var a=0;a<Global.mods_loaded.Length;a+=1)
+			for (var a=0;a<Singleton.Game.mods_loaded.Length;a+=1)
 			{
-				Text+=Global.mods_loaded[a]+"\",\"";
+				Text+=Singleton.Game.mods_loaded[a]+"\",\"";
 			}
 			Text=Text.TrimSuffix(",\"")+"}";
 			if (Text.EndsWith("{\"}"))
@@ -83,9 +82,9 @@ public partial class DebugOverlay : Label
 				Text=Text.TrimSuffix("\"}")+"}";
 			}
 			Text+="\nLocalization files Loaded: {\"";
-			for (var a=0;a<Global.locale_loaded.Length;a+=1)
+			for (var a=0;a<Singleton.Game.locale_loaded.Length;a+=1)
 		{
-				Text+=Global.locale_loaded[a]+"\",\"";
+				Text+=Singleton.Game.locale_loaded[a]+"\",\"";
 			}
 			Text=Text.TrimSuffix(",\"")+"}";
 			if (Text.EndsWith("{\"}"))

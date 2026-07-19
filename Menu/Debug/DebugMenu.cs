@@ -5,30 +5,28 @@ public partial class DebugMenu : Control
 {
 	public override void _Ready()
 	{
-		Game Global=GetNode<Game>("/root/Global");
-		if (!Global.debug)
+		if (!Singleton.Game.debug)
 		{
-			Global.Crashed("Debug Menu is debug mode only\nAdd \"-debug\" launch option");
+			Singleton.Game.Crashed("Debug Menu is debug mode only\nAdd \"-debug\" launch option");
 		}
-		GetNode<CheckButton>("ScrollContainer/VBoxContainer/HBoxContainer2/DebugOverlay").ButtonPressed = Global.debug_overlay;
-		GetNode<CheckButton>("ScrollContainer/VBoxContainer/HBoxContainer2/DebugOverlayRight").ButtonPressed = Global.debug_overlay_r;
-		GetNode<CheckButton>("ScrollContainer/VBoxContainer/HBoxContainer2/DebugOverlayRight").Disabled = !Global.debug_overlay;
+		GetNode<CheckButton>("ScrollContainer/VBoxContainer/HBoxContainer2/DebugOverlay").ButtonPressed = Singleton.Game.debug_overlay;
+		GetNode<CheckButton>("ScrollContainer/VBoxContainer/HBoxContainer2/DebugOverlayRight").ButtonPressed = Singleton.Game.debug_overlay_r;
+		GetNode<CheckButton>("ScrollContainer/VBoxContainer/HBoxContainer2/DebugOverlayRight").Disabled = !Singleton.Game.debug_overlay;
 	}
 
 	public override void _Process(double delta)
 	{
-		Game Global=GetNode<Game>("/root/Global");
-		if (GetNode<CheckButton>("ScrollContainer/VBoxContainer/HBoxContainer2/DebugOverlay").ButtonPressed!=Global.debug_overlay)
+		if (GetNode<CheckButton>("ScrollContainer/VBoxContainer/HBoxContainer2/DebugOverlay").ButtonPressed!=Singleton.Game.debug_overlay)
 		{
-			GetNode<CheckButton>("ScrollContainer/VBoxContainer/HBoxContainer2/DebugOverlay").ButtonPressed=Global.debug_overlay;
+			GetNode<CheckButton>("ScrollContainer/VBoxContainer/HBoxContainer2/DebugOverlay").ButtonPressed=Singleton.Game.debug_overlay;
 		}
-		if (GetNode<CheckButton>("ScrollContainer/VBoxContainer/HBoxContainer2/DebugOverlayRight").ButtonPressed!=Global.debug_overlay_r)
+		if (GetNode<CheckButton>("ScrollContainer/VBoxContainer/HBoxContainer2/DebugOverlayRight").ButtonPressed!=Singleton.Game.debug_overlay_r)
 		{
-			GetNode<CheckButton>("ScrollContainer/VBoxContainer/HBoxContainer2/DebugOverlayRight").ButtonPressed=Global.debug_overlay_r;
+			GetNode<CheckButton>("ScrollContainer/VBoxContainer/HBoxContainer2/DebugOverlayRight").ButtonPressed=Singleton.Game.debug_overlay_r;
 		}
-		if (GetNode<CheckButton>("ScrollContainer/VBoxContainer/HBoxContainer2/DebugOverlayRight").Disabled==Global.debug_overlay)
+		if (GetNode<CheckButton>("ScrollContainer/VBoxContainer/HBoxContainer2/DebugOverlayRight").Disabled==Singleton.Game.debug_overlay)
 		{
-			GetNode<CheckButton>("ScrollContainer/VBoxContainer/HBoxContainer2/DebugOverlayRight").Disabled=!Global.debug_overlay;
+			GetNode<CheckButton>("ScrollContainer/VBoxContainer/HBoxContainer2/DebugOverlayRight").Disabled=!Singleton.Game.debug_overlay;
 		}
 	}
 
@@ -49,12 +47,12 @@ public partial class DebugMenu : Control
 
 	public void _on_debug_overlay_toggled(bool a)
 	{
-		GetNode<Game>("/root/Global").debug_overlay=a;
+		Singleton.Game.debug_overlay=a;
 	}
 
 	public void _on_debug_overlay_right_toggled(bool a)
 	{
-		GetNode<Game>("/root/Global").debug_overlay_r=a;
+		Singleton.Game.debug_overlay_r=a;
 	}
 
 	public void _on_restart_game_pressed()
@@ -63,7 +61,7 @@ public partial class DebugMenu : Control
 		{
 			GD.Print($"[{Time.GetDatetimeStringFromSystem(false,true)}] Restarted game with debug menu.");
 		}
-		GetNode<Game>("/root/Global").GameInit();
+		Singleton.Game.GameInit();
 	}
 	public void _on_restart_scene_pressed()
 	{
@@ -85,16 +83,16 @@ public partial class DebugMenu : Control
 		var custom_button = GetNode<CheckButton>("ScrollContainer/VBoxContainer/CreatePopUpMessage/args/custom_button").ButtonPressed;
 		var custom_button_text = GetNode<TextEdit>("ScrollContainer/VBoxContainer/CreatePopUpMessage/args/custom_button_text").Text;
 		var custom_method_name = GetNode<TextEdit>("ScrollContainer/VBoxContainer/CreatePopUpMessage/args/custom_method_name").Text;
-		GetNode<Game>("/root/Global").CreatePopUpMessage(message, type, copy_button, shown_time, close_button, custom_button, (custom_button_text == "" ? null : custom_button_text), (custom_method_name == "" ? null : custom_method_name));
+		Singleton.Game.CreatePopUpMessage(message, type, copy_button, shown_time, close_button, custom_button, (custom_button_text == "" ? null : custom_button_text), (custom_method_name == "" ? null : custom_method_name));
 	}
 
 	public void _on_clear_message_list_pressed()
 	{
-		GetNode<Game>("/root/Global").ClearMessageList();
+		Singleton.Game.ClearMessageList();
 	}
 
 	public void _on_color_picker_color_changed(Color color)
 	{
-		GetNode<Game>("/root/Global").fader_color = color;
+		Singleton.Game.fader_color = color;
 	}
 }

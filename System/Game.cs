@@ -85,6 +85,7 @@ public partial class Game : Node2D
 		{
 			GD.Print("Verbose stdout was enabled.");
 		}
+		Singleton.Game = this;
 		fader_color = new Color(0,0,0,0);
 		control_mode = CONTROL_MODE.KEYBOARD_MOUSE;
 		mod = OS.GetCmdlineUserArgs().Contains("-mod");
@@ -679,13 +680,13 @@ public partial class Game : Node2D
 			if (Input.IsActionJustPressed("debug_overlay"))
 			{
 				debug_overlay = !debug_overlay;
-				GetNode<DebugOverlay>("CanvasLayer/DebugOverlay").Text = DebugOverlay.Update(GetNode<DebugOverlay>("CanvasLayer/DebugOverlay"),tree,this);
-				GetNode<DebugOverlay2>("CanvasLayer/DebugOverlay2").Text = DebugOverlay2.Update(this);
+				GetNode<DebugOverlay>("CanvasLayer/DebugOverlay").Text = DebugOverlay.Update(GetNode<DebugOverlay>("CanvasLayer/DebugOverlay"),tree);
+				GetNode<DebugOverlay2>("CanvasLayer/DebugOverlay2").Text = DebugOverlay2.Update();
 			}
 			if (debug_overlay && Input.IsActionJustPressed("debug_overlay_r"))
 			{
 				debug_overlay_r = !debug_overlay_r;
-				GetNode<DebugOverlay2>("CanvasLayer/DebugOverlay2").Text = DebugOverlay2.Update(this);
+				GetNode<DebugOverlay2>("CanvasLayer/DebugOverlay2").Text = DebugOverlay2.Update();
 			}
 			if (Input.IsActionJustPressed("debug_restart"))
 			{

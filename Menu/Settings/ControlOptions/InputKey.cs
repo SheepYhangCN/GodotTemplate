@@ -15,8 +15,7 @@ public partial class InputKey : Control
 
 	public override void _Process(double delta)
 	{
-		var Global=GetNode<Game>("/root/Global");
-		if (!Global.input_remapping)
+		if (!Singleton.Game.input_remapping)
 		{
 			if (alarm>0)
 			{
@@ -26,7 +25,7 @@ public partial class InputKey : Control
 			{
 				GetNode<Button>("Edit").Text="locWaitingForInput";
 				Visible=false;
-				Global.input_remapping=false;
+				Singleton.Game.input_remapping=false;
 				edit=false;
 				alarm=0;
 			}
@@ -40,11 +39,11 @@ public partial class InputKey : Control
 				Keybinds.SaveKeybindsToTemp();
 				GetNode<Keybinds>("../").CreateActionListFromTemp();
 				Visible=false;
-				Global.input_remapping=false;
+				Singleton.Game.input_remapping=false;
 				edit=false;
 				alarm=0;
 			}
-			if (GetNode<Button>("Edit").ButtonPressed && !Global.input_remapping && alarm==0)
+			if (GetNode<Button>("Edit").ButtonPressed && !Singleton.Game.input_remapping && alarm==0)
 			{
 				GetNode<Button>("Edit").Text="locWaitingForInput";
 				alarm=0.2;
@@ -52,7 +51,7 @@ public partial class InputKey : Control
 			if (alarm<0)
 			{
 				alarm=0;
-				Global.input_remapping=true;
+				Singleton.Game.input_remapping=true;
 			}
 		}
 	}
@@ -60,8 +59,7 @@ public partial class InputKey : Control
 	public override void _Input(InputEvent @event)
 	{
 		base._Input(@event);
-		var Global=GetNode<Game>("/root/Global");
-		if (Global.input_remapping&&(@event is InputEventKey||@event is InputEventMouseButton))//||@event is InputEventJoypadButton||@event is InputEventJoypadMotion))
+		if (Singleton.Game.input_remapping&&(@event is InputEventKey||@event is InputEventMouseButton))//||@event is InputEventJoypadButton||@event is InputEventJoypadMotion))
 		{
 			if (@event is InputEventMouseButton inpute && inpute.DoubleClick)
 			{
@@ -69,7 +67,7 @@ public partial class InputKey : Control
 			}
 			if (@event.IsReleased())
 			{
-				Global.input_remapping=false;
+				Singleton.Game.input_remapping=false;
 			}
 			else
 			{

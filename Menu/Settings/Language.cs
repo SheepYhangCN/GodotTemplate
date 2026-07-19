@@ -18,7 +18,7 @@ public partial class Language : HBoxContainer
 	}
 	public void _on_language_1_item_selected(int selected)
 	{
-		GetNode<Game>("/root/Global").ClearMessageList();
+		Singleton.Game.ClearMessageList();
 		if (OS.IsStdOutVerbose())
 		{
 			GD.Print($"[{Time.GetDatetimeStringFromSystem(false,true)}] Language changed from {TranslationServer.GetLocale()} to {locales[selected]}.");
