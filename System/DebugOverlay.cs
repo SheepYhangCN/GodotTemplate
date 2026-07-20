@@ -66,9 +66,9 @@ public partial class DebugOverlay : Label
 		Text+="\nWindow Position,Decorations: "+DisplayServer.WindowGetPosition().ToString()+","+DisplayServer.WindowGetPositionWithDecorations().ToString();
 		Text+="\nWindow Size,Decorations: "+DisplayServer.WindowGetSize().ToString()+","+DisplayServer.WindowGetSizeWithDecorations().ToString();
 		Text+="\nWindow Focused: "+DisplayServer.WindowIsFocused().ToString();
-		Text+="\nSingleton.Game.fader_color = "+Singleton.Game.fader_color.ToString();
-		Text+="\nSingleton.Game.control_mode = "+((int)Singleton.Game.control_mode).ToString()+"("+Singleton.Game.control_mode.ToString()+")";
-		Text+="\nSingleton.Game.input_remapping = "+Singleton.Game.input_remapping.ToString();
+		Text+="\nGame.fader_color = "+Singleton.Game.fader_color.ToString();
+		Text+="\nGame.control_mode = "+((int)Singleton.Game.control_mode).ToString()+"("+Singleton.Game.control_mode.ToString()+")";
+		Text+="\nGame.input_remapping = "+Singleton.Game.input_remapping.ToString();
 		if (Singleton.Game.mod)
 		{
 			Text+="\nMods Loaded: {\"";
