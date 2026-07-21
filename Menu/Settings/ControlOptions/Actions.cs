@@ -15,7 +15,7 @@ public partial class Actions : Control
 		var b=0;
 		for (var a=0;a<events.Count;a+=1)
 		{
-			if (!(events[a].AsText().Contains("Controller")||events[a].AsText().Contains("Joypad")))
+			if (!(events[a] is InputEventJoypadButton || events[a] is InputEventJoypadMotion))
 			{
 				b+=1;
 				var button=scene.Instantiate<ActionButton>();
